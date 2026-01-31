@@ -9,13 +9,11 @@ const statesData = {
       "star": 7,
       "city": "Visakhapatnam",
       "reviews": [{
-        "reviewerName": "Anjali Sharma",
         "date": "2025-04-10",
         "rating": 5,
         "comment": "Absolutely stunning hotel with exceptional service!"
       },
       {
-        "reviewerName": "Ravi Kumar",
         "date": "2025-03-15",
         "rating": 4,
         "comment": "Luxurious experience but food could've been better."
@@ -30,13 +28,11 @@ const statesData = {
       "star": 5,
       "city": "Vijayawada",
       "reviews": [{
-        "reviewerName": "Meera Verma",
         "date": "2025-01-20",
         "rating": 5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Karan Joshi",
         "date": "2025-02-02",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
@@ -51,13 +47,11 @@ const statesData = {
       "star": 5,
       "city": "Tirupati",
       "reviews": [{
-        "reviewerName": "Priya Menon",
         "date": "2025-04-01",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Arjun Singh",
         "date": "2025-03-05",
         "rating": 5,
         "comment": "Loved the pool and the food!"
@@ -72,13 +66,11 @@ const statesData = {
       "star": 5,
       "city": "Visakhapatnam",
       "reviews": [{
-        "reviewerName": "Nisha Patel",
         "date": "2025-02-25",
         "rating": 4,
         "comment": "Great location. Would visit again."
       },
       {
-        "reviewerName": "Siddharth Rao",
         "date": "2025-01-18",
         "rating": 5,
         "comment": "Everything was perfect. Worth every penny."
@@ -93,13 +85,11 @@ const statesData = {
       "star": 4,
       "city": "Vijayawada",
       "reviews": [{
-        "reviewerName": "Divya Kapoor",
         "date": "2025-03-22",
         "rating": 3,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Harshita Jain",
         "date": "2025-04-17",
         "rating": 5,
         "comment": "Best hotel experience I've had in a while!"
@@ -114,13 +104,11 @@ const statesData = {
       "star": 4,
       "city": "Guntur",
       "reviews": [{
-        "reviewerName": "Allison Hill",
         "date": "2024-12-03",
         "rating": 3,
         "comment": "Absolutely stunning hotel with exceptional service!"
       },
       {
-        "reviewerName": "Brian Yang",
         "date": "2025-02-03",
         "rating": 4.5,
         "comment": "Everything was perfect. Worth every penny."
@@ -137,13 +125,11 @@ const statesData = {
       "star": 5,
       "city": "Itanagar",
       "reviews": [{
-        "reviewerName": "Javier Johnson",
         "date": "2024-12-02",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Lance Hoffman",
         "date": "2025-03-09",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
@@ -158,13 +144,11 @@ const statesData = {
       "star": 5,
       "city": "Tawang",
       "reviews": [{
-        "reviewerName": "Kimberly Robinson",
         "date": "2025-02-12",
         "rating": 3,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Sean Blake",
         "date": "2024-11-21",
         "rating": 5,
         "comment": "Luxurious experience but food could've been better."
@@ -179,13 +163,11 @@ const statesData = {
       "star": 4,
       "city": "Itanagar",
       "reviews": [{
-        "reviewerName": "Gina Moore",
         "date": "2025-03-18",
         "rating": 3,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Brandon Davis",
         "date": "2025-04-03",
         "rating": 4,
         "comment": "Everything was perfect. Worth every penny."
@@ -200,13 +182,11 @@ const statesData = {
       "star": 4,
       "city": "Pasighat",
       "reviews": [{
-        "reviewerName": "Dennis Williams",
         "date": "2025-01-18",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Valerie Gray",
         "date": "2025-02-05",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
@@ -223,13 +203,11 @@ const statesData = {
       "star": 5,
       "city": "Guwahati",
       "reviews": [{
-        "reviewerName": "Mark Mcclure",
         "date": "2024-12-30",
         "rating": 5,
         "comment": "Everything was perfect. Worth every penny."
       },
       {
-        "reviewerName": "Michele Williams",
         "date": "2024-12-04",
         "rating": 5,
         "comment": "Excellent amenities and courteous staff."
@@ -244,13 +222,11 @@ const statesData = {
       "star": 5,
       "city": "Tezpur",
       "reviews": [{
-        "reviewerName": "Victoria Wyatt",
         "date": "2025-04-07",
         "rating": 4.5,
         "comment": "Absolutely stunning hotel with exceptional service!"
       },
       {
-        "reviewerName": "Donald Reid",
         "date": "2024-12-30",
         "rating": 4,
         "comment": "Location was perfect for sightseeing."
@@ -265,13 +241,11 @@ const statesData = {
       "star": 4,
       "city": "Guwahati",
       "reviews": [{
-        "reviewerName": "Henry Santiago",
         "date": "2025-03-06",
         "rating": 4.5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Maria Lynch",
         "date": "2024-11-23",
         "rating": 4,
         "comment": "Great location. Would visit again."
@@ -286,13 +260,11 @@ const statesData = {
       "star": 4,
       "city": "Silchar",
       "reviews": [{
-        "reviewerName": "Danielle Ford",
         "date": "2024-12-12",
         "rating": 4.5,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Margaret Hawkins DDS",
         "date": "2025-04-02",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
@@ -309,13 +281,11 @@ const statesData = {
       "star": 7,
       "city": "Patna",
       "reviews": [{
-        "reviewerName": "Amy Underwood",
         "date": "2025-03-26",
         "rating": 3,
         "comment": "Room service was prompt and friendly."
       },
       {
-        "reviewerName": "Derek Clark",
         "date": "2025-02-08",
         "rating": 4.5,
         "comment": "My go-to hotel whenever I'm in town."
@@ -330,13 +300,11 @@ const statesData = {
       "star": 5,
       "city": "Gaya",
       "reviews": [{
-        "reviewerName": "Emily Rios",
         "date": "2025-01-05",
         "rating": 4.5,
         "comment": "Luxurious experience but food could've been better."
       },
       {
-        "reviewerName": "Maria Thomas",
         "date": "2024-11-17",
         "rating": 5,
         "comment": "Peaceful environment and cozy rooms."
@@ -351,13 +319,11 @@ const statesData = {
       "star": 5,
       "city": "Patna",
       "reviews": [{
-        "reviewerName": "Justin Baker",
         "date": "2025-02-11",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
       },
       {
-        "reviewerName": "Kevin Cox",
         "date": "2024-11-16",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
@@ -372,13 +338,11 @@ const statesData = {
       "star": 5,
       "city": "Bihar Sharif",
       "reviews": [{
-        "reviewerName": "Ann Williams",
         "date": "2024-11-11",
         "rating": 4.5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Christopher Becker",
         "date": "2025-02-13",
         "rating": 4.5,
         "comment": "Excellent amenities and courteous staff."
@@ -393,13 +357,11 @@ const statesData = {
       "star": 4,
       "city": "Patna",
       "reviews": [{
-        "reviewerName": "James Ferrell",
         "date": "2025-01-31",
         "rating": 4,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Juan Dunlap",
         "date": "2025-03-02",
         "rating": 3,
         "comment": "Everything was perfect. Worth every penny."
@@ -414,13 +376,11 @@ const statesData = {
       "star": 4,
       "city": "Gaya",
       "reviews": [{
-        "reviewerName": "Melanie Herrera",
         "date": "2024-12-11",
         "rating": 4.5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Gina Carter",
         "date": "2024-11-20",
         "rating": 4,
         "comment": "Nice place but rooms were a bit small."
@@ -437,13 +397,11 @@ const statesData = {
       "star": 7,
       "city": "Raipur",
       "reviews": [{
-        "reviewerName": "Troy Liu",
         "date": "2024-12-11",
         "rating": 5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Pamela Romero",
         "date": "2024-11-10",
         "rating": 5,
         "comment": "Room service was prompt and friendly."
@@ -458,13 +416,11 @@ const statesData = {
       "star": 5,
       "city": "Bilaspur",
       "reviews": [{
-        "reviewerName": "Elizabeth Fowler",
         "date": "2025-02-16",
         "rating": 4,
         "comment": "Room service was prompt and friendly."
       },
       {
-        "reviewerName": "James Martin",
         "date": "2025-03-21",
         "rating": 4.5,
         "comment": "Great location. Would visit again."
@@ -479,13 +435,11 @@ const statesData = {
       "star": 5,
       "city": "Korba",
       "reviews": [{
-        "reviewerName": "Tamara George",
         "date": "2025-01-23",
         "rating": 4.5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Timothy Koch",
         "date": "2025-03-31",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
@@ -500,13 +454,11 @@ const statesData = {
       "star": 5,
       "city": "Raipur",
       "reviews": [{
-        "reviewerName": "Cynthia Allen",
         "date": "2025-02-08",
         "rating": 4,
         "comment": "Loved the pool and the food!"
       },
       {
-        "reviewerName": "Angelica Tucker",
         "date": "2024-11-03",
         "rating": 5,
         "comment": "The ambiance is absolutely delightful."
@@ -521,13 +473,11 @@ const statesData = {
       "star": 4,
       "city": "Raigarh",
       "reviews": [{
-        "reviewerName": "Kim Martinez",
         "date": "2025-02-26",
         "rating": 4.5,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Joshua Baker",
         "date": "2025-04-08",
         "rating": 4,
         "comment": "The spa services were top-notch!"
@@ -542,13 +492,11 @@ const statesData = {
       "star": 4,
       "city": "Durg-Bhilai Nagar",
       "reviews": [{
-        "reviewerName": "Tracey Hickman",
         "date": "2025-03-16",
         "rating": 3,
         "comment": "Everything was perfect. Worth every penny."
       },
       {
-        "reviewerName": "Christina Collins",
         "date": "2025-02-28",
         "rating": 3,
         "comment": "The spa services were top-notch!"
@@ -565,13 +513,11 @@ const statesData = {
       "star": 5,
       "city": "Panaji",
       "reviews": [{
-        "reviewerName": "Jessica Holmes",
         "date": "2024-11-13",
         "rating": 5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Austin Smith",
         "date": "2025-02-05",
         "rating": 3,
         "comment": "Great location. Would visit again."
@@ -586,13 +532,11 @@ const statesData = {
       "star": 5,
       "city": "Vasco da Gama",
       "reviews": [{
-        "reviewerName": "Daniel Jones",
         "date": "2025-02-20",
         "rating": 4.5,
         "comment": "Great location. Would visit again."
       },
       {
-        "reviewerName": "Austin Johnson",
         "date": "2024-12-24",
         "rating": 5,
         "comment": "The ambiance is absolutely delightful."
@@ -607,13 +551,11 @@ const statesData = {
       "star": 4,
       "city": "Panaji",
       "reviews": [{
-        "reviewerName": "David Caldwell",
         "date": "2024-12-01",
         "rating": 5,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Miranda Khan",
         "date": "2025-02-09",
         "rating": 4.5,
         "comment": "Very clean and well-maintained hotel."
@@ -628,13 +570,11 @@ const statesData = {
       "star": 4,
       "city": "Margao",
       "reviews": [{
-        "reviewerName": "Richard Aguirre",
         "date": "2024-11-26",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Matthew Gomez",
         "date": "2025-01-08",
         "rating": 4.5,
         "comment": "Excellent amenities and courteous staff."
@@ -651,13 +591,11 @@ const statesData = {
       "star": 7,
       "city": "Ahmedabad",
       "reviews": [{
-        "reviewerName": "Nicholas Nunez",
         "date": "2025-02-23",
         "rating": 5,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "James Morgan",
         "date": "2025-04-06",
         "rating": 5,
         "comment": "Room service was prompt and friendly."
@@ -672,13 +610,11 @@ const statesData = {
       "star": 7,
       "city": "Surat",
       "reviews": [{
-        "reviewerName": "Corey Herrera",
         "date": "2024-11-17",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Donald Wright",
         "date": "2025-04-18",
         "rating": 5,
         "comment": "Impeccable service and a gorgeous view."
@@ -693,13 +629,11 @@ const statesData = {
       "star": 5,
       "city": "Rajkot",
       "reviews": [{
-        "reviewerName": "Robert Chase",
         "date": "2024-11-09",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Zachary Huff",
         "date": "2024-11-08",
         "rating": 4,
         "comment": "Loved the pool and the food!"
@@ -714,13 +648,11 @@ const statesData = {
       "star": 5,
       "city": "Ahmedabad",
       "reviews": [{
-        "reviewerName": "Sarah Martin",
         "date": "2025-01-23",
         "rating": 5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Dr. Steven Martin",
         "date": "2024-10-21",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
@@ -735,13 +667,11 @@ const statesData = {
       "star": 5,
       "city": "Vadodara",
       "reviews": [{
-        "reviewerName": "Sarah Martin",
         "date": "2025-01-23",
         "rating": 5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Dr. Steven Martin",
         "date": "2024-10-21",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
@@ -756,13 +686,11 @@ const statesData = {
       "star": 5,
       "city": "Junagadh",
       "reviews": [{
-        "reviewerName": "Mrs. Rachel Gibson",
         "date": "2025-01-11",
         "rating": 5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Monica Logan",
         "date": "2025-02-26",
         "rating": 5,
         "comment": "Highly recommended for families."
@@ -777,13 +705,11 @@ const statesData = {
       "star": 4,
       "city": "Dwarka",
       "reviews": [{
-        "reviewerName": "Brittney Phillips",
         "date": "2024-11-01",
         "rating": 4.5,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Kimberly Adkins",
         "date": "2024-11-01",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
@@ -798,13 +724,11 @@ const statesData = {
       "star": 4,
       "city": "Gandhinagar",
       "reviews": [{
-        "reviewerName": "John Calhoun",
         "date": "2025-02-01",
         "rating": 4.5,
         "comment": "The spa services were top-notch!"
       },
       {
-        "reviewerName": "Tyler Miller",
         "date": "2024-11-26",
         "rating": 3,
         "comment": "Best hotel experience I've had in a while!"
@@ -819,13 +743,11 @@ const statesData = {
       "star": 4,
       "city": "Vadodara",
       "reviews": [{
-        "reviewerName": "Barry Hensley",
         "date": "2025-01-07",
         "rating": 5,
         "comment": "Loved the pool and the food!"
       },
       {
-        "reviewerName": "Steve Sanchez",
         "date": "2025-02-13",
         "rating": 5,
         "comment": "Absolutely stunning hotel with exceptional service!"
@@ -842,13 +764,11 @@ const statesData = {
       "star": 7,
       "city": "Faridabad",
       "reviews": [{
-        "reviewerName": "Bradley Sandoval",
         "date": "2025-02-07",
         "rating": 4.5,
         "comment": "Highly recommended for families."
       },
       {
-        "reviewerName": "Taylor Harris",
         "date": "2025-03-09",
         "rating": 4,
         "comment": "Highly recommended for families."
@@ -863,13 +783,11 @@ const statesData = {
       "star": 5,
       "city": "Gurgaon",
       "reviews": [{
-        "reviewerName": "Derek Anderson",
         "date": "2025-02-23",
         "rating": 3,
         "comment": "Best hotel experience I've had in a while!"
       },
       {
-        "reviewerName": "Eugene Walton",
         "date": "2024-11-04",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
@@ -884,13 +802,11 @@ const statesData = {
       "star": 5,
       "city": "Sonipat",
       "reviews": [{
-        "reviewerName": "Marc Hart",
         "date": "2024-11-09",
         "rating": 4.5,
         "comment": "Loved the pool and the food!"
       },
       {
-        "reviewerName": "Daniel Baker",
         "date": "2025-04-20",
         "rating": 3,
         "comment": "My go-to hotel whenever I'm in town."
@@ -905,13 +821,11 @@ const statesData = {
       "star": 5,
       "city": "Panipat",
       "reviews": [{
-        "reviewerName": "Benjamin Sanchez",
         "date": "2024-12-15",
         "rating": 4.5,
         "comment": "Could improve the check-in process."
       },
       {
-        "reviewerName": "Roy Warner",
         "date": "2025-02-16",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
@@ -926,13 +840,11 @@ const statesData = {
       "star": 4,
       "city": "Faridabad",
       "reviews": [{
-        "reviewerName": "Benjamin Sanchez",
         "date": "2024-12-15",
         "rating": 4.5,
         "comment": "Could improve the check-in process."
       },
       {
-        "reviewerName": "Roy Warner",
         "date": "2025-02-16",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
@@ -947,13 +859,11 @@ const statesData = {
       "star": 4,
       "city": "Ambala",
       "reviews": [{
-        "reviewerName": "Dr. Kendra Contreras",
         "date": "2025-02-05",
         "rating": 4.5,
         "comment": "Best hotel experience I've had in a while!"
       },
       {
-        "reviewerName": "Matthew Mcmillan",
         "date": "2024-11-16",
         "rating": 4,
         "comment": "Luxurious experience but food could've been better."
@@ -970,13 +880,11 @@ const statesData = {
       "star": 5,
       "city": "Shimla",
       "reviews": [{
-        "reviewerName": "Steve Newton",
         "date": "2024-11-20",
         "rating": 4,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Larry Robbins",
         "date": "2024-11-29",
         "rating": 3,
         "comment": "Impeccable service and a gorgeous view."
@@ -991,13 +899,11 @@ const statesData = {
       "star": 5,
       "city": "Manali",
       "reviews": [{
-        "reviewerName": "Sarah Wagner",
         "date": "2024-12-08",
         "rating": 5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Sarah Davis",
         "date": "2025-01-11",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
@@ -1012,13 +918,11 @@ const statesData = {
       "star": 4,
       "city": "Shimla",
       "reviews": [{
-        "reviewerName": "Amanda Cook",
         "date": "2024-11-15",
         "rating": 5,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Deborah Figueroa",
         "date": "2025-02-05",
         "rating": 4,
         "comment": "Service was slow but the room was nice."
@@ -1033,13 +937,11 @@ const statesData = {
       "star": 4,
       "city": "Dharamshala",
       "reviews": [{
-        "reviewerName": "Kristina Rodriguez",
         "date": "2025-04-10",
         "rating": 5,
         "comment": "Great location. Would visit again."
       },
       {
-        "reviewerName": "Brittany Johnson",
         "date": "2024-12-31",
         "rating": 4,
         "comment": "Best hotel experience I've had in a while!"
@@ -1056,13 +958,11 @@ const statesData = {
       "star": 7,
       "city": "Ranchi",
       "reviews": [{
-        "reviewerName": "Brittany Anderson",
         "date": "2024-12-19",
         "rating": 5,
         "comment": "Room service was prompt and friendly."
       },
       {
-        "reviewerName": "Timothy Stanton",
         "date": "2024-10-28",
         "rating": 5,
         "comment": "Highly recommended for families."
@@ -1077,13 +977,11 @@ const statesData = {
       "star": 5,
       "city": "Jamshedpur",
       "reviews": [{
-        "reviewerName": "Christine Wright",
         "date": "2024-11-09",
         "rating": 5,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Justin Baxter",
         "date": "2025-02-18",
         "rating": 4,
         "comment": "Everything was perfect. Worth every penny."
@@ -1098,13 +996,11 @@ const statesData = {
       "star": 5,
       "city": "Bokaro Steel City",
       "reviews": [{
-        "reviewerName": "Tammy Young",
         "date": "2024-11-21",
         "rating": 3,
         "comment": "The spa services were top-notch!"
       },
       {
-        "reviewerName": "Rita Keith",
         "date": "2024-10-25",
         "rating": 3,
         "comment": "Excellent amenities and courteous staff."
@@ -1119,13 +1015,11 @@ const statesData = {
       "star": 5,
       "city": "Deoghar",
       "reviews": [{
-        "reviewerName": "Tim Patton",
         "date": "2025-01-08",
         "rating": 4,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Sharon Cochran",
         "date": "2024-12-11",
         "rating": 4,
         "comment": "Absolutely stunning hotel with exceptional service!"
@@ -1140,13 +1034,11 @@ const statesData = {
       "star": 4,
       "city": "Ranchi",
       "reviews": [{
-        "reviewerName": "Michael Reyes",
         "date": "2024-10-28",
         "rating": 3,
         "comment": "Luxurious experience but food could've been better."
       },
       {
-        "reviewerName": "Courtney Velasquez",
         "date": "2025-01-18",
         "rating": 4,
         "comment": "Impeccable service and a gorgeous view."
@@ -1161,13 +1053,11 @@ const statesData = {
       "star": 4,
       "city": "Dhanbad",
       "reviews": [{
-        "reviewerName": "Robert Savage",
         "date": "2024-12-03",
         "rating": 3,
         "comment": "The spa services were top-notch!"
       },
       {
-        "reviewerName": "Corey Murphy",
         "date": "2025-04-06",
         "rating": 3,
         "comment": "Highly recommended for families."
@@ -1184,13 +1074,11 @@ const statesData = {
       "star": 7,
       "city": "Bengaluru",
       "reviews": [{
-        "reviewerName": "Raymond Bell",
         "date": "2025-01-27",
         "rating": 4,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "William Herrera",
         "date": "2025-04-21",
         "rating": 5,
         "comment": "Great location. Would visit again."
@@ -1205,7 +1093,6 @@ const statesData = {
       "star": 7,
       "city": "Mysore",
       "reviews": [{
-        "reviewerName": "Shawn Green",
         "date": "2025-02-10",
         "rating": 4,
         "comment": "Excellent amenities and courteous staff."
@@ -1220,7 +1107,6 @@ const statesData = {
       "star": 5,
       "city": "Hampi",
       "reviews": [{
-        "reviewerName": "Deborah Rodriguez",
         "date": "2025-01-13",
         "rating": 5,
         "comment": "Everything was perfect. Worth every penny."
@@ -1235,13 +1121,11 @@ const statesData = {
       "star": 5,
       "city": "Mangalore",
       "reviews": [{
-        "reviewerName": "Allison Hill",
         "date": "2024-12-03",
         "rating": 3,
         "comment": "Absolutely stunning hotel with exceptional service!"
       },
       {
-        "reviewerName": "Brian Yang",
         "date": "2025-02-03",
         "rating": 4.5,
         "comment": "Everything was perfect. Worth every penny."
@@ -1256,13 +1140,11 @@ const statesData = {
       "star": 5,
       "city": "Davangere",
       "reviews": [{
-        "reviewerName": "Javier Johnson",
         "date": "2024-12-02",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Lance Hoffman",
         "date": "2025-03-09",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
@@ -1277,13 +1159,11 @@ const statesData = {
       "star": 5,
       "city": "Hubli-Dharwad",
       "reviews": [{
-        "reviewerName": "Kimberly Robinson",
         "date": "2025-02-12",
         "rating": 3,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Sean Blake",
         "date": "2024-11-21",
         "rating": 5,
         "comment": "Luxurious experience but food could've been better."
@@ -1298,13 +1178,11 @@ const statesData = {
       "star": 4,
       "city": "Bengaluru",
       "reviews": [{
-        "reviewerName": "Gina Moore",
         "date": "2025-03-18",
         "rating": 3,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Brandon Davis",
         "date": "2025-04-03",
         "rating": 4,
         "comment": "Everything was perfect. Worth every penny."
@@ -1319,13 +1197,11 @@ const statesData = {
       "star": 4,
       "city": "Mysore",
       "reviews": [{
-        "reviewerName": "Dennis Williams",
         "date": "2025-01-18",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Valerie Gray",
         "date": "2025-02-05",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
@@ -1340,13 +1216,11 @@ const statesData = {
       "star": 4,
       "city": "Mangalore",
       "reviews": [{
-        "reviewerName": "Mark Mcclure",
         "date": "2024-12-30",
         "rating": 5,
         "comment": "Everything was perfect. Worth every penny."
       },
       {
-        "reviewerName": "Michele Williams",
         "date": "2024-12-04",
         "rating": 5,
         "comment": "Excellent amenities and courteous staff."
@@ -1363,13 +1237,11 @@ const statesData = {
       "star": 7,
       "city": "Kochi",
       "reviews": [{
-        "reviewerName": "Victoria Wyatt",
         "date": "2025-04-07",
         "rating": 4.5,
         "comment": "Absolutely stunning hotel with exceptional service!"
       },
       {
-        "reviewerName": "Donald Reid",
         "date": "2024-12-30",
         "rating": 4,
         "comment": "Location was perfect for sightseeing."
@@ -1384,13 +1256,11 @@ const statesData = {
       "star": 5,
       "city": "Thrissur",
       "reviews": [{
-        "reviewerName": "Henry Santiago",
         "date": "2025-03-06",
         "rating": 4.5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Maria Lynch",
         "date": "2024-11-23",
         "rating": 4,
         "comment": "Great location. Would visit again."
@@ -1405,13 +1275,11 @@ const statesData = {
       "star": 5,
       "city": "Kozhikode",
       "reviews": [{
-        "reviewerName": "Danielle Ford",
         "date": "2024-12-12",
         "rating": 4.5,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Margaret Hawkins DDS",
         "date": "2025-04-02",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
@@ -1426,13 +1294,11 @@ const statesData = {
       "star": 5,
       "city": "Munnar",
       "reviews": [{
-        "reviewerName": "Amy Underwood",
         "date": "2025-03-26",
         "rating": 3,
         "comment": "Room service was prompt and friendly."
       },
       {
-        "reviewerName": "Derek Clark",
         "date": "2025-02-08",
         "rating": 4.5,
         "comment": "My go-to hotel whenever I'm in town."
@@ -1447,13 +1313,11 @@ const statesData = {
       "star": 4,
       "city": "Kochi",
       "reviews": [{
-        "reviewerName": "Emily Rios",
         "date": "2025-01-05",
         "rating": 4.5,
         "comment": "Luxurious experience but food could've been better."
       },
       {
-        "reviewerName": "Maria Thomas",
         "date": "2024-11-17",
         "rating": 5,
         "comment": "Peaceful environment and cozy rooms."
@@ -1468,13 +1332,11 @@ const statesData = {
       "star": 4,
       "city": "Wayanad",
       "reviews": [{
-        "reviewerName": "Justin Baker",
         "date": "2025-02-11",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
       },
       {
-        "reviewerName": "Kevin Cox",
         "date": "2024-11-16",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
@@ -1491,13 +1353,11 @@ const statesData = {
       "star": 7,
       "city": "Gwalior",
       "reviews": [{
-        "reviewerName": "Ann Williams",
         "date": "2024-11-11",
         "rating": 4.5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Christopher Becker",
         "date": "2025-02-13",
         "rating": 4.5,
         "comment": "Excellent amenities and courteous staff."
@@ -1512,13 +1372,11 @@ const statesData = {
       "star": 5,
       "city": "Indore",
       "reviews": [{
-        "reviewerName": "James Ferrell",
         "date": "2025-01-31",
         "rating": 4,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Juan Dunlap",
         "date": "2025-03-02",
         "rating": 3,
         "comment": "Everything was perfect. Worth every penny."
@@ -1533,13 +1391,11 @@ const statesData = {
       "star": 5,
       "city": "Sanchi",
       "reviews": [{
-        "reviewerName": "Melanie Herrera",
         "date": "2024-12-11",
         "rating": 4.5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Gina Carter",
         "date": "2024-11-20",
         "rating": 4,
         "comment": "Nice place but rooms were a bit small."
@@ -1554,13 +1410,11 @@ const statesData = {
       "star": 5,
       "city": "Bhopal",
       "reviews": [{
-        "reviewerName": "Troy Liu",
         "date": "2024-12-11",
         "rating": 5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Pamela Romero",
         "date": "2024-11-10",
         "rating": 5,
         "comment": "Room service was prompt and friendly."
@@ -1575,13 +1429,11 @@ const statesData = {
       "star": 4,
       "city": "Gwalior",
       "reviews": [{
-        "reviewerName": "Elizabeth Fowler",
         "date": "2025-02-16",
         "rating": 4,
         "comment": "Room service was prompt and friendly."
       },
       {
-        "reviewerName": "James Martin",
         "date": "2025-03-21",
         "rating": 4.5,
         "comment": "Great location. Would visit again."
@@ -1596,13 +1448,11 @@ const statesData = {
       "star": 4,
       "city": "Ujjain",
       "reviews": [{
-        "reviewerName": "Tamara George",
         "date": "2025-01-23",
         "rating": 4.5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Timothy Koch",
         "date": "2025-03-31",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
@@ -1619,13 +1469,11 @@ const statesData = {
       "star": 7,
       "city": "Mumbai",
       "reviews": [{
-        "reviewerName": "Cynthia Allen",
         "date": "2025-02-08",
         "rating": 4,
         "comment": "Loved the pool and the food!"
       },
       {
-        "reviewerName": "Angelica Tucker",
         "date": "2024-11-03",
         "rating": 5,
         "comment": "The ambiance is absolutely delightful."
@@ -1640,13 +1488,11 @@ const statesData = {
       "star": 7,
       "city": "Pune",
       "reviews": [{
-        "reviewerName": "Kim Martinez",
         "date": "2025-02-26",
         "rating": 4.5,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Joshua Baker",
         "date": "2025-04-08",
         "rating": 4,
         "comment": "The spa services were top-notch!"
@@ -1661,13 +1507,11 @@ const statesData = {
       "star": 5,
       "city": "Nagpur",
       "reviews": [{
-        "reviewerName": "Tracey Hickman",
         "date": "2025-03-16",
         "rating": 3,
         "comment": "Everything was perfect. Worth every penny."
       },
       {
-        "reviewerName": "Christina Collins",
         "date": "2025-02-28",
         "rating": 3,
         "comment": "The spa services were top-notch!"
@@ -1682,13 +1526,11 @@ const statesData = {
       "star": 5,
       "city": "Mumbai",
       "reviews": [{
-        "reviewerName": "Jessica Holmes",
         "date": "2024-11-13",
         "rating": 5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Austin Smith",
         "date": "2025-02-05",
         "rating": 3,
         "comment": "Great location. Would visit again."
@@ -1703,13 +1545,11 @@ const statesData = {
       "star": 5,
       "city": "Pune",
       "reviews": [{
-        "reviewerName": "Daniel Jones",
         "date": "2025-02-20",
         "rating": 4.5,
         "comment": "Great location. Would visit again."
       },
       {
-        "reviewerName": "Austin Johnson",
         "date": "2024-12-24",
         "rating": 5,
         "comment": "The ambiance is absolutely delightful."
@@ -1724,13 +1564,11 @@ const statesData = {
       "star": 5,
       "city": "Aurangabad",
       "reviews": [{
-        "reviewerName": "David Caldwell",
         "date": "2024-12-01",
         "rating": 5,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Miranda Khan",
         "date": "2025-02-09",
         "rating": 4.5,
         "comment": "Very clean and well-maintained hotel."
@@ -1745,13 +1583,11 @@ const statesData = {
       "star": 4,
       "city": "Nashik",
       "reviews": [{
-        "reviewerName": "Richard Aguirre",
         "date": "2024-11-26",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Matthew Gomez",
         "date": "2025-01-08",
         "rating": 4.5,
         "comment": "Excellent amenities and courteous staff."
@@ -1766,13 +1602,11 @@ const statesData = {
       "star": 4,
       "city": "Matheran",
       "reviews": [{
-        "reviewerName": "Nicholas Nunez",
         "date": "2025-02-23",
         "rating": 5,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "James Morgan",
         "date": "2025-04-06",
         "rating": 5,
         "comment": "Room service was prompt and friendly."
@@ -1787,13 +1621,11 @@ const statesData = {
       "star": 4,
       "city": "Malvan",
       "reviews": [{
-        "reviewerName": "Corey Herrera",
         "date": "2024-11-17",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Donald Wright",
         "date": "2025-04-18",
         "rating": 5,
         "comment": "Impeccable service and a gorgeous view."
@@ -1810,13 +1642,11 @@ const statesData = {
       "star": 5,
       "city": "Imphal",
       "reviews": [{
-        "reviewerName": "Robert Chase",
         "date": "2024-11-09",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Zachary Huff",
         "date": "2024-11-08",
         "rating": 4,
         "comment": "Loved the pool and the food!"
@@ -1831,13 +1661,11 @@ const statesData = {
       "star": 5,
       "city": "Churachandpur", 
       "reviews": [{
-        "reviewerName": "Sarah Martin",
         "date": "2025-01-23",
         "rating": 5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Dr. Steven Martin",
         "date": "2024-10-21",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
@@ -1852,13 +1680,11 @@ const statesData = {
       "star": 4,
       "city": "Imphal",
       "reviews": [{
-        "reviewerName": "Mrs. Rachel Gibson",
         "date": "2025-01-11",
         "rating": 5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Monica Logan",
         "date": "2025-02-26",
         "rating": 5,
         "comment": "Highly recommended for families."
@@ -1873,13 +1699,11 @@ const statesData = {
       "star": 4,
       "city": "Ukhrul",
       "reviews": [{
-        "reviewerName": "Brittney Phillips",
         "date": "2024-11-01",
         "rating": 4.5,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Kimberly Adkins",
         "date": "2024-11-01",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
@@ -1896,13 +1720,11 @@ const statesData = {
       "star": 5,
       "city": "Shillong",
       "reviews": [{
-        "reviewerName": "John Calhoun",
         "date": "2025-02-01",
         "rating": 4.5,
         "comment": "The spa services were top-notch!"
       },
       {
-        "reviewerName": "Tyler Miller",
         "date": "2024-11-26",
         "rating": 3,
         "comment": "Best hotel experience I've had in a while!"
@@ -1917,13 +1739,11 @@ const statesData = {
       "star": 5,
       "city": "Cherrapunji",
       "reviews": [{
-        "reviewerName": "Barry Hensley",
         "date": "2025-01-07",
         "rating": 5,
         "comment": "Loved the pool and the food!"
       },
       {
-        "reviewerName": "Steve Sanchez",
         "date": "2025-02-13",
         "rating": 5,
         "comment": "Absolutely stunning hotel with exceptional service!"
@@ -1938,13 +1758,11 @@ const statesData = {
       "star": 4,
       "city": "Shillong",
       "reviews": [{
-        "reviewerName": "Bradley Sandoval",
         "date": "2025-02-07",
         "rating": 4.5,
         "comment": "Highly recommended for families."
       },
       {
-        "reviewerName": "Taylor Harris",
         "date": "2025-03-09",
         "rating": 4,
         "comment": "Highly recommended for families."
@@ -1959,13 +1777,11 @@ const statesData = {
       "star": 4,
       "city": "Mawlynnong",
       "reviews": [{
-        "reviewerName": "Derek Anderson",
         "date": "2025-02-23",
         "rating": 3,
         "comment": "Best hotel experience I've had in a while!"
       },
       {
-        "reviewerName": "Eugene Walton",
         "date": "2024-11-04",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
@@ -1982,13 +1798,11 @@ const statesData = {
       "star": 5,
       "city": "Aizawl",
       "reviews": [{
-        "reviewerName": "Marc Hart",
         "date": "2024-11-09",
         "rating": 4.5,
         "comment": "Loved the pool and the food!"
       },
       {
-        "reviewerName": "Daniel Baker",
         "date": "2025-04-20",
         "rating": 3,
         "comment": "My go-to hotel whenever I'm in town."
@@ -2003,13 +1817,11 @@ const statesData = {
       "star": 5,
       "city": "Champhai",
       "reviews": [{
-        "reviewerName": "Benjamin Sanchez",
         "date": "2024-12-15",
         "rating": 4.5,
         "comment": "Could improve the check-in process."
       },
       {
-        "reviewerName": "Roy Warner",
         "date": "2025-02-16",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
@@ -2024,13 +1836,11 @@ const statesData = {
       "star": 4,
       "city": "Aizawl",
       "reviews": [{
-        "reviewerName": "Dr. Kendra Contreras",
         "date": "2025-02-05",
         "rating": 4.5,
         "comment": "Best hotel experience I've had in a while!"
       },
       {
-        "reviewerName": "Matthew Mcmillan",
         "date": "2024-11-16",
         "rating": 4,
         "comment": "Luxurious experience but food could've been better."
@@ -2045,13 +1855,11 @@ const statesData = {
       "star": 4,
       "city": "Lunglei",
       "reviews": [{
-        "reviewerName": "Steve Newton",
         "date": "2024-11-20",
         "rating": 4,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Larry Robbins",
         "date": "2024-11-29",
         "rating": 3,
         "comment": "Impeccable service and a gorgeous view."
@@ -2068,13 +1876,11 @@ const statesData = {
       "star": 5,
       "city": "Kohima",
       "reviews": [{
-        "reviewerName": "Sarah Wagner",
         "date": "2024-12-08",
         "rating": 5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Sarah Davis",
         "date": "2025-01-11",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
@@ -2089,13 +1895,11 @@ const statesData = {
       "star": 5,
       "city": "Mokokchung",
       "reviews": [{
-        "reviewerName": "Amanda Cook",
         "date": "2024-11-15",
         "rating": 5,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Deborah Figueroa",
         "date": "2025-02-05",
         "rating": 4,
         "comment": "Service was slow but the room was nice."
@@ -2110,13 +1914,11 @@ const statesData = {
       "star": 4,
       "city": "Kohima",
       "reviews": [{
-        "reviewerName": "Kristina Rodriguez",
         "date": "2025-04-10",
         "rating": 5,
         "comment": "Great location. Would visit again."
       },
       {
-        "reviewerName": "Brittany Johnson",
         "date": "2024-12-31",
         "rating": 4,
         "comment": "Best hotel experience I've had in a while!"
@@ -2131,13 +1933,11 @@ const statesData = {
       "star": 4,
       "city": "Dimapur",
       "reviews": [{
-        "reviewerName": "Brittany Anderson",
         "date": "2024-12-19",
         "rating": 5,
         "comment": "Room service was prompt and friendly."
       },
       {
-        "reviewerName": "Timothy Stanton",
         "date": "2024-10-28",
         "rating": 5,
         "comment": "Highly recommended for families."
@@ -2154,13 +1954,11 @@ const statesData = {
       "star": 7,
       "city": "Bhubaneswar",
       "reviews": [{
-        "reviewerName": "Christine Wright",
         "date": "2024-11-09",
         "rating": 5,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Justin Baxter",
         "date": "2025-02-18",
         "rating": 4,
         "comment": "Everything was perfect. Worth every penny."
@@ -2175,13 +1973,11 @@ const statesData = {
       "star": 5,
       "city": "Konark",
       "reviews": [{
-        "reviewerName": "Tammy Young",
         "date": "2024-11-21",
         "rating": 3,
         "comment": "The spa services were top-notch!"
       },
       {
-        "reviewerName": "Rita Keith",
         "date": "2024-10-25",
         "rating": 3,
         "comment": "Excellent amenities and courteous staff."
@@ -2196,13 +1992,11 @@ const statesData = {
       "star": 5,
       "city": "Bhubaneswar",
       "reviews": [{
-        "reviewerName": "Tim Patton",
         "date": "2025-01-08",
         "rating": 4,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Sharon Cochran",
         "date": "2024-12-11",
         "rating": 4,
         "comment": "Absolutely stunning hotel with exceptional service!"
@@ -2217,13 +2011,11 @@ const statesData = {
       "star": 5,
       "city": "Puri",
       "reviews": [{
-        "reviewerName": "Michael Reyes",
         "date": "2024-10-28",
         "rating": 3,
         "comment": "Luxurious experience but food could've been better."
       },
       {
-        "reviewerName": "Courtney Velasquez",
         "date": "2025-01-18",
         "rating": 4,
         "comment": "Impeccable service and a gorgeous view."
@@ -2238,13 +2030,11 @@ const statesData = {
       "star": 4,
       "city": "Cuttack",
       "reviews": [{
-        "reviewerName": "Robert Savage",
         "date": "2024-12-03",
         "rating": 3,
         "comment": "The spa services were top-notch!"
       },
       {
-        "reviewerName": "Corey Murphy",
         "date": "2025-04-06",
         "rating": 3,
         "comment": "Highly recommended for families."
@@ -2259,13 +2049,11 @@ const statesData = {
       "star": 4,
       "city": "Sambalpur",
       "reviews": [{
-        "reviewerName": "Raymond Bell",
         "date": "2025-01-27",
         "rating": 4,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "William Herrera",
         "date": "2025-04-21",
         "rating": 5,
         "comment": "Great location. Would visit again."
@@ -2282,13 +2070,11 @@ const statesData = {
       "star": 7,
       "city": "Amritsar",
       "reviews": [{
-        "reviewerName": "Shawn Green",
         "date": "2025-02-10",
         "rating": 4,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Deborah Rodriguez",
         "date": "2025-01-13",
         "rating": 5,
         "comment": "Everything was perfect. Worth every penny."
@@ -2303,13 +2089,11 @@ const statesData = {
       "star": 5,
       "city": "Chandigarh",
       "reviews": [{
-        "reviewerName": "Allison Hill",
         "date": "2024-12-03",
         "rating": 3,
         "comment": "Absolutely stunning hotel with exceptional service!"
       },
       {
-        "reviewerName": "Brian Yang",
         "date": "2025-02-03",
         "rating": 4.5,
         "comment": "Everything was perfect. Worth every penny."
@@ -2324,13 +2108,11 @@ const statesData = {
       "star": 5,
       "city": "Patiala",
       "reviews": [{
-        "reviewerName": "Javier Johnson",
         "date": "2024-12-02",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Lance Hoffman",
         "date": "2025-03-09",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
@@ -2345,13 +2127,11 @@ const statesData = {
       "star": 5,
       "city": "Jalandhar",
       "reviews": [{
-        "reviewerName": "Kimberly Robinson",
         "date": "2025-02-12",
         "rating": 3,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Sean Blake",
         "date": "2024-11-21",
         "rating": 5,
         "comment": "Luxurious experience but food could've been better."
@@ -2366,13 +2146,11 @@ const statesData = {
       "star": 4,
       "city": "Ludhiana",
       "reviews": [{
-        "reviewerName": "Gina Moore",
         "date": "2025-03-18",
         "rating": 3,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Brandon Davis",
         "date": "2025-04-03",
         "rating": 4,
         "comment": "Everything was perfect. Worth every penny."
@@ -2387,13 +2165,11 @@ const statesData = {
       "star": 4,
       "city": "Amritsar",
       "reviews": [{
-        "reviewerName": "Dennis Williams",
         "date": "2025-01-18",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Valerie Gray",
         "date": "2025-02-05",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
@@ -2410,13 +2186,11 @@ const statesData = {
       "star": 7,
       "city": "Udaipur",
       "reviews": [{
-        "reviewerName": "Mark Mcclure",
         "date": "2024-12-30",
         "rating": 5,
         "comment": "Everything was perfect. Worth every penny."
       },
       {
-        "reviewerName": "Michele Williams",
         "date": "2024-12-04",
         "rating": 5,
         "comment": "Excellent amenities and courteous staff."
@@ -2431,13 +2205,11 @@ const statesData = {
       "star": 5,
       "city": "Jaipur",
       "reviews": [{
-        "reviewerName": "Victoria Wyatt",
         "date": "2025-04-07",
         "rating": 4.5,
         "comment": "Absolutely stunning hotel with exceptional service!"
       },
       {
-        "reviewerName": "Donald Reid",
         "date": "2024-12-30",
         "rating": 4,
         "comment": "Location was perfect for sightseeing."
@@ -2452,13 +2224,11 @@ const statesData = {
       "star": 5,
       "city": "Jaisalmer",
       "reviews": [{
-        "reviewerName": "Henry Santiago",
         "date": "2025-03-06",
         "rating": 4.5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Maria Lynch",
         "date": "2024-11-23",
         "rating": 4,
         "comment": "Great location. Would visit again."
@@ -2473,13 +2243,11 @@ const statesData = {
       "star": 5,
       "city": "Jodhpur",
       "reviews": [{
-        "reviewerName": "Danielle Ford",
         "date": "2024-12-12",
         "rating": 4.5,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Margaret Hawkins DDS",
         "date": "2025-04-02",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
@@ -2494,13 +2262,11 @@ const statesData = {
       "star": 4,
       "city": "Bikaner",
       "reviews": [{
-        "reviewerName": "Amy Underwood",
         "date": "2025-03-26",
         "rating": 3,
         "comment": "Room service was prompt and friendly."
       },
       {
-        "reviewerName": "Derek Clark",
         "date": "2025-02-08",
         "rating": 4.5,
         "comment": "My go-to hotel whenever I'm in town."
@@ -2515,13 +2281,11 @@ const statesData = {
       "star": 4,
       "city": "Chittorgarh",
       "reviews": [{
-        "reviewerName": "Emily Rios",
         "date": "2025-01-05",
         "rating": 4.5,
         "comment": "Luxurious experience but food could've been better."
       },
       {
-        "reviewerName": "Maria Thomas",
         "date": "2024-11-17",
         "rating": 5,
         "comment": "Peaceful environment and cozy rooms."
@@ -2538,13 +2302,11 @@ const statesData = {
       "star": 5,
       "city": "Gangtok",
       "reviews": [{
-        "reviewerName": "Justin Baker",
         "date": "2025-02-11",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
       },
       {
-        "reviewerName": "Kevin Cox",
         "date": "2024-11-16",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
@@ -2559,13 +2321,11 @@ const statesData = {
       "star": 5,
       "city": "Pelling",
       "reviews": [{
-        "reviewerName": "Ann Williams",
         "date": "2024-11-11",
         "rating": 4.5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Christopher Becker",
         "date": "2025-02-13",
         "rating": 4.5,
         "comment": "Excellent amenities and courteous staff."
@@ -2580,13 +2340,11 @@ const statesData = {
       "star": 4,
       "city": "Lachung",
       "reviews": [{
-        "reviewerName": "James Ferrell",
         "date": "2025-01-31",
         "rating": 4,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Juan Dunlap",
         "date": "2025-03-02",
         "rating": 3,
         "comment": "Everything was perfect. Worth every penny."
@@ -2601,13 +2359,11 @@ const statesData = {
       "star": 4,
       "city": "Gangtok",
       "reviews": [{
-        "reviewerName": "Melanie Herrera",
         "date": "2024-12-11",
         "rating": 4.5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Gina Carter",
         "date": "2024-11-20",
         "rating": 4,
         "comment": "Nice place but rooms were a bit small."
@@ -2624,13 +2380,11 @@ const statesData = {
       "star": 7,
       "city": "Chennai",
       "reviews": [{
-        "reviewerName": "Troy Liu",
         "date": "2024-12-11",
         "rating": 5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Pamela Romero",
         "date": "2024-11-10",
         "rating": 5,
         "comment": "Room service was prompt and friendly."
@@ -2645,13 +2399,11 @@ const statesData = {
       "star": 7,
       "city": "Coimbatore",
       "reviews": [{
-        "reviewerName": "Elizabeth Fowler",
         "date": "2025-02-16",
         "rating": 4,
         "comment": "Room service was prompt and friendly."
       },
       {
-        "reviewerName": "James Martin",
         "date": "2025-03-21",
         "rating": 4.5,
         "comment": "Great location. Would visit again."
@@ -2666,13 +2418,11 @@ const statesData = {
       "star": 5,
       "city": "Thanjavur",
       "reviews": [{
-        "reviewerName": "Tamara George",
         "date": "2025-01-23",
         "rating": 4.5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Timothy Koch",
         "date": "2025-03-31",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
@@ -2687,13 +2437,11 @@ const statesData = {
       "star": 5,
       "city": "Tiruchirappalli",
       "reviews": [{
-        "reviewerName": "Cynthia Allen",
         "date": "2025-02-08",
         "rating": 4,
         "comment": "Loved the pool and the food!"
       },
       {
-        "reviewerName": "Angelica Tucker",
         "date": "2024-11-03",
         "rating": 5,
         "comment": "The ambiance is absolutely delightful."
@@ -2708,13 +2456,11 @@ const statesData = {
       "star": 5,
       "city": "Madurai",
       "reviews": [{
-        "reviewerName": "Kim Martinez",
         "date": "2025-02-26",
         "rating": 4.5,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Joshua Baker",
         "date": "2025-04-08",
         "rating": 4,
         "comment": "The spa services were top-notch!"
@@ -2729,13 +2475,11 @@ const statesData = {
       "star": 5,
       "city": "Ooty",
       "reviews": [{
-        "reviewerName": "Tracey Hickman",
         "date": "2025-03-16",
         "rating": 3,
         "comment": "Everything was perfect. Worth every penny."
       },
       {
-        "reviewerName": "Christina Collins",
         "date": "2025-02-28",
         "rating": 3,
         "comment": "The spa services were top-notch!"
@@ -2750,13 +2494,11 @@ const statesData = {
       "star": 4,
       "city": "Tirunelveli",
       "reviews": [{
-        "reviewerName": "Jessica Holmes",
         "date": "2024-11-13",
         "rating": 5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Austin Smith",
         "date": "2025-02-05",
         "rating": 3,
         "comment": "Great location. Would visit again."
@@ -2771,13 +2513,11 @@ const statesData = {
       "star": 4,
       "city": "Kanchipuram",
       "reviews": [{
-        "reviewerName": "Daniel Jones",
         "date": "2025-02-20",
         "rating": 4.5,
         "comment": "Great location. Would visit again."
       },
       {
-        "reviewerName": "Austin Johnson",
         "date": "2024-12-24",
         "rating": 5,
         "comment": "The ambiance is absolutely delightful."
@@ -2792,13 +2532,11 @@ const statesData = {
       "star": 4,
       "city": "Chennai",
       "reviews": [{
-        "reviewerName": "David Caldwell",
         "date": "2024-12-01",
         "rating": 5,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Miranda Khan",
         "date": "2025-02-09",
         "rating": 4.5,
         "comment": "Very clean and well-maintained hotel."
@@ -2815,13 +2553,11 @@ const statesData = {
       "star": 7,
       "city": "Hyderabad",
       "reviews": [{
-        "reviewerName": "Richard Aguirre",
         "date": "2024-11-26",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Matthew Gomez",
         "date": "2025-01-08",
         "rating": 4.5,
         "comment": "Excellent amenities and courteous staff."
@@ -2836,13 +2572,11 @@ const statesData = {
       "star": 7,
       "city": "Warangal",
       "reviews": [{
-        "reviewerName": "Nicholas Nunez",
         "date": "2025-02-23",
         "rating": 5,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "James Morgan",
         "date": "2025-04-06",
         "rating": 5,
         "comment": "Room service was prompt and friendly."
@@ -2857,13 +2591,11 @@ const statesData = {
       "star": 5,
       "city": "Nizamabad",
       "reviews": [{
-        "reviewerName": "Corey Herrera",
         "date": "2024-11-17",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Donald Wright",
         "date": "2025-04-18",
         "rating": 5,
         "comment": "Impeccable service and a gorgeous view."
@@ -2878,13 +2610,11 @@ const statesData = {
       "star": 5,
       "city": "Nalgonda",
       "reviews": [{
-        "reviewerName": "Robert Chase",
         "date": "2024-11-09",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Zachary Huff",
         "date": "2024-11-08",
         "rating": 4,
         "comment": "Loved the pool and the food!"
@@ -2899,13 +2629,11 @@ const statesData = {
       "star": 5,
       "city": "Khammam",
       "reviews": [{
-        "reviewerName": "Sarah Martin",
         "date": "2025-01-23",
         "rating": 5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Dr. Steven Martin",
         "date": "2024-10-21",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
@@ -2920,13 +2648,11 @@ const statesData = {
       "star": 5,
       "city": "Karimnagar",
       "reviews": [{
-        "reviewerName": "Mrs. Rachel Gibson",
         "date": "2025-01-11",
         "rating": 5,
         "comment": "My go-to hotel whenever I'm in town."
       },
       {
-        "reviewerName": "Monica Logan",
         "date": "2025-02-26",
         "rating": 5,
         "comment": "Highly recommended for families."
@@ -2941,13 +2667,11 @@ const statesData = {
       "star": 4,
       "city": "Secunderabad",
       "reviews": [{
-        "reviewerName": "Brittney Phillips",
         "date": "2024-11-01",
         "rating": 4.5,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Kimberly Adkins",
         "date": "2024-11-01",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
@@ -2962,13 +2686,11 @@ const statesData = {
       "star": 4,
       "city": "Warangal",
       "reviews": [{
-        "reviewerName": "John Calhoun",
         "date": "2025-02-01",
         "rating": 4.5,
         "comment": "The spa services were top-notch!"
       },
       {
-        "reviewerName": "Tyler Miller",
         "date": "2024-11-26",
         "rating": 3,
         "comment": "Best hotel experience I've had in a while!"
@@ -2983,13 +2705,11 @@ const statesData = {
       "star": 4,
       "city": "Hyderabad",
       "reviews": [{
-        "reviewerName": "Barry Hensley",
         "date": "2025-01-07",
         "rating": 5,
         "comment": "Loved the pool and the food!"
       },
       {
-        "reviewerName": "Steve Sanchez",
         "date": "2025-02-13",
         "rating": 5,
         "comment": "Absolutely stunning hotel with exceptional service!"
@@ -3006,13 +2726,11 @@ const statesData = {
       "star": 5,
       "city": "Agartala",
       "reviews": [{
-        "reviewerName": "Bradley Sandoval",
         "date": "2025-02-07",
         "rating": 4.5,
         "comment": "Highly recommended for families."
       },
       {
-        "reviewerName": "Taylor Harris",
         "date": "2025-03-09",
         "rating": 4,
         "comment": "Highly recommended for families."
@@ -3027,13 +2745,11 @@ const statesData = {
       "star": 5,
       "city": "Udaipur",
       "reviews": [{
-        "reviewerName": "Derek Anderson",
         "date": "2025-02-23",
         "rating": 3,
         "comment": "Best hotel experience I've had in a while!"
       },
       {
-        "reviewerName": "Eugene Walton",
         "date": "2024-11-04",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
@@ -3048,13 +2764,11 @@ const statesData = {
       "star": 4,
       "city": "Kailashahar",
       "reviews": [{
-        "reviewerName": "Marc Hart",
         "date": "2024-11-09",
         "rating": 4.5,
         "comment": "Loved the pool and the food!"
       },
       {
-        "reviewerName": "Daniel Baker",
         "date": "2025-04-20",
         "rating": 3,
         "comment": "My go-to hotel whenever I'm in town."
@@ -3069,13 +2783,11 @@ const statesData = {
       "star": 4,
       "city": "Agartala",
       "reviews": [{
-        "reviewerName": "Benjamin Sanchez",
         "date": "2024-12-15",
         "rating": 4.5,
         "comment": "Could improve the check-in process."
       },
       {
-        "reviewerName": "Roy Warner",
         "date": "2025-02-16",
         "rating": 3,
         "comment": "Nice place but rooms were a bit small."
@@ -3092,13 +2804,11 @@ const statesData = {
       "star": 7,
       "city": "Varanasi",
       "reviews": [{
-        "reviewerName": "Dr. Kendra Contreras",
         "date": "2025-02-05",
         "rating": 4.5,
         "comment": "Best hotel experience I've had in a while!"
       },
       {
-        "reviewerName": "Matthew Mcmillan",
         "date": "2024-11-16",
         "rating": 4,
         "comment": "Luxurious experience but food could've been better."
@@ -3113,13 +2823,11 @@ const statesData = {
       "star": 7,
       "city": "Agra",
       "reviews": [{
-        "reviewerName": "Steve Newton",
         "date": "2024-11-20",
         "rating": 4,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Larry Robbins",
         "date": "2024-11-29",
         "rating": 3,
         "comment": "Impeccable service and a gorgeous view."
@@ -3134,13 +2842,11 @@ const statesData = {
       "star": 5,
       "city": "Lucknow",
       "reviews": [{
-        "reviewerName": "Sarah Wagner",
         "date": "2024-12-08",
         "rating": 5,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Sarah Davis",
         "date": "2025-01-11",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
@@ -3155,13 +2861,11 @@ const statesData = {
       "star": 5,
       "city": "Mathura",
       "reviews": [{
-        "reviewerName": "Amanda Cook",
         "date": "2024-11-15",
         "rating": 5,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Deborah Figueroa",
         "date": "2025-02-05",
         "rating": 4,
         "comment": "Service was slow but the room was nice."
@@ -3176,13 +2880,11 @@ const statesData = {
       "star": 5,
       "city": "Kanpur",
       "reviews": [{
-        "reviewerName": "Kristina Rodriguez",
         "date": "2025-04-10",
         "rating": 5,
         "comment": "Great location. Would visit again."
       },
       {
-        "reviewerName": "Brittany Johnson",
         "date": "2024-12-31",
         "rating": 4,
         "comment": "Best hotel experience I've had in a while!"
@@ -3197,13 +2899,11 @@ const statesData = {
       "star": 5,
       "city": "Jhansi",
       "reviews": [{
-        "reviewerName": "Brittany Anderson",
         "date": "2024-12-19",
         "rating": 5,
         "comment": "Room service was prompt and friendly."
       },
       {
-        "reviewerName": "Timothy Stanton",
         "date": "2024-10-28",
         "rating": 5,
         "comment": "Highly recommended for families."
@@ -3218,13 +2918,11 @@ const statesData = {
       "star": 4,
       "city": "Ayodhya",
       "reviews": [{
-        "reviewerName": "Christine Wright",
         "date": "2024-11-09",
         "rating": 5,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Justin Baxter",
         "date": "2025-02-18",
         "rating": 4,
         "comment": "Everything was perfect. Worth every penny."
@@ -3239,13 +2937,11 @@ const statesData = {
       "star": 4,
       "city": "Aligarh",
       "reviews": [{
-        "reviewerName": "Tammy Young",
         "date": "2024-11-21",
         "rating": 3,
         "comment": "The spa services were top-notch!"
       },
       {
-        "reviewerName": "Rita Keith",
         "date": "2024-10-25",
         "rating": 3,
         "comment": "Excellent amenities and courteous staff."
@@ -3260,13 +2956,11 @@ const statesData = {
       "star": 4,
       "city": "Noida",
       "reviews": [{
-        "reviewerName": "Tim Patton",
         "date": "2025-01-08",
         "rating": 4,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Sharon Cochran",
         "date": "2024-12-11",
         "rating": 4,
         "comment": "Absolutely stunning hotel with exceptional service!"
@@ -3283,13 +2977,11 @@ const statesData = {
       "star": 5,
       "city": "Dehradun",
       "reviews": [{
-        "reviewerName": "Michael Reyes",
         "date": "2024-10-28",
         "rating": 3,
         "comment": "Luxurious experience but food could've been better."
       },
       {
-        "reviewerName": "Courtney Velasquez",
         "date": "2025-01-18",
         "rating": 4,
         "comment": "Impeccable service and a gorgeous view."
@@ -3304,13 +2996,11 @@ const statesData = {
       "star": 5,
       "city": "Mussoorie",
       "reviews": [{
-        "reviewerName": "Robert Savage",
         "date": "2024-12-03",
         "rating": 3,
         "comment": "The spa services were top-notch!"
       },
       {
-        "reviewerName": "Corey Murphy",
         "date": "2025-04-06",
         "rating": 3,
         "comment": "Highly recommended for families."
@@ -3326,13 +3016,11 @@ const statesData = {
       "star": 4,
       "city": "Haridwar",
       "reviews": [{
-        "reviewerName": "Raymond Bell",
         "date": "2025-01-27",
         "rating": 4,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "William Herrera",
         "date": "2025-04-21",
         "rating": 5,
         "comment": "Great location. Would visit again."
@@ -3347,13 +3035,11 @@ const statesData = {
       "star": 4,
       "city": "Dehradun",
       "reviews": [{
-        "reviewerName": "Shawn Green",
         "date": "2025-02-10",
         "rating": 4,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Deborah Rodriguez",
         "date": "2025-01-13",
         "rating": 5,
         "comment": "Everything was perfect. Worth every penny."
@@ -3370,13 +3056,11 @@ const statesData = {
       "star": 7,
       "city": "Kolkata",
       "reviews": [{
-        "reviewerName": "Allison Hill",
         "date": "2024-12-03",
         "rating": 3,
         "comment": "Absolutely stunning hotel with exceptional service!"
       },
       {
-        "reviewerName": "Brian Yang",
         "date": "2025-02-03",
         "rating": 4.5,
         "comment": "Everything was perfect. Worth every penny."
@@ -3391,13 +3075,11 @@ const statesData = {
       "star": 7,
       "city": "Howrah",
       "reviews": [{
-        "reviewerName": "Javier Johnson",
         "date": "2024-12-02",
         "rating": 4,
         "comment": "Very clean and well-maintained hotel."
       },
       {
-        "reviewerName": "Lance Hoffman",
         "date": "2025-03-09",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
@@ -3412,13 +3094,11 @@ const statesData = {
       "star": 5,
       "city": "Darjeeling",
       "reviews": [{
-        "reviewerName": "Kimberly Robinson",
         "date": "2025-02-12",
         "rating": 3,
         "comment": "Excellent amenities and courteous staff."
       },
       {
-        "reviewerName": "Sean Blake",
         "date": "2024-11-21",
         "rating": 5,
         "comment": "Luxurious experience but food could've been better."
@@ -3433,13 +3113,11 @@ const statesData = {
       "star": 5,
       "city": "Siliguri",
       "reviews": [{
-        "reviewerName": "Gina Moore",
         "date": "2025-03-18",
         "rating": 3,
         "comment": "Impeccable service and a gorgeous view."
       },
       {
-        "reviewerName": "Brandon Davis",
         "date": "2025-04-03",
         "rating": 4,
         "comment": "Everything was perfect. Worth every penny."
@@ -3454,13 +3132,11 @@ const statesData = {
       "star": 5,
       "city": "Kalimpong",
       "reviews": [{
-        "reviewerName": "Dennis Williams",
         "date": "2025-01-18",
         "rating": 3,
         "comment": "Peaceful environment and cozy rooms."
       },
       {
-        "reviewerName": "Valerie Gray",
         "date": "2025-02-05",
         "rating": 4,
         "comment": "Peaceful environment and cozy rooms."
@@ -3475,13 +3151,11 @@ const statesData = {
       "star": 5,
       "city": "Kurseong",
       "reviews": [{
-        "reviewerName": "Mark Mcclure",
         "date": "2024-12-30",
         "rating": 5,
         "comment": "Everything was perfect. Worth every penny."
       },
       {
-        "reviewerName": "Michele Williams",
         "date": "2024-12-04",
         "rating": 5,
         "comment": "Excellent amenities and courteous staff."
@@ -3496,13 +3170,11 @@ const statesData = {
       "star": 4,
       "city": "Mandarmoni",
       "reviews": [{
-        "reviewerName": "Victoria Wyatt",
         "date": "2025-04-07",
         "rating": 4.5,
         "comment": "Absolutely stunning hotel with exceptional service!"
       },
       {
-        "reviewerName": "Donald Reid",
         "date": "2024-12-30",
         "rating": 4,
         "comment": "Location was perfect for sightseeing."
@@ -3517,13 +3189,11 @@ const statesData = {
       "star": 4,
       "city": "Durgapur",
       "reviews": [{
-        "reviewerName": "Henry Santiago",
         "date": "2025-03-06",
         "rating": 4.5,
         "comment": "Service was slow but the room was nice."
       },
       {
-        "reviewerName": "Maria Lynch",
         "date": "2024-11-23",
         "rating": 4,
         "comment": "Great location. Would visit again."
@@ -3538,13 +3208,11 @@ const statesData = {
       "star": 4,
       "city": "Kolkata",
       "reviews": [{
-        "reviewerName": "Danielle Ford",
         "date": "2024-12-12",
         "rating": 4.5,
         "comment": "Nice place but rooms were a bit small."
       },
       {
-        "reviewerName": "Margaret Hawkins DDS",
         "date": "2025-04-02",
         "rating": 3,
         "comment": "The ambiance is absolutely delightful."
