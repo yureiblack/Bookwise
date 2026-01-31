@@ -56,7 +56,7 @@ model City {
   state   State  @relation(fields: [stateId], references: [id])
   hotels  Hotel[]
 
-  @@unique([name, stateId])
+  @@unique([name, stateId], name: "name_stateId")
 }
 
 model Hotel {
@@ -67,13 +67,14 @@ model Hotel {
   image     String
   amenities Json
   star      Int
+  description String
 
   city      City        @relation(fields: [cityId], references: [id])
   rooms     RoomType[]
   bookings  Booking[]
   reviews   Review[]
 
-  @@unique([name, cityId])
+  @@unique([name, cityId], name: "name_cityId")
 }
 
 model RoomType {
@@ -85,7 +86,7 @@ model RoomType {
   hotel     Hotel   @relation(fields: [hotelId], references: [id])
   bookings  Booking[]
 
-  @@unique([hotelId, type])
+  @@unique([hotelId, type], name: "hotelId_type")
 }
 
 model Booking {
