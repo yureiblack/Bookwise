@@ -72,6 +72,8 @@ model Hotel {
   rooms     RoomType[]
   bookings  Booking[]
   reviews   Review[]
+
+  @@unique([name, cityId])
 }
 
 model RoomType {
