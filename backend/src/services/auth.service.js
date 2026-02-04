@@ -6,8 +6,6 @@ const authWithEmail = async (email) => {
         throw new Error("Email is required");
     }
 
-    email = email.toLowerCase().trim()
-
     let user = await prisma.user.findUnique({
         where: {email}
     })
