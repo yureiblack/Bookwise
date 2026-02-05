@@ -20,6 +20,6 @@ export const getCitiesByState = async(req, res) => {
         const cities = await fetchCitiesByState(stateId)
         return res.json(cities)
     } catch{
-        return res.status(500).json({message: "Failed to fetch cities"})
+        return res.status(500).json({message: "Failed to fetch cities by stateId"})
     }
 }
