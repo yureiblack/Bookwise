@@ -1,23 +1,37 @@
 import prisma from '../prisma/client.js'
+import bcrypt from 'bcrypt'
+import crypto from 'crypto'
 import {generateToken} from '../utils/jwt.js'
 
-const authWithEmail = async (email) => {
-    if (!email) {
-        throw new Error("Email is required");
-    }
-
+const authUser = async (email, password) => {
     let user = await prisma.user.findUnique({
         where: {email}
     })
 
-    if(!user){
-        user = await prisma.user.create({
-            data: {email}
-        })
+    //LOGIN:
+    if(user){
+        const passwordCheck = await bcrypt.compare(password, user.password)
+
+        if(!passwordCheck){
+            throw new Error("INVALID_CREDENTIALS")
+        }
+
+        const {password: _, ...safeUser} = user
+        return {user: safeUser, token: generateToken({userId: user.id})}
     }
 
-    const token = generateToken({userId: user.id})
-    return {user, token}
+    //SIGNUP:
+    const hashedPassword = await bcrypt.hash(password, 10)
+    const newUser = await prisma.user.create({
+        data: {
+            email,
+            password: hashedPassword,
+            accountId: crypto.randomUUID()
+        }
+    })
+
+    const {password: _, ...safeUser} = newUser
+    return {user: safeUser, token: generateToken({userId: newUser.id})}
 }
 
-export default authWithEmail
+export default authUser

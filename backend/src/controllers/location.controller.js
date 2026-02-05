@@ -5,11 +5,11 @@ export const getStates = async (req, res) => {
     res.json(allStates)
 }
 
-export const getCitiesbyState = async(req, res) => {
+export const getCitiesByState = async(req, res) => {
     const {stateId} = req.params
     
     const cities = await prisma.city.findMany({
-        where: {stateId: Number(stateId)}
+        where: {stateId}
     })
 
     res.json(cities)

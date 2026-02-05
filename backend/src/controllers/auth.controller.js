@@ -1,9 +1,9 @@
-import {authWithEmail} from '../services/auth.service.js'
+import authUser from '../services/auth.service.js'
 const loginOrSignup = async (req, res) => {
-    let {email} = req.body
+    let {email, password} = req.body
 
-    if (!email){
-        return res.status(400).json({message: "Email required"})
+    if (!email || !password){
+        return res.status(400).json({message: "Email and password required"})
     }
 
     email = email.trim().toLowerCase()
@@ -12,8 +12,20 @@ const loginOrSignup = async (req, res) => {
         return res.status(400).json({message: "Invalid email"})
     }
 
-    const data = await authWithEmail(email)
-    res.json(data)
+    if(password.length < 6){
+        return res.status(400).json({message: "Password must be at least 6 characters"})
+    }
+
+    try{
+        const data = await authUser(email, password)
+        res.json(data)
+    } catch(err){
+        if (err.message === "INVALID_CREDENTIALS"){
+            return res.status(401).json({message: "Invalid credentials"})
+        } else{
+            return res.status(500).json({message: "Server error"})
+        }
+    }
 }
 
 export default loginOrSignup
