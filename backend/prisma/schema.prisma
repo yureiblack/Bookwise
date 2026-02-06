@@ -96,7 +96,7 @@ model Booking {
   hotelId     String
   roomTypeId  String
 
-  checkIn     DateTime
+  checkIn     DateTime 
   checkOut    DateTime
 
   qrPayload   Json
