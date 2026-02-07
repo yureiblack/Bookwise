@@ -3221,4 +3221,4 @@ const statesData = {
   ]
 };
 
-module.exports = statesData
+export default statesData

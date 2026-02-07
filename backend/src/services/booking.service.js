@@ -23,26 +23,32 @@ export const createBooking = async ({
             status: "PENDING",
             qrPayload: {
                 token,
-                issuedAt: new Date().toISOString()
+                issuedAt: new Date()
             }
+        },
+        select: {
+            id: true,
+            bookingCode: true,
+            qrPayload: true, 
+            status: true
         }
     })
 }
 
 export const findBookingByQRToken = async (token) => {
-    return prisma.booking.findFirst({
-        where: {
-            qrPayload: {
-                path: ['token'],
-                equals: token
-            }
-        },
-        orderBy: {createdAt: 'desc'},
+    const bookings = await prisma.booking.findMany({
+        orderBy: { createdAt: 'desc' },
         include: {
             hotel: true,
-            roomType: true,
+            roomType: true
         }
-    })
+    });
+
+    return bookings.find(b => {
+        let payload = b.qrPayload;
+        if (typeof payload === "string") payload = JSON.parse(payload);
+        return payload?.token === token;
+    });
 }
 
 export const confirmCheckIn = async (bookingId) => {

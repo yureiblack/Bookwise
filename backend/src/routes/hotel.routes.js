@@ -3,7 +3,7 @@ import {fetchHotelsByCity, fetchHotelById} from '../controllers/hotel.controller
 
 const router = express.Router()
 
-router.get('/cities/:cityId/hotels', fetchHotelsByCity)
-router.get('/hotels/:hotelId', fetchHotelById)
+router.get('/', fetchHotelsByCity)
+router.get('/:hotelId', fetchHotelById)
 
 export default router

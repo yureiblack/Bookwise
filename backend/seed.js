@@ -1,9 +1,10 @@
-const {PrismaClient} = require('@prisma/client')
-const prisma = new PrismaClient()
-const statesData = require('./statesData.js')
-const path = require('path')
+import { PrismaClient } from '@prisma/client';
+import statesData from './statesData.js';
+import path from 'path';
+import crypto from 'crypto';
 
-const IMAGE_URL = "http://localhost:5000/images/hotels"
+const prisma = new PrismaClient();
+const IMAGE_URL = "http://localhost:5000/images/hotels";
 
 async function seed(){
     // upsert states:
@@ -111,9 +112,42 @@ async function seed(){
             })
 
             for (const review of hotel.reviews) {
+                const dummyUser = await prisma.user.upsert({
+                    where: { email: `dummy-${review.comment}-${dbHotel.id}@bookwise.com` },
+                    update: {},
+                    create: {
+                        email: `dummy-${review.comment}-${dbHotel.id}@bookwise.com`,
+                        accountId: crypto.randomUUID(),
+                        password: "dummy"
+                    }
+                });
+
+                // Pick the first roomType of this hotel
+                const roomType = await prisma.roomType.findFirst({
+                    where: { hotelId: dbHotel.id }
+                });
+
+                const booking = await prisma.booking.create({
+                    data: {
+                        bookingCode: `BW-${crypto.randomBytes(3).toString('hex').toUpperCase()}`,
+                        userId: dummyUser.id,
+                        hotelId: dbHotel.id,
+                        roomTypeId: roomType.id, 
+                        checkIn: new Date(),
+                        checkOut: new Date(),
+                        status: "CONFIRMED",
+                        qrPayload: {
+                            token: crypto.randomUUID(),
+                            issuedAt: new Date().toISOString()
+                        }
+                    }
+                });
+
+                // 3️⃣ Create the review with the bookingId
                 await prisma.review.create({
                     data: {
                         hotelId: dbHotel.id,
+                        bookingId: booking.id,
                         rating: review.rating,
                         comment: review.comment,
                         createdAt: new Date(review.date),

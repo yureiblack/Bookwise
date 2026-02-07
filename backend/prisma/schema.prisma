@@ -109,7 +109,7 @@ model Booking {
   hotel       Hotel    @relation(fields: [hotelId], references: [id])
   roomType    RoomType @relation(fields: [roomTypeId], references: [id])
   payment     Payment?
-  review      Review?
+  review      Review[]
 }
 
 model Payment {
@@ -125,12 +125,12 @@ model Payment {
 
 model Review {
   id        String   @id @default(cuid())
-  bookingId String @unique
+  bookingId String?
   hotelId  String
   rating   Float
   comment  String
   createdAt DateTime @default(now())
 
-  booking Booking @relation(fields: [bookingId], references: [id])
+  booking Booking? @relation(fields: [bookingId], references: [id])
   hotel    Hotel @relation(fields: [hotelId], references: [id])
 }

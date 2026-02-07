@@ -13,8 +13,10 @@ export const bookHotel = async (req, res) => {
             ...req.body
         }) 
 
-        const qrUrl = `${process.env.BASE_URL}/verify/${booking.qrPayload.token}`
+        const qrUrl = `${process.env.BASE_URL}/api/bookings/verify/${booking.qrPayload.token}`
         const qrImage = await generateQR(qrUrl)
+
+        console.log("QR Token:", booking.qrPayload.token);
 
         return res.status(201).json({
             bookingCode: booking.bookingCode,

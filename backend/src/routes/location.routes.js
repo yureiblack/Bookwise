@@ -4,6 +4,6 @@ import {getStates, getCitiesByState} from '../controllers/location.controller.js
 const router = express.Router()
 
 router.get('/states', getStates)
-router.get('/states/:stateId/cities', getCitiesByState)
+router.get('/cities', getCitiesByState)
 
 export default router 

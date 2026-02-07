@@ -10,7 +10,7 @@ export const getStates = async (req, res) => {
 }
 
 export const getCitiesByState = async(req, res) => {
-    const {stateId} = req.params
+    const {stateId} = req.query
     
     if (!stateId){
         return res.status(400).json({message: "State ID is required"})

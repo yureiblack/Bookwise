@@ -1,7 +1,7 @@
 import {getHotelsByCity, getHotelById} from '../services/hotel.service.js'
 
 export const fetchHotelsByCity = async (req, res) => {
-    const {cityId} = req.params
+    const {cityId} = req.query
 
     if (!cityId){
         return res.status(400).json({message: "cityId is required"})
