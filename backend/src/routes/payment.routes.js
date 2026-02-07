@@ -4,7 +4,7 @@ import {authMiddleware} from '../middlewares/auth.middleware.js'
 
 const router = express.Router()
 
-router.post('/payments/initiate', authMiddleware, startPayment)
-router.post('/payments/success', paymentSuccess)
+router.post('/initiate', authMiddleware, startPayment)
+router.post('/success', paymentSuccess)
 
 export default router

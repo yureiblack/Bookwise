@@ -4,6 +4,6 @@ import {authMiddleware} from '../middlewares/auth.middleware.js'
 
 const router = express.Router()
 
-router.post('/hotels/:hotelId/reviews', authMiddleware, postReview)
+router.post('/:hotelId/reviews', authMiddleware, postReview)
 
 export default router 

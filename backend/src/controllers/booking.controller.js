@@ -20,6 +20,8 @@ export const bookHotel = async (req, res) => {
 
         return res.status(201).json({
             bookingCode: booking.bookingCode,
+            bookingId: booking.id,
+            status: booking.status,
             qrImage
         })
     } catch (err){

@@ -14,7 +14,7 @@ export const addReview = async ({
         throw new Error("NOT_ALLOWED")
     }
 
-    const review = prisma.review.create({
+    const review = await prisma.review.create({
         data: {
             bookingId: booking.id,
             hotelId, 

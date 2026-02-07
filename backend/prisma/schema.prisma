@@ -68,6 +68,8 @@ model Hotel {
   amenities Json
   star      Int
   description String
+  paymentProvider String?
+  paymentAccount String? 
 
   city      City        @relation(fields: [cityId], references: [id])
   rooms     RoomType[]

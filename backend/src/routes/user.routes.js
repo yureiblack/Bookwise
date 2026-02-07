@@ -4,6 +4,6 @@ import {authMiddleware} from '../middlewares/auth.middleware.js'
 
 const router = express.Router()
 
-router.get('/users/me', authMiddleware, fetchMyProfile)
+router.get('/me', authMiddleware, fetchMyProfile)
 
 export default router 
