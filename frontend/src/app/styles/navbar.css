@@ -1,0 +1,26 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 50px;
+    background: transparent; 
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; 
+    gap: 30px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+
+.navbar ul li a:hover {
+    opacity: 0.7;
+}
