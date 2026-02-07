@@ -16,4 +16,4 @@ export const getHotelById = async(hotelId) => {
             city: true, rooms: true, reviews: true
         }
     })
-}
+} 

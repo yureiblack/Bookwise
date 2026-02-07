@@ -1,4 +1,4 @@
-import prisma from '../prisna/client.js'
+import prisma from '../prisma/client.js'
 
 export const fetchStates = async () => {
     return prisma.state.findMany({

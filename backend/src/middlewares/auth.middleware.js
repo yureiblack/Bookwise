@@ -1,7 +1,10 @@
 import jwt from 'jsonwebtoken'
 
-const protect = (req, res, next) => {
-    const token = req.headers.authorization?.split(' ')[1]
+export const authMiddleware = (req, res, next) => {
+    const authHeader = req.headers.authorization
+    const token = authHeader?.startsWith('Bearer ')
+        ? authHeader.split(' ')[1]
+        : null
     
     if (!token) {
         return res.status(401).json({message: "Not authorised"})
@@ -12,8 +15,6 @@ const protect = (req, res, next) => {
         req.userId = decoded.userId
         next()
     } catch{
-        return res.status(401).json({message: "Invalid token"})
+        return res.status(401).json({message: "Invalid or expired token"})
     }
 }
-
-export default protect
