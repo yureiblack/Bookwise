@@ -1,6 +1,5 @@
 import prisma from '../prisma/client.js'
 import crypto from 'crypto'
-// import {generateQR} from '../utils/qr.js'
 
 export const createBooking = async ({
     userId,
@@ -9,19 +8,19 @@ export const createBooking = async ({
     checkIn, 
     checkOut
 }) => {
-    // (Later) availability checks go here
 
     const bookingCode = `BW-${crypto.randomBytes(3).toString('hex').toUpperCase()}`
     const token = crypto.randomUUID()
 
     return prisma.booking.create({
-        data: {
+        data: { 
             bookingCode,
             userId,
             hotelId,
             roomTypeId,
             checkIn: new Date(checkIn),
             checkOut: new Date(checkOut),
+            status: "PENDING",
             qrPayload: {
                 token,
                 issuedAt: new Date().toISOString()
@@ -42,26 +41,22 @@ export const findBookingByQRToken = async (token) => {
         include: {
             hotel: true,
             roomType: true,
-            payment: true
         }
     })
 }
 
-// export const getBookingByCode = async (bookingCode) => {
-//     return prisma.booking.findUnique({
-//         where: {bookingCode},
-//         include: {
-//             user: true,
-//             hotel: true,
-//             roomType: true,
-//             payment: true
-//         }
-//     })
-// }
-
 export const confirmCheckIn = async (bookingId) => {
-    return prisma.booking.update({
-        where: {id: bookingId},
-        data: {status: "CONFIRMED"}
-    }) 
-}
+    const updated = await prisma.booking.updateMany({
+        where: {
+            id: bookingId,
+            status: "CONFIRMED"
+        },
+        data: {
+            status: "CHECKED_IN"
+        }
+    })
+
+    if(updated.count === 0){
+        throw new Error("ALREADY USED")
+    }
+} 

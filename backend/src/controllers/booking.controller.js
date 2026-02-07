@@ -9,7 +9,7 @@ import {generateQR} from '../utils/qr.js'
 export const bookHotel = async (req, res) => {
     try{
         const booking = await createBooking({
-            userId: req.user.id,
+            userId: req.userId,
             ...req.body
         }) 
 
@@ -29,17 +29,18 @@ export const verifyBooking = async (req, res) => {
     const {token} = req.params
     const booking = await findBookingByQRToken(token)
 
-    if (!booking){
-        return res.status(404).json({message: "Booking not found"})
+    if (!booking || booking.status === "CHECKED_IN"){
+        return res.status(404).json({message: "Invalid or used QR"})
     }
 
     return res.json({
         bookingCode: booking.bookingCode,
-        hotel: booking.hotelId,
-        roomTypeId: booking.roomTypeId,
+        hotel: booking.hotel.name,
+        roomType: booking.roomType.type,
         checkIn: booking.checkIn,
         checkOut: booking.checkOut,
-        status: booking.status
+        status: booking.status,
+        isPaid: booking.status === "CONFIRMED"
     })
 }
 
@@ -47,10 +48,20 @@ export const checkInGuest = async (req, res) => {
     const {token} = req.params
     const booking = await findBookingByQRToken(token)
 
-    if (!booking || booking.status !== 'PENDING'){
-        return res.status(400).json({message: "Cannot check in"})
+    if (!booking){
+        return res.status(404).json({message: "Invalid QR"})
     }
 
-    await confirmCheckIn(booking.id)
-    return res.json({message: "Guest checked in successfully"})
+    if (booking.status !== "CONFIRMED") {
+        return res.status(400).json({
+            message: "Booking not paid or not confirmed"
+        })
+    }
+    
+    try{
+        await confirmCheckIn(booking.id)
+        return res.json({message: "Guest checked in successfully"})
+    } catch{
+        return res.status(400).json({ message: "QR already used" })
+    }
 } 

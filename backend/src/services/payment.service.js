@@ -2,11 +2,20 @@ import prisma from '../prisma/client.js'
 
 export const initiatePayment = async ({bookingId, provider}) => {
     const booking = await prisma.booking.findUnique({
-        where: {id: bookingId}
+        where: {id: bookingId},
+        include: {payment: true}
     })
 
     if (!booking){
         throw new Error("BOOKING_NOT_FOUND")
+    }
+
+    if (booking.status !== "PENDING"){
+        throw new Error("INVALID_BOOKING_STATE")
+    }
+
+    if (booking.payment){
+        throw new Error("PAYMENT_ALREADY_INITIATED")
     }
 
     const payment = await prisma.payment.create({
@@ -16,7 +25,6 @@ export const initiatePayment = async ({bookingId, provider}) => {
         }
     })
 
-    // In real life this comes from hotel dashboard / config
     const hotelPaymentUrl = `https://pay.${provider}.com/booking/${booking.bookingCode}`
 
     return {
@@ -26,20 +34,36 @@ export const initiatePayment = async ({bookingId, provider}) => {
 }
 
 export const confirmPayment = async({bookingId, reference}) => {
-    await prisma.payment.update({
-        where: {bookingId},
-        data: {
-            status: "SUCCESS",
-            reference
-        }
+    const payment = await prisma.payment.findUnique({
+        where: {bookingId}
     })
 
-    await prisma.booking.update({
-        where: {id: bookingId},
-        data: {
-            status: "CONFIRMED"
-        }
-    })
+    if (!payment){
+        throw new Error("PAYMENT_NOT_FOUND")
+    }
+
+    if (payment.status === "SUCCESS"){
+        return true
+    } 
+
+    await prisma.$transaction([
+        prisma.payment.update({
+            where: {bookingId},
+            data: {
+                status: "SUCCESS",
+                reference
+            }      
+        }),
+        prisma.booking.update({
+            where: {
+                id: bookingId,
+                status: "PENDING"
+            }, 
+            data: {
+                status: "CONFIRMED"
+            }
+        })
+    ])
 
     return true
-}
+} 

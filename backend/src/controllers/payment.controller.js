@@ -9,7 +9,13 @@ export const startPayment = async (req, res) => {
     try {
         const payment = await initiatePayment({bookingId, provider})
         return res.json({payment})
-    } catch{
+    } catch(err){
+        if(err.message === "INVALID_BOOKING_STATE"){
+            return res.status(400).json({message: "Booking not payable"})
+        }
+        if(err.message === "PAYMENT_ALREADY_INITIATED"){
+            return res.status(400).json({message: "Payment already initiated for this booking"})
+        }
         return res.status(500).json({message: 'Failed to initiate payment'})
     } 
 }
