@@ -13,24 +13,21 @@ export default function HeroSection() {
   }, [])
 
   const handleGetStarted = () => {
-    if (isLoggedIn) {
-      router.push('/dashboard')
-    } else {
-      router.push('/login')
-    }
+    router.push(isLoggedIn ? '/dashboard' : '/login')
   }
 
   return (
     <div className="hero-container">
-      <img src="/images/blur-bg.jpg" className="blur-bg" alt="Background" />
-      <img src="/images/clear-image.png" className="clear-image" alt="Foreground" />
+      <img
+        src="/images/clear-image.jpg"
+        className="clear-image"
+        alt="Foreground"
+      />
 
       <div className="hero-text">
         <h1>Bookwise</h1>
-        <p>Your smart gateway to hassle-free hotel bookings</p>
-        <span className="get-started" onClick={handleGetStarted}>
-          Get Started →
-        </span>
+        <p>Your stay, simplified — book hotels with just your email, no lengthy forms or unnecessary details</p>
+        <span className="get-started" onClick={handleGetStarted}>Get Started</span>
       </div>
     </div>
   )

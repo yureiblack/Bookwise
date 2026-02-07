@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
 .navbar {
   position: absolute;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 20px 50px;
+  padding: 40px 50px;
   background: transparent;
   z-index: 10;
 }
@@ -16,8 +18,9 @@
 }
 
 .navbar ul li a {
-  color: var(--primary-3);
-  font-size: 1rem;
+  font-family: "Tangerine", cursive;
+  color: rgb(242, 214, 214);
+  font-size: 2rem;
   transition: opacity 0.2s;
 }
 
