@@ -1,87 +1,34 @@
 'use client'
-
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import './login.css'
 
 export default function LoginPage() {
-  const router = useRouter()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
+  const [animateIn, setAnimateIn] = useState(false)
 
-  // redirect if already logged in
   useEffect(() => {
-    const token = localStorage.getItem('token')
-    if (token) {
-      router.replace('/dashboard')
-    }
+    setAnimateIn(true)
   }, [])
-
-  const handleLogin = async (e) => {
-    e.preventDefault()
-    setError('')
-
-    if (!email || !password) {
-      setError('Email and password required')
-      return
-    }
-
-    try {
-      const res = await fetch('http://localhost:3001/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      })
-
-      const data = await res.json()
-
-      if (res.ok) {
-        localStorage.setItem('token', data.token)
-        router.push('/dashboard')
-      } else {
-        setError(data.message || 'Login failed')
-      }
-    } catch {
-      setError('Something went wrong')
-    }
-  }
 
   return (
     <div className="login-container">
-      <form className="login-form" onSubmit={handleLogin}>
+      <img
+        src="/images/clear-image.jpg"
+        className="clear-image"
+        alt="Background"
+      />
+      <form className={`login-form ${animateIn ? 'slide-in' : ''}`}>
         <h1>Bookwise Login</h1>
-
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        {error && <span className="error">{error}</span>}
-
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
         <button type="submit">Login</button>
-
-        {/* 👇 small register link */}
         <p className="register-text">
           New here?{' '}
-          <span
-            className="register-link"
-            onClick={() => router.push('/register')}
-          >
+          <Link href="/register" className="register-link">
             Register
-          </span>
+          </Link>
         </p>
       </form>
     </div>
   )
 }
-

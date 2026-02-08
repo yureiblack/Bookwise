@@ -1,17 +1,22 @@
 :root {
-  --primary-1: #8B7375;
-  --primary-2: #2A2627;
-  --primary-3: #CEA38B;
-  --primary-4: #101016;
-  --primary-5: #A8594E;
-  --primary-6: #384722;
-  --primary-7: #6B793F;
-  --primary-8: #3C4616;
-  --primary-9: #0D1506;
-  --primary-10: #1A3112;
+  /* New palette mapping */
+  --primary-1: #6e7b42; /* main text / accent */
+  --primary-2: #51490B; /* secondary accent / buttons */
+  --primary-3: #4B521F; /* highlights / hover states */
+  --primary-4: #020A01; /* dark background */
+  --primary-5: #263315; /* subtle background / cards */
+  --primary-6: #6E7B42; /* repeated main accent */
+  --primary-7: #4B521F; /* repeated for consistency */
+  --primary-8: #51490B; /* repeated for buttons or borders */
+  --primary-9: #020A01; /* repeated for deeper background */
+  --primary-10: #263315; /* repeated for cards/sections */
 
-  --background: var(--primary-4); /* default dark background */
-  --foreground: var(--primary-1); /* default text color */
+  /* Main app colors */
+  --background: var(--primary-4); /* deep green / almost black */
+  --foreground: var(--primary-1); /* light green for text */
+  --accent: var(--primary-2); /* for buttons, links, highlights */
+  --card-bg: var(--primary-5); /* cards or sections */
+  --hover: var(--primary-3); /* hover or interactive elements */
 }
 
 html,
@@ -32,7 +37,11 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--accent);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+a:hover {
+  color: var(--hover);
+}
