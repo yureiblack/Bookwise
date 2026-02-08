@@ -2,6 +2,13 @@ import express from 'express'
 import cors from 'cors'
 const app = express()
 
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}))
+
+app.use(express.json())
+
 import authRoutes from './routes/auth.routes.js'
 import locationRoutes from './routes/location.routes.js'
 import hotelRoutes from './routes/hotel.routes.js'
@@ -9,9 +16,6 @@ import bookingRoutes from './routes/booking.routes.js'
 import paymentRoutes from './routes/payment.routes.js'
 import reviewRoutes from './routes/review.routes.js'
 import userRoutes from './routes/user.routes.js'
-
-app.use(cors())
-app.use(express.json())
 
 app.use('/api/auth', authRoutes)
 app.use('/api/locations', locationRoutes)

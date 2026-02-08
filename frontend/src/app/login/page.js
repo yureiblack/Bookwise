@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import './login.css'
 
@@ -8,6 +8,13 @@ export default function LoginPage() {
   const router = useRouter()
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
+
+    useEffect(() => {
+      const token = localStorage.getItem('token')
+      if (token) {
+        router.replace('/dashboard')
+      }
+    }, [])
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -19,8 +26,7 @@ export default function LoginPage() {
     }
 
     try {
-      // Call backend login API
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch('http://localhost:3001/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),

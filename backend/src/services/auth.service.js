@@ -1,37 +1,28 @@
 import prisma from '../prisma/client.js'
 import bcrypt from 'bcrypt'
-import crypto from 'crypto'
-import {generateToken} from '../utils/jwt.js'
+import { generateToken } from '../utils/jwt.js'
 
-const authUser = async (email, password) => {
-    let user = await prisma.user.findUnique({
-        where: {email}
-    })
+export const signupUser = async (email, password) => {
+  const existing = await prisma.user.findUnique({ where: { email } })
+  if (existing) throw new Error('USER_EXISTS')
 
-    //LOGIN:
-    if(user){
-        const passwordCheck = await bcrypt.compare(password, user.password)
+  const hashedPassword = await bcrypt.hash(password, 10)
 
-        if(!passwordCheck){
-            throw new Error("INVALID_CREDENTIALS")
-        }
+  const user = await prisma.user.create({
+    data: { email, password: hashedPassword },
+  })
 
-        const {password: _, ...safeUser} = user
-        return {user: safeUser, token: generateToken({userId: user.id})}
-    }
-
-    //SIGNUP:
-    const hashedPassword = await bcrypt.hash(password, 10)
-    const newUser = await prisma.user.create({
-        data: {
-            email,
-            password: hashedPassword,
-            accountId: crypto.randomUUID()
-        }
-    })
-
-    const {password: _, ...safeUser} = newUser
-    return {user: safeUser, token: generateToken({userId: newUser.id})}
+  const token = generateToken({ userId: user.id })
+  return { token }
 }
 
-export default authUser
+export const loginUser = async (email, password) => {
+  const user = await prisma.user.findUnique({ where: { email } })
+  if (!user) throw new Error('INVALID_CREDENTIALS')
+
+  const isValid = await bcrypt.compare(password, user.password)
+  if (!isValid) throw new Error('INVALID_CREDENTIALS')
+
+  const token = generateToken({ userId: user.id })
+  return { token }
+}
