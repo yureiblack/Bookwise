@@ -1,34 +1,21 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import './login.css'
+import '../login/login.css'   // 👈 reuse login styles
 
-export default function LoginPage() {
+export default function RegisterPage() {
   const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
-  // redirect if already logged in
-  useEffect(() => {
-    const token = localStorage.getItem('token')
-    if (token) {
-      router.replace('/dashboard')
-    }
-  }, [])
-
-  const handleLogin = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault()
     setError('')
 
-    if (!email || !password) {
-      setError('Email and password required')
-      return
-    }
-
     try {
-      const res = await fetch('http://localhost:3001/api/auth/login', {
+      const res = await fetch('http://localhost:3001/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -40,7 +27,7 @@ export default function LoginPage() {
         localStorage.setItem('token', data.token)
         router.push('/dashboard')
       } else {
-        setError(data.message || 'Login failed')
+        setError(data.message || 'Signup failed')
       }
     } catch {
       setError('Something went wrong')
@@ -49,8 +36,9 @@ export default function LoginPage() {
 
   return (
     <div className="login-container">
-      <form className="login-form" onSubmit={handleLogin}>
-        <h1>Bookwise Login</h1>
+      <form className="login-form" onSubmit={handleRegister}>
+        <h1>Create Account</h1>
+        <p>Register to start booking with Bookwise</p>
 
         <input
           type="email"
@@ -68,20 +56,10 @@ export default function LoginPage() {
 
         {error && <span className="error">{error}</span>}
 
-        <button type="submit">Login</button>
-
-        {/* 👇 small register link */}
-        <p className="register-text">
-          New here?{' '}
-          <span
-            className="register-link"
-            onClick={() => router.push('/register')}
-          >
-            Register
-          </span>
-        </p>
+        <button type="submit">Register</button>
       </form>
     </div>
   )
 }
+
 
