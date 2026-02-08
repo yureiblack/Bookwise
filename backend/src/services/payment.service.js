@@ -67,3 +67,54 @@ export const confirmPayment = async({bookingId, reference}) => {
 
     return true
 } 
+
+// ---------------------------
+// DEV / MOCK PAYMENT
+// ---------------------------
+export const simulatePayment = async ({ bookingId }) => {
+    const booking = await prisma.booking.findUnique({
+        where: { id: bookingId },
+        include: { payment: true }
+    });
+
+    if (!booking) throw new Error("BOOKING_NOT_FOUND");
+    if (booking.status !== "PENDING") throw new Error("INVALID_BOOKING_STATE");
+
+    // Auto-assign success/failure (90% success rate)
+    const isSuccess = Math.random() < 0.9;
+
+    let payment = booking.payment;
+
+    if (!payment) {
+        payment = await prisma.payment.create({
+            data: {
+                bookingId,
+                provider: "mock",
+                status: isSuccess ? "SUCCESS" : "FAILED",
+                reference: isSuccess ? "MOCK-REF-" + bookingId.slice(-6) : null
+            }
+        });
+    } else {
+        payment = await prisma.payment.update({
+            where: { id: payment.id },
+            data: {
+                status: isSuccess ? "SUCCESS" : "FAILED",
+                reference: isSuccess ? "MOCK-REF-" + bookingId.slice(-6) : null
+            }
+        });
+    }
+
+    // Update booking if payment succeeded
+    if (isSuccess) {
+        await prisma.booking.update({
+            where: { id: bookingId },
+            data: { status: "CONFIRMED" }
+        });
+    }
+
+    return {
+        bookingId,
+        paymentStatus: payment.status,
+        bookingStatus: isSuccess ? "CONFIRMED" : "PENDING"
+    };
+};

@@ -117,7 +117,6 @@ async function seed(){
                     update: {},
                     create: {
                         email: `dummy-${review.comment}-${dbHotel.id}@bookwise.com`,
-                        accountId: crypto.randomUUID(),
                         password: "dummy"
                     }
                 });

@@ -1,5 +1,5 @@
 import express from 'express'
-import {startPayment, paymentSuccess} from '../controllers/payment.controller.js'
+import {startPayment, paymentSuccess, mockPayment} from '../controllers/payment.controller.js'
 import {authMiddleware} from '../middlewares/auth.middleware.js'
 
 const router = express.Router()
@@ -7,4 +7,9 @@ const router = express.Router()
 router.post('/initiate', authMiddleware, startPayment)
 router.post('/success', paymentSuccess)
 
-export default router
+// Dev-only mock route
+if (process.env.NODE_ENV !== 'production') {
+    router.post('/mock', authMiddleware, mockPayment);
+}
+
+export default router 

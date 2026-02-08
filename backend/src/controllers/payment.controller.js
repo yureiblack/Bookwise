@@ -1,4 +1,5 @@
-import {initiatePayment, confirmPayment} from '../services/payment.service.js'
+import {initiatePayment, confirmPayment, simulatePayment} from '../services/payment.service.js'
+
 export const startPayment = async (req, res) => {
     const {bookingId, provider} = req.body
 
@@ -34,3 +35,19 @@ export const paymentSuccess = async (req, res) => {
         return res.status(500).json({message: "Payment confirmation failed"})
     }
 }
+
+// DEV / MOCK payment route — fully automatic, no simulate needed
+export const mockPayment = async (req, res) => {
+  const { bookingId } = req.body;
+
+  if (!bookingId) {
+    return res.status(400).json({ message: "bookingId is required" });
+  }
+
+  try {
+    const result = await simulatePayment({ bookingId });
+    return res.json(result);
+  } catch (err) {
+    return res.status(400).json({ message: err.message });
+  }
+};

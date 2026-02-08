@@ -52,17 +52,12 @@ export const findBookingByQRToken = async (token) => {
 }
 
 export const confirmCheckIn = async (bookingId) => {
-    const updated = await prisma.booking.updateMany({
-        where: {
-            id: bookingId,
-            status: "CONFIRMED"
-        },
-        data: {
-            status: "CHECKED_IN"
-        }
-    })
+    const updated = await prisma.booking.update({
+        where: { id: bookingId },
+        data: { status: "CHECKED_IN" }
+    });
 
-    if(updated.count === 0){
-        throw new Error("ALREADY USED")
+    if (!updated) {
+        throw new Error("ALREADY_USED");
     }
-} 
+};

@@ -1,19 +1,14 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import './login.css'
+import './login-register.css'
 
 export default function LoginPage() {
-  const [animateIn, setAnimateIn] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const router = useRouter()
-
-  useEffect(() => {
-    setAnimateIn(true)
-  }, [])
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -49,7 +44,7 @@ export default function LoginPage() {
       />
 
       <form
-        className={`login-form ${animateIn ? 'slide-in' : ''}`}
+        className="login-form"
         onSubmit={handleLogin}
       >
         <h1>User Login</h1>

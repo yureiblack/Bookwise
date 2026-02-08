@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+
 .login-container {
   position: absolute;    
   top: 0;
@@ -25,6 +27,7 @@
 }
 
 .login-form {
+  font-family: "Libre Baskerville", serif;
   position: relative;
   background: rgba(255, 255, 255, 0.15);
   padding: 4rem 4rem;
@@ -39,15 +42,6 @@
   border: 1px solid white;
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
   z-index: 2;
-
-  transform: none;
-  opacity: 1;
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-.login-form.slide-in {
-  transform: translateX(0);
-  opacity: 1;
 }
 
 .login-form h1 {
@@ -57,6 +51,7 @@
 }
 
 .login-form input {
+  font-family: "Libre Baskerville", serif;
   width: 100%;
   padding: 0.9rem 1rem;
   background: transparent;
@@ -77,6 +72,7 @@
 }
 
 .login-form button {
+  font-family: "Libre Baskerville", serif;
   width: 50%;
   padding: 0.9rem;
   background: transparent;
@@ -93,16 +89,49 @@
   background-color: rgba(197, 182, 137, 0.15); 
 }
 
-.register-text{
+.register-text {
   padding-top: 5px;
   color: #97a271;
 }
 
-.register-link{
+.register-link {
   color: #97a271;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.error{
+.error {
+  font-size: small;
   padding-bottom: 5px;
   color: #b1bb8d;
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    width: 90%;         
+    height: auto;       
+    padding: 2rem;      
+    border-radius: 20px; 
+  }
+
+  .login-form input,
+  .login-form button {
+    width: 100%;         
+  }
+
+  .login-container {
+    padding: 1rem;
+  }
+
+  .clear-image {
+    object-position: center top; 
+  }
+
+  .login-form h1 {
+    font-size: 1.8rem;
+  }
+
+  .login-form button {
+    font-size: 1rem;
+  }
 }

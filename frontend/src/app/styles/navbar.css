@@ -15,6 +15,8 @@
   list-style: none;
   display: flex;
   gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar ul li a {
@@ -27,4 +29,31 @@
 .navbar ul li a:hover {
   opacity: 0.85;         
   color: var(--hover);    
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 15px;          
+    justify-content: center;       
+  }
+
+  .navbar ul {
+    flex-direction: column;        
+    gap: 15px;                     
+    align-items: center;
+  }
+
+  .navbar ul li a {
+    font-size: 1.5rem;             
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar ul li a {
+    font-size: 1.8rem;             
+  }
+
+  .navbar ul {
+    gap: 20px;
+  }
 }
