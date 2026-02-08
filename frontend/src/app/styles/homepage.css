@@ -37,14 +37,14 @@
 
 .hero-text p {
   font-family: "Tangerine", cursive;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 30px;
   color: rgb(242, 214, 214);
 }
 
 .get-started {
   font-family: "Tangerine", cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: rgb(242, 214, 214);
   cursor: pointer;
   text-decoration: none;

@@ -26,7 +26,7 @@ export default function HeroSection() {
 
       <div className="hero-text">
         <h1>Bookwise</h1>
-        <p>Your stay, simplified — book hotels with just your email, no lengthy forms or unnecessary details</p>
+        <p>Your stay, simplified — book hotels with just your email</p>
         <span className="get-started" onClick={handleGetStarted}>Get Started</span>
       </div>
     </div>
