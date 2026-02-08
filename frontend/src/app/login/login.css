@@ -26,22 +26,22 @@
 
 .login-form {
   position: relative;
-  background: rgba(255, 255, 255, 0.15); 
-  padding: 4rem 4rem; 
-  border-radius: 50%; 
-  width: 500px;        
-  height: 500px;      
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4rem 4rem;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid white; 
+  border: 1px solid white;
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
   z-index: 2;
 
-  transform: translateX(100vw);
-  opacity: 0;
+  transform: none;
+  opacity: 1;
   transition: transform 1s ease, opacity 1s ease;
 }
 
@@ -50,9 +50,8 @@
   opacity: 1;
 }
 
-/* form content */
 .login-form h1 {
-  color: #6a7a35;
+  color: #b1bb8d;
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
 }
@@ -92,4 +91,18 @@
 .login-form button:hover {
   opacity: 0.95;                        
   background-color: rgba(197, 182, 137, 0.15); 
+}
+
+.register-text{
+  padding-top: 5px;
+  color: #97a271;
+}
+
+.register-link{
+  color: #97a271;
+}
+
+.error{
+  padding-bottom: 5px;
+  color: #b1bb8d;
 }

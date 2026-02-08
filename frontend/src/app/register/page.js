@@ -36,10 +36,13 @@ export default function RegisterPage() {
 
   return (
     <div className="login-container">
+      <img
+        src="/images/clear-image.jpg"
+        className="clear-image"
+        alt="Background"
+      />
       <form className="login-form" onSubmit={handleRegister}>
         <h1>Create Account</h1>
-        <p>Register to start booking with Bookwise</p>
-
         <input
           type="email"
           placeholder="Email"
