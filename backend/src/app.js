@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import path from 'path'
 const app = express()
 
 app.use(cors({
@@ -8,6 +9,11 @@ app.use(cors({
 }))
 
 app.use(express.json())
+
+app.use(
+  "/images",
+  express.static(path.join(process.cwd(), "public/images"))
+);
 
 import authRoutes from './routes/auth.routes.js'
 import locationRoutes from './routes/location.routes.js'

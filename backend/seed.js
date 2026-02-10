@@ -4,7 +4,7 @@ import path from 'path';
 import crypto from 'crypto';
 
 const prisma = new PrismaClient();
-const IMAGE_URL = "http://localhost:5000/images/hotels";
+const IMAGE_URL = "http://localhost:3001/images/hotels";
 
 async function seed(){
     // upsert states:
