@@ -1,0 +1,438 @@
+/* DASHBOARD WRAPPER */
+.dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px 20px 20px;
+  background: var(--background);
+  min-height: calc(100vh - 60px);
+}
+
+.dashboard-container {
+  display: flex;
+  width: 95%;
+  max-width: 1000px;
+
+  /* GLASS + TRANSPARENCY */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  /* WHITE BORDER + GLOW */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.25),
+    0 0 60px rgba(255, 255, 255, 0.15);
+
+  border-radius: 16px;
+  color: var(--foreground);
+  overflow: hidden;
+}
+
+.account-section {
+  position: relative;
+  flex: 0 0 220px;
+  background: url('/path/to/your/image.jpg') center/cover no-repeat;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* GLASS OVERLAY */
+.account-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+.account-section button {
+  position: relative;
+  z-index: 1;
+
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.6);
+  color: white;
+}
+
+.account-section button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: var(--foreground);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.account-section button:hover {
+  background: var(--hover);
+}
+
+/* MAIN DASHBOARD CONTENT */
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything horizontally */
+  padding: 40px 30px;
+  gap: 30px;
+}
+
+/* GREETING + SEARCH HOTELS */
+.welcome-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.welcome-section h1 {
+  font-size: 2rem;
+}
+
+.search-hotels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-hotels button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: var(--foreground);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-hotels button:hover {
+  background: var(--hover);
+}
+
+.search-dropdowns {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.search-dropdowns select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-8);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.bookings-section {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 350px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bookings-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.bookings-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bookings-section th,
+.bookings-section td {
+  padding: 10px;
+  border-bottom: 1px solid var(--primary-8);
+}
+
+.bookings-section tr:nth-child(even) {
+  background: var(--primary-5);
+}
+
+.bookings-section .confirmed {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.bookings-section .pending {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.bookings-section .checked-in {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .account-section {
+    flex: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--primary-8);
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .dashboard-main {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-dropdowns {
+    width: 100%;
+  }
+}
+/* DASHBOARD WRAPPER */
+.dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px 20px 20px;
+  background: var(--background);
+  min-height: calc(100vh - 60px);
+}
+
+/* DASHBOARD CONTAINER */
+.dashboard-container {
+  display: flex;
+  width: 95%;
+  max-width: 1000px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  color: var(--foreground);
+  overflow: hidden;
+}
+
+/* LEFT ACCOUNT PANEL */
+.account-section {
+  flex: 0 0 220px;
+  background: url('/path/to/your/image.jpg') center/cover no-repeat;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* buttons at bottom */
+  border-right: 1px solid var(--primary-8);
+  gap: 10px;
+}
+
+.account-section button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: var(--foreground);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.account-section button:hover {
+  background: var(--hover);
+}
+
+/* MAIN DASHBOARD CONTENT */
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  padding: 40px 30px;
+  gap: 30px;
+}
+
+/* GREETING + SEARCH */
+.welcome-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.welcome-section h1 {
+  font-size: 2rem;
+}
+
+/* SEARCH HOTELS */
+.search-hotels {
+  position: relative; /* for dropdown positioning */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-hotels button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: var(--foreground);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-hotels button:hover {
+  background: var(--hover);
+}
+
+/* make dropdown visible and card-like */
+.search-dropdowns {
+  position: absolute;
+  top: 100%; /* just below button */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  width: 220px;
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  z-index: 20;
+}
+
+.search-dropdowns select,
+.search-dropdowns button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-8);
+  background: var(--background);
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.search-dropdowns button {
+  border: none;
+  background: var(--accent);
+  font-weight: 600;
+}
+
+.search-dropdowns button:hover {
+  background: var(--hover);
+}
+
+/* Bookings section stays central */
+.bookings-section {
+  background: var(--primary-10);
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px; /* keeps it compact */
+  max-height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bookings-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bookings-section th,
+.bookings-section td {
+  padding: 10px;
+  border-bottom: 1px solid var(--primary-8);
+  text-align: center;
+}
+
+.bookings-section tr:nth-child(even) {
+  background: var(--primary-5);
+}
+
+.bookings-section .confirmed {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.bookings-section .pending {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.bookings-section .checked-in {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .account-section {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--primary-8);
+    flex-direction: row;
+    justify-content: space-around;
+    background: var(--card-bg);
+  }
+
+  .dashboard-main {
+    padding: 30px 20px;
+  }
+
+  .search-dropdowns {
+    position: static;
+    transform: none;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .bookings-section {
+    max-width: 100%;
+  }
+}

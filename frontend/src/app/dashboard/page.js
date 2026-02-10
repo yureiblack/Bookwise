@@ -1,19 +1,18 @@
 'use client'
 import { useState, useEffect } from "react";
 import Link from "next/link";
-// import "./dashboard.css";
+import "./dashboard.css";
 
 export default function Dashboard() {
   const [greeting, setGreeting] = useState("");
   const [user, setUser] = useState(null);
   const [bookings, setBookings] = useState([]);
-  const [search, setSearch] = useState({
-    state: "",
-    city: "",
-    date: "",
-    roomType: ""
-  });
+  const [showSearch, setShowSearch] = useState(false);
+  const [states, setStates] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [search, setSearch] = useState({ stateId: "", cityId: "" });
 
+  //set greetings
   useEffect(() => {
     const hour = new Date().getHours();
     if (hour < 12) setGreeting("Good morning");
@@ -21,101 +20,110 @@ export default function Dashboard() {
     else setGreeting("Good evening");
   }, []);
 
+  // Fetch user
   useEffect(() => {
-    fetch("/api/users/me")
+    fetch("/users/me")
       .then(res => res.json())
       .then(data => setUser(data))
       .catch(err => console.error(err));
   }, []);
 
+  // Fetch all bookings
   useEffect(() => {
-    fetch("/api/bookings/upcoming")
+    fetch("/bookings")
       .then(res => res.json())
       .then(data => setBookings(data))
       .catch(err => console.error(err));
   }, []);
 
+  //fetch states
+  useEffect(() => {
+  fetch("http://localhost:3001/api/locations/states")
+    .then(res => res.json())
+    .then(data => setStates(data))
+    .catch(err => console.error("States error:", err));
+  }, []);
+
+  // Fetch cities when state changes
+  useEffect(() => {
+    if (!search.stateId) {
+      setCities([]);
+      setSearch(prev => ({ ...prev, cityId: "" }));
+      return;
+    }
+
+    fetch(`http://localhost:3001/api/locations/cities?stateId=${search.stateId}`)
+      .then(res => res.json())
+      .then(data => setCities(data))
+      .catch(err => console.error("Cities error:", err));
+  }, [search.stateId]);
+
+
   const handleSearch = (e) => {
     e.preventDefault();
     const query = new URLSearchParams(search).toString();
-    window.location.href = `/hotels/search?${query}`;
+    window.location.href = `/hotels?cityId=${search.cityId}`;
   };
 
   return (
-    <>
-      <nav className="navbar">
-        <div className="nav-brand">Bookwise</div>
-        <div className="nav-links">
-          <Link href="/bookings">Bookings</Link>
-          <Link href="/profile">Profile</Link>
+    <div className="dashboard-wrapper">
+      <div className="dashboard-container">
+        {/* Left Account Panel */}
+        <div className="account-section">
+          <Link href="/profile">
+            <button>Profile</button>
+          </Link>
+          <button
+            className="logout"
+            onClick={() => fetch("/api/auth/logout", { method: "POST" }).then(() => window.location.href = "/")}
+          >
+            Logout
+          </button>
         </div>
-      </nav>
 
-      <div className="dashboard-wrapper">
-        <div className="dashboard-container">
-          {/* Welcome */}
+        {/* Main Dashboard */}
+        <div className="dashboard-main">
+          {/* Greeting + Search */}
           <div className="welcome-section">
-            <h1>{greeting}, {user?.email?.split("@")[0] || "User"}!</h1>
-            <div className="quick-buttons">
-              <Link href="/bookings">
-                <button>View Bookings</button>
-              </Link>
-              <Link href="/hotels/search">
-                <button>Search Hotels</button>
-              </Link>
+            <h1>{greeting}, {user?.email?.split("@")[0] || "Champ"}!</h1>
+            <div className="search-hotels">
+              <button onClick={() => setShowSearch(!showSearch)}>Search Hotels</button>
+              {showSearch && (
+                <form className="search-dropdowns" onSubmit={handleSearch}>
+                  <select
+                    value={search.stateId}
+                    onChange={e => setSearch({ ...search, stateId: e.target.value })}
+                    required
+                  >
+                    <option value="">Select State</option>
+                    {states.map(state => (
+                      <option key={state.id} value={state.id}>{state.name}</option>
+                    ))}
+                  </select>
+
+                  <select
+                    value={search.cityId}
+                    onChange={e => setSearch({ ...search, cityId: e.target.value })}
+                    required
+                    disabled={!cities.length}
+                  >
+                    <option value="">Select City</option>
+                    {cities.map(city => (
+                      <option key={city.id} value={city.id}>{city.name}</option>
+                    ))}
+                  </select>
+
+                  <button type="submit">Go</button>
+                </form>
+              )}
             </div>
           </div>
 
-          {/* Quick Booking */}
-          <div className="booking-section">
-            <h2>Quick Booking</h2>
-            <form className="booking-form" onSubmit={handleSearch}>
-              <select
-                value={search.state}
-                onChange={(e) => setSearch({ ...search, state: e.target.value })}
-                required
-              >
-                <option value="">Select State</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Delhi">Delhi</option>
-              </select>
-
-              <select
-                value={search.city}
-                onChange={(e) => setSearch({ ...search, city: e.target.value })}
-                required
-              >
-                <option value="">Select City</option>
-                <option value="Mumbai">Mumbai</option>
-                <option value="Delhi">Delhi</option>
-              </select>
-
-              <input
-                type="date"
-                value={search.date}
-                onChange={(e) => setSearch({ ...search, date: e.target.value })}
-                required
-              />
-
-              <select
-                value={search.roomType}
-                onChange={(e) => setSearch({ ...search, roomType: e.target.value })}
-                required
-              >
-                <option value="">Room Type</option>
-                <option value="SINGLE">Single</option>
-                <option value="DOUBLE">Double</option>
-              </select>
-
-              <button type="submit">Search Hotels</button>
-            </form>
-          </div>
-
-          {/* Upcoming Bookings */}
+          {/* Your Bookings */}
           <div className="bookings-section">
-            <h2>Upcoming Bookings</h2>
+            <h2>Your Bookings</h2>
             {bookings.length === 0 ? (
-              <p>No upcoming bookings.</p>
+              <p>No bookings yet.</p>
             ) : (
               <table>
                 <thead>
@@ -129,7 +137,7 @@ export default function Dashboard() {
                   </tr>
                 </thead>
                 <tbody>
-                  {bookings.map((b) => (
+                  {bookings.map(b => (
                     <tr key={b.id}>
                       <td>{b.hotel.name}</td>
                       <td>{b.hotel.city.name}</td>
@@ -143,27 +151,8 @@ export default function Dashboard() {
               </table>
             )}
           </div>
-
-          {/* Account Section */}
-          <div className="account-section">
-            <h2>Account Settings</h2>
-            <Link href="/profile">
-              <button>Profile</button>
-            </Link>
-            <Link href="/bookings">
-              <button>Past Bookings</button>
-            </Link>
-            <button
-              className="logout"
-              onClick={() => {
-                fetch("/api/auth/logout", { method: "POST" }).then(() => window.location.href = "/");
-              }}
-            >
-              Logout
-            </button>
-          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

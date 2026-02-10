@@ -20,7 +20,7 @@ enum RoomCategory {
 }
 
 enum BookingStatus {
-  PENDING
+  PENDING 
   CONFIRMED
   CHECKED_IN
 }
