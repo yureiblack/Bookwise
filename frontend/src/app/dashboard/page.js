@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import "./dashboard.css";
+import Image from "next/image";
 
 export default function Dashboard() {
   const [greeting, setGreeting] = useState("");
@@ -70,15 +71,34 @@ export default function Dashboard() {
       <div className="dashboard-container">
         {/* Left Account Panel */}
         <div className="account-section">
-          <Link href="/profile">
-            <button>Profile</button>
-          </Link>
-          <button
-            className="logout"
-            onClick={() => fetch("/api/auth/logout", { method: "POST" }).then(() => window.location.href = "/")}
-          >
-            Logout
-          </button>
+
+          {/* Logo Top */}
+          <div className="account-top">
+            <Image
+              src="/images/light-logo.png"
+              alt="Bookwise Logo"
+              width={100}
+              height={200}
+              className="dashboard-logo"
+            />
+          </div>
+
+          {/* Buttons Bottom */}
+          <div className="account-buttons">
+            <Link href="/profile">
+              <button>Profile</button>
+            </Link>
+
+            <button
+              className="logout"
+              onClick={() =>
+                fetch("/api/auth/logout", { method: "POST" })
+                  .then(() => (window.location.href = "/"))
+              }
+            >
+              Logout
+            </button>
+          </div>
         </div>
 
         {/* Main Dashboard */}
