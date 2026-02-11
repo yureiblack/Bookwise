@@ -8,6 +8,7 @@ import {generateQR} from '../utils/qr.js'
 
 export const bookHotel = async (req, res) => {
     try{
+        console.log("Decoded userId:", req.userId);
         const booking = await createBooking({
             userId: req.userId,
             ...req.body
@@ -24,8 +25,12 @@ export const bookHotel = async (req, res) => {
             status: booking.status,
             qrImage
         })
-    } catch (err){
-        return res.status(500).json({message: "Booking failed"})
+    } catch (err) {
+    console.error("BOOKING ERROR:", err);
+    return res.status(500).json({ 
+        message: "Booking failed",
+        error: err.message
+    });
     }
 }
 
