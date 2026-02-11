@@ -93,76 +93,107 @@ export default function HotelSearchPage() {
     setShowModal(true);
   }
 
-async function handlePayNow() {
-  try {
-    if (!checkIn || !checkOut || !selectedRoomId) {
-      alert("Please select dates and room type.");
-      return;
-    }
+  async function handlePayNow() {
+    try {
+      if (!checkIn || !checkOut || !selectedRoomId) {
+        alert("Please select dates and room type.");
+        return;
+      }
 
-    if (new Date(checkOut) <= new Date(checkIn)) {
-      alert("Check-out must be after check-in.");
-      return;
-    }
+      if (new Date(checkOut) <= new Date(checkIn)) {
+        alert("Check-out must be after check-in.");
+        return;
+      }
 
-    const token = localStorage.getItem("token");
+      const token = localStorage.getItem("token");
 
-    if (!token) {
-      alert("Please login first.");
-      router.push("/login");
-      return;
-    }
+      if (!token) {
+        alert("Please login first.");
+        router.push("/login");
+        return;
+      }
 
-    setProcessingPayment(true);
+      setProcessingPayment(true);
 
-    // 1️⃣ Create Booking
-    const bookingRes = await fetch("http://localhost:3001/api/bookings", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        hotelId: selectedHotel.id,
-        roomTypeId: selectedRoomId,
-        checkIn,
-        checkOut,
-      }),
-    });
+      // 1️⃣ Create Booking
+      const bookingRes = await fetch("http://localhost:3001/api/bookings", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          hotelId: selectedHotel.id,
+          roomTypeId: selectedRoomId,
+          checkIn,
+          checkOut,
+        }),
+      });
 
-    const bookingData = await bookingRes.json();
+      const bookingData = await bookingRes.json();
 
-    if (!bookingRes.ok) {
-      throw new Error(bookingData.message || "Booking failed");
-    }
+      if (!bookingRes.ok) {
+        throw new Error(bookingData.message || "Booking failed");
+      }
 
-    // 2️⃣ Run Mock Payment
-    const paymentRes = await fetch("http://localhost:3001/api/payments/mock", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        bookingId: bookingData.id,
-      }),
-    });
+      // 2️⃣ Run Mock Payment
+      const paymentRes = await fetch("http://localhost:3001/api/payments/mock", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          bookingId: bookingData.bookingId || bookingData.id,
+        }),
+      });
 
-    const paymentData = await paymentRes.json();
+      const paymentData = await paymentRes.json();
 
-    // ✅ Close modal ONLY on success
-    if (paymentData.paymentStatus === "SUCCESS") {
-      setShowModal(false);
-      router.push(`/booking-success?bookingId=${bookingData.id}`);
-    } else {
-      router.push(`/payment-failed?bookingId=${bookingData.id}`);
-    }
+      if (!paymentRes.ok) {
+        throw new Error(paymentData.message || "Payment failed");
+      }
+
+      // ===============================
+      // 🎯 HANDLE RESULT
+      // ===============================
+
+      if (paymentData.paymentStatus === "SUCCESS") {
+
+        alert("Payment Successful ✅");
+
+        // Close modal
+        setShowModal(false);
+
+        // Show QR in same page
+        alert("Scan this QR at hotel check-in");
+
+        // Open QR in new tab (simple solution)
+        const qrWindow = window.open();
+        qrWindow.document.write(`
+          <html>
+            <head><title>Booking QR</title></head>
+            <body style="text-align:center;font-family:sans-serif;">
+              <h2>Booking Confirmed 🎉</h2>
+              <p>Booking Code: ${bookingData.bookingCode}</p>
+              <img src="${bookingData.qrImage}" />
+              <p>Show this QR at hotel check-in</p>
+            </body>
+          </html>
+        `);
+
+      } else {
+
+        alert("Payment Failed ❌");
+        // DO NOTHING → Stay on same page
+
+      }
 
     } catch (err) {
       console.error(err);
       alert(err.message || "Something went wrong.");
     } finally {
-      setProcessingPayment(false); // Only stop loader here
+      setProcessingPayment(false);
     }
   }
 
