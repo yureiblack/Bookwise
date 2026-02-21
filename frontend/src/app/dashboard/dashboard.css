@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
 /* ===============================
    DASHBOARD WRAPPER
 =================================*/
@@ -115,10 +117,11 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  font-family: "Tangerine", cursive;
 }
 
 .welcome-section h1 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 /* ===============================
@@ -266,7 +269,7 @@
   }
 
   .welcome-section h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .dashboard-main {

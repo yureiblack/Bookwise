@@ -105,7 +105,7 @@ export default function Dashboard() {
         <div className="dashboard-main">
           {/* Greeting + Search */}
           <div className="welcome-section">
-            <h1>{greeting}, {user?.email?.split("@")[0] || "Champ"}!</h1>
+            <h1>{greeting}, {user?.email?.split("@")[0] || "User"}!</h1>
             <div className="search-hotels">
               <button onClick={() => setShowSearch(!showSearch)}>Search Hotels</button>
               {showSearch && (
