@@ -1,38 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+.hotel-search-wrapper {
+  max-width: 1300px;
+  margin: 100px auto 0;
+}
+
+.hotel-search-wrapper h1 {
+  font-family: "Marcellus", serif;
+  margin-bottom: 24px;
+}
+
+/* Scroll container */
 .hotel-scroll-card {
+  font-family: "Marcellus", serif;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
-/* One hotel row */
+/* Hotel card */
 .hotel-row {
   display: flex;
-  gap: 20px;
+  gap: 28px;
   background: var(--card-bg);
-  padding: 20px;
+  padding: 28px;
   border-radius: 16px;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
-/* Image section */
+/* Image */
 .hotel-image img {
-  width: 180px;
-  height: 140px;
+  width: 360px;
+  height: 520px;
   object-fit: cover;
   border-radius: 12px;
   flex-shrink: 0;
 }
 
-/* Details section */
+/* Details layout */
 .hotel-details {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   flex: 1;
+  gap: 22px;
 }
 
+/* Headings */
+.hotel-details h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+/* Sections */
+.hotel-top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hotel-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hotel-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: auto;
+}
+
+/* Text styles */
 .hotel-name {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: var(--foreground);
 }
 
@@ -43,63 +87,78 @@
 
 .hotel-description {
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* Amenities */
 .hotel-amenities {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .amenity {
   background: rgba(255, 255, 255, 0.08);
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 999px;
   font-size: 0.8rem;
 }
 
-/* Rooms */
+/* Rooms (COMPACT WIDTH) */
 .hotel-rooms {
   display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start; /* prevents full-width stretch */
 }
 
 .room {
+  display: inline-flex;           /* KEY */
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: 320px;               /* controls width */
+  width: fit-content;             /* shrinks to content */
   font-size: 0.9rem;
-  background: rgba(255,255,255,0.06);
-  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 10px 14px;
   border-radius: 8px;
 }
 
 /* Reviews */
+.hotel-reviews {
+  max-height: 120px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
 .hotel-reviews p {
   font-size: 0.85rem;
   opacity: 0.85;
+  margin-bottom: 6px;
 }
 
 /* Button */
 .view-btn {
-  margin-top: 8px;
   align-self: flex-start;
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 8px 14px;
+  padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
+  font-family: "Marcellus", serif;
 }
 
 .view-btn:hover {
   background: var(--hover);
 }
 
+/* Modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,7 +172,7 @@
   width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .modal input,

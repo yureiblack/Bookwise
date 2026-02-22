@@ -222,61 +222,83 @@ export default function HotelSearchPage() {
         <div className="hotel-scroll-card">
           {hotels.map((hotel) => (
             <div key={hotel.id} className="hotel-row">
-
               {/* LEFT: Hotel Image */}
               <div className="hotel-image">
-                <img
-                  src={hotel.image}
-                  alt={hotel.name}
-                />
+                <img src={hotel.image} alt={hotel.name} />
               </div>
 
               {/* RIGHT: Hotel Details */}
               <div className="hotel-details">
 
-                <h2 className="hotel-name">{hotel.name}</h2>
+                {/* TOP SECTION */}
+                <div className="hotel-top">
+                  <h2 className="hotel-name">{hotel.name}</h2>
 
-                <p className="hotel-meta">
-                  ⭐ {hotel.rating} • {hotel.star}-Star Hotel
-                </p>
-
-                <p className="hotel-description">
-                  {hotel.description}
-                </p>
-
-                {/* Amenities */}
-                <div className="hotel-amenities">
-                  {hotel.amenities.map((a, i) => (
-                    <span key={i} className="amenity">{a}</span>
-                  ))}
+                  <p className="hotel-description">
+                    {hotel.description}
+                  </p>
                 </div>
 
-                {/* Room Prices */}
-                <div className="hotel-rooms">
-                  {hotel.rooms.map((room) => (
-                    <div key={room.id} className="room">
-                      <span>{room.type}:</span>
-                      <strong> ₹{room.priceNight} / night</strong>
-                    </div>
-                  ))}
-                </div>
+                {/* MIDDLE SECTION */}
+                <div className="hotel-middle">
 
-                {/* Reviews */}
-                <div className="hotel-reviews">
-                  <strong>Reviews:</strong>
-                  {hotel.reviews.map((r) => (
-                    <p key={r.id}>
-                      ⭐ {r.rating} – {r.comment}
+                  {/* Overall Rating */}
+                  <div>
+                    <h4>Overall Rating</h4>
+                    <p className="hotel-meta">
+                      ⭐ {hotel.rating} ({hotel.star}-Star Hotel)
                     </p>
-                  ))}
+                  </div>
+
+                  {/* Amenities */}
+                  <div>
+                    <h4>Amenities</h4>
+                    <div className="hotel-amenities">
+                      {hotel.amenities.map((a, i) => (
+                        <span key={i} className="amenity">{a}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Room Prices */}
+                  <div>
+                    <h4>Available Rooms</h4>
+                    <div className="hotel-rooms">
+                      {hotel.rooms.map((room) => (
+                        <div key={room.id} className="room">
+                          {room.type} — <strong>₹{room.priceNight} / night</strong>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                 </div>
 
-                <button
-                  className="view-btn"
-                  onClick={() => handleBookNow(hotel)}
-                >
-                  Book Now
-                </button>
+                {/* BOTTOM SECTION */}
+                <div className="hotel-bottom">
+
+                  {/* Customer Reviews */}
+                  <div className="hotel-reviews">
+                    <h4>Customer Reviews</h4>
+                    {hotel.reviews.length === 0 ? (
+                      <p>No reviews yet.</p>
+                    ) : (
+                      hotel.reviews.map((r) => (
+                        <p key={r.id}>
+                          ⭐ {r.rating} — {r.comment}
+                        </p>
+                      ))
+                    )}
+                  </div>
+
+                  <button
+                    className="view-btn"
+                    onClick={() => handleBookNow(hotel)}
+                  >
+                    Book Now
+                  </button>
+
+                </div>
 
               </div>
             </div>
