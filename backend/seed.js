@@ -45,16 +45,16 @@ async function seed(){
       const imageUrl = `${HOTEL_IMAGE_URL}/${imageBaseName}`
 
       const hotelDescriptions = [
-        "A luxurious retreat offering world-class hospitality and elegant interiors.",
-        "Perfect for business and leisure travelers with modern amenities and comfort.",
-        "Nestled in a prime location, combining convenience with premium services.",
-        "An elegant stay experience featuring spacious rooms and fine dining.",
-        "Designed for travelers seeking comfort, style, and excellent service.",
-        "A peaceful escape with refined rooms and attentive staff.",
-        "Blending contemporary design with traditional hospitality.",
-        "Ideal for families and professionals looking for a premium stay.",
-        "Experience comfort and sophistication in the heart of the city.",
-        "A modern hotel offering seamless luxury and relaxation."
+        "A luxurious retreat offering world-class hospitality and elegant interiors. Enjoy beautifully designed rooms, premium amenities, and exceptional service that ensures a memorable and relaxing stay for every guest.",
+        "Perfect for business and leisure travelers with modern amenities and comfort. Whether you're attending meetings or exploring the city, this hotel provides convenience, efficiency, and a relaxing atmosphere.",
+        "Nestled in a prime location, combining convenience with premium services. Guests can easily access nearby attractions while enjoying top-notch facilities, comfortable rooms, and attentive hospitality.",
+        "An elegant stay experience featuring spacious rooms and fine dining. Indulge in a refined ambiance, curated cuisine, and thoughtfully designed spaces that elevate your overall stay experience.",
+        "Designed for travelers seeking comfort, style, and excellent service. With modern interiors, cozy accommodations, and a welcoming environment, this hotel ensures a pleasant and hassle-free stay.",
+        "A peaceful escape with refined rooms and attentive staff. Perfect for unwinding, the hotel offers a calm ambiance, personalized service, and all the essentials for a comfortable stay.",
+        "Blending contemporary design with traditional hospitality. Experience stylish interiors paired with warm service, creating a balanced stay that feels both modern and welcoming.",
+        "Ideal for families and professionals looking for a premium stay. Spacious rooms, thoughtful amenities, and a convenient location make it suitable for both relaxation and productivity.",
+        "Experience comfort and sophistication in the heart of the city. Enjoy easy access to major attractions while relaxing in well-appointed rooms designed for maximum comfort and convenience.",
+        "A modern hotel offering seamless luxury and relaxation. From well-equipped rooms to excellent service, every detail is designed to provide a smooth and enjoyable stay experience."
       ];
 
       //Hotel: 

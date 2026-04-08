@@ -60,7 +60,7 @@ model Hotel {
   image       String   // thumbnail 
   amenities   Json
   star        Int
-  description String
+  description String @db.Text
 
   paymentProvider String?
   paymentAccount  String?
