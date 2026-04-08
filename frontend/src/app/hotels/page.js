@@ -269,4 +269,4 @@ export default function HotelSearchPage() {
       <HotelListContent />
     </Suspense>
   );
-}
+} 

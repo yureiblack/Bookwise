@@ -61,3 +61,19 @@ export const confirmCheckIn = async (bookingId) => {
         throw new Error("ALREADY_USED");
     }
 };
+
+export const getUserBookings = async (userId) => {
+    return prisma.booking.findMany({
+        where: {
+            userId,
+            status: { in: ["CONFIRMED", "CHECKED_IN"] }
+        },
+        include: {
+            hotel: {
+                include: { city: true }
+            },
+            roomType: true
+        },
+        orderBy: { createdAt: 'desc' }
+    });
+};

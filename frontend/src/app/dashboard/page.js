@@ -8,6 +8,7 @@ export default function Dashboard() {
   const [greeting, setGreeting] = useState("");
   const [user, setUser] = useState(null);
   const [bookings, setBookings] = useState([]);
+  const [bookingsLoading, setBookingsLoading] = useState(true);
   const [showSearch, setShowSearch] = useState(false);
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
@@ -21,28 +22,44 @@ export default function Dashboard() {
     else setGreeting("Good evening");
   }, []);
 
-  // Fetch user
+  // Fetch user profile
   useEffect(() => {
-    fetch("/users/me")
+    const token = localStorage.getItem("token");
+    if (!token) return;
+
+    fetch("http://localhost:3001/api/users/me", {
+      headers: { Authorization: `Bearer ${token}` }
+    })
       .then(res => res.json())
       .then(data => setUser(data))
-      .catch(err => console.error(err));
+      .catch(err => console.error("User fetch error:", err));
   }, []);
 
-  // Fetch all bookings
+  // Fetch user's confirmed & checked-in bookings
   useEffect(() => {
-    fetch("/bookings")
+    const token = localStorage.getItem("token");
+    if (!token) {
+      setBookingsLoading(false);
+      return;
+    }
+
+    fetch("http://localhost:3001/api/bookings/my", {
+      headers: { Authorization: `Bearer ${token}` }
+    })
       .then(res => res.json())
-      .then(data => setBookings(data))
-      .catch(err => console.error(err));
+      .then(data => {
+        setBookings(Array.isArray(data) ? data : []);
+      })
+      .catch(err => console.error("Bookings fetch error:", err))
+      .finally(() => setBookingsLoading(false));
   }, []);
 
   //fetch states
   useEffect(() => {
-  fetch("http://localhost:3001/api/locations/states")
-    .then(res => res.json())
-    .then(data => setStates(data))
-    .catch(err => console.error("States error:", err));
+    fetch("http://localhost:3001/api/locations/states")
+      .then(res => res.json())
+      .then(data => setStates(data))
+      .catch(err => console.error("States error:", err));
   }, []);
 
   // Fetch cities when state changes
@@ -59,11 +76,22 @@ export default function Dashboard() {
       .catch(err => console.error("Cities error:", err));
   }, [search.stateId]);
 
-
   const handleSearch = (e) => {
     e.preventDefault();
-    const query = new URLSearchParams(search).toString();
     window.location.href = `/hotels?cityId=${search.cityId}`;
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/";
+  };
+
+  const formatDate = (dateStr) => {
+    return new Date(dateStr).toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
   };
 
   return (
@@ -71,8 +99,6 @@ export default function Dashboard() {
       <div className="dashboard-container">
         {/* Left Account Panel */}
         <div className="account-section">
-
-          {/* Logo Top */}
           <div className="account-top">
             <Image
               src="/images/light-logo.png"
@@ -83,19 +109,11 @@ export default function Dashboard() {
             />
           </div>
 
-          {/* Buttons Bottom */}
           <div className="account-buttons">
             <Link href="/profile">
               <button>Profile</button>
             </Link>
-
-            <button
-              className="logout"
-              onClick={() =>
-                fetch("/api/auth/logout", { method: "POST" })
-                  .then(() => (window.location.href = "/"))
-              }
-            >
+            <button className="logout" onClick={handleLogout}>
               Logout
             </button>
           </div>
@@ -142,33 +160,45 @@ export default function Dashboard() {
           {/* Your Bookings */}
           <div className="bookings-section">
             <h2>Your Bookings</h2>
-            {bookings.length === 0 ? (
-              <p>No bookings yet.</p>
+            {bookingsLoading ? (
+              <p className="bookings-empty">Loading bookings...</p>
+            ) : bookings.length === 0 ? (
+              <p className="bookings-empty">No confirmed or checked-in bookings yet.</p>
             ) : (
-              <table>
-                <thead>
-                  <tr>
-                    <th>Hotel</th>
-                    <th>City</th>
-                    <th>Check-in</th>
-                    <th>Check-out</th>
-                    <th>Room Type</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {bookings.map(b => (
-                    <tr key={b.id}>
-                      <td>{b.hotel.name}</td>
-                      <td>{b.hotel.city.name}</td>
-                      <td>{b.checkIn}</td>
-                      <td>{b.checkOut}</td>
-                      <td>{b.roomType}</td>
-                      <td className={b.status.toLowerCase()}>{b.status}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="bookings-grid">
+                {bookings.map(b => (
+                  <div key={b.id} className="booking-card">
+                    <div className="booking-card-header">
+                      <h3>{b.hotel.name}</h3>
+                      <span className={`status-badge status-${b.status.toLowerCase().replace("_", "-")}`}>
+                        {b.status === "CHECKED_IN" ? "Checked In" : "Confirmed"}
+                      </span>
+                    </div>
+                    <div className="booking-card-body">
+                      <div className="booking-detail">
+                        <span className="detail-label">📍 City</span>
+                        <span className="detail-value">{b.hotel.city.name}</span>
+                      </div>
+                      <div className="booking-detail">
+                        <span className="detail-label">🛏️ Room</span>
+                        <span className="detail-value">{b.roomType.type}</span>
+                      </div>
+                      <div className="booking-detail">
+                        <span className="detail-label">📅 Check-in</span>
+                        <span className="detail-value">{formatDate(b.checkIn)}</span>
+                      </div>
+                      <div className="booking-detail">
+                        <span className="detail-label">📅 Check-out</span>
+                        <span className="detail-value">{formatDate(b.checkOut)}</span>
+                      </div>
+                      <div className="booking-detail">
+                        <span className="detail-label">🔖 Code</span>
+                        <span className="detail-value booking-code">{b.bookingCode}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             )}
           </div>
         </div>

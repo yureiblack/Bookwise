@@ -1,7 +1,8 @@
 import {
     createBooking,
     findBookingByQRToken,
-    confirmCheckIn
+    confirmCheckIn,
+    getUserBookings
 } from '../services/booking.service.js'
 
 import {generateQR} from '../utils/qr.js'
@@ -73,4 +74,14 @@ export const checkInGuest = async (req, res) => {
     } catch{
         return res.status(400).json({ message: "QR already used" })
     }
-} 
+}
+
+export const fetchMyBookings = async (req, res) => {
+    try {
+        const bookings = await getUserBookings(req.userId);
+        return res.json(bookings);
+    } catch (err) {
+        console.error("FETCH MY BOOKINGS ERROR:", err);
+        return res.status(500).json({ message: "Failed to fetch bookings" });
+    }
+}

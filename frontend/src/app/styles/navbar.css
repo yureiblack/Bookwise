@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   padding: 40px 50px;
   background: transparent; 
-  z-index: 10;
+  z-index: 100;
 }
 
 .navbar ul {
