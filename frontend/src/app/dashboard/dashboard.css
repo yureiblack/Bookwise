@@ -261,6 +261,8 @@
 .booking-card-header h3 {
   font-size: 1.1rem;
   font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 /* Hotel Name Link */
@@ -328,13 +330,14 @@
 
 .detail-label {
   font-size: 0.75rem;
-  opacity: 0.55;
+  color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.3px;
 }
 
 .detail-value {
   font-size: 0.9rem;
   font-weight: 500;
+  color: #ffffff;
 }
 
 .booking-code {
