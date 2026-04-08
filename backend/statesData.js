@@ -1,186 +1,4 @@
 const statesData = {
-  "Andhra Pradesh": [
-  {
-    "id": "and_city_01",
-    "name": "The Imperial Crown",
-    "rating": 5.0,
-    "image": "/images/hotels/and_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3500, "image": "/images/rooms/and_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/and_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/and_city_01_suite.jpg" }
-    ],
-    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
-    "star": 7,
-    "city": "Visakhapatnam",
-    "reviews": [
-      { "date": "2025-04-10", "rating": 5, "comment": "Absolutely stunning hotel with exceptional service!" },
-      { "date": "2025-03-15", "rating": 4, "comment": "Luxurious experience but food could've been better." }
-    ]
-  },
-  {
-    "id": "and_city_02",
-    "name": "Grand Eden",
-    "rating": 4.5,
-    "image": "/images/hotels/and_img2.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/and_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/and_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7000, "image": "/images/rooms/and_city_02_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Vijayawada",
-    "reviews": [
-      { "date": "2025-01-20", "rating": 5, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2025-02-02", "rating": 3, "comment": "Nice place but rooms were a bit small." }
-    ]
-  },
-  {
-    "id": "and_city_03",
-    "name": "Azure Bay Hotel",
-    "rating": 4.5,
-    "image": "/images/hotels/and_img3.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 2800, "image": "/images/rooms/and_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4200, "image": "/images/rooms/and_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/and_city_03_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Tirupati",
-    "reviews": [
-      { "date": "2025-04-01", "rating": 4, "comment": "Very clean and well-maintained hotel." },
-      { "date": "2025-03-05", "rating": 5, "comment": "Loved the pool and the food!" }
-    ]
-  },
-  {
-    "id": "and_city_04",
-    "name": "The Golden Lotus",
-    "rating": 4.5,
-    "image": "/images/hotels/and_img4.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/and_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/and_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7500, "image": "/images/rooms/and_city_04_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Visakhapatnam",
-    "reviews": [
-      { "date": "2025-02-25", "rating": 4, "comment": "Great location. Would visit again." },
-      { "date": "2025-01-18", "rating": 5, "comment": "Everything was perfect. Worth every penny." }
-    ]
-  },
-  {
-    "id": "and_city_05",
-    "name": "The Oakwood Inn",
-    "rating": 4.0,
-    "image": "/images/hotels/and_img5.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 2200, "image": "/images/rooms/and_city_05_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3400, "image": "/images/rooms/and_city_05_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5200, "image": "/images/rooms/and_city_05_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Vijayawada",
-    "reviews": [
-      { "date": "2025-03-22", "rating": 3, "comment": "Service was slow but the room was nice." },
-      { "date": "2025-04-17", "rating": 5, "comment": "Best hotel experience I've had in a while!" }
-    ]
-  },
-  {
-    "id": "and_city_06",
-    "name": "Riverstone Hotel",
-    "rating": 4.0,
-    "image": "/images/hotels/and_img6.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 2100, "image": "/images/rooms/and_city_06_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3300, "image": "/images/rooms/and_city_06_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5000, "image": "/images/rooms/and_city_06_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Guntur",
-    "reviews": [
-      { "date": "2024-12-03", "rating": 3, "comment": "Absolutely stunning hotel with exceptional service!" },
-      { "date": "2025-02-03", "rating": 4.5, "comment": "Everything was perfect. Worth every penny." }
-    ]
-  }],
-  "Arunachal Pradesh": [
-  {
-    "id": "aru_city_01",
-    "name": "Prestige Heights",
-    "rating": 4.5,
-    "image": "/images/hotels/aru_img3.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/aru_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/aru_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7000, "image": "/images/rooms/aru_city_01_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Itanagar",
-    "reviews": [
-      { "date": "2024-12-02", "rating": 4, "comment": "Very clean and well-maintained hotel." },
-      { "date": "2025-03-09", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
-    ]
-  },
-  {
-    "id": "aru_city_02",
-    "name": "Sterling Vista",
-    "rating": 4.5,
-    "image": "/images/hotels/aru_img4.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/aru_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/aru_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7500, "image": "/images/rooms/aru_city_02_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Tawang",
-    "reviews": [
-      { "date": "2025-02-12", "rating": 3, "comment": "Excellent amenities and courteous staff." },
-      { "date": "2024-11-21", "rating": 5, "comment": "Luxurious experience but food could've been better." }
-    ]
-  },
-  {
-    "id": "aru_city_03",
-    "name": "Pine Hill Lodge",
-    "rating": 4.0,
-    "image": "/images/hotels/aru_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 2400, "image": "/images/rooms/aru_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3600, "image": "/images/rooms/aru_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5500, "image": "/images/rooms/aru_city_03_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Itanagar",
-    "reviews": [
-      { "date": "2025-03-18", "rating": 3, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2025-04-03", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
-    ]
-  },
-  {
-    "id": "aru_city_04",
-    "name": "The Green Terrace",
-    "rating": 4.0,
-    "image": "/images/hotels/aru_img2.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 2300, "image": "/images/rooms/aru_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3500, "image": "/images/rooms/aru_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5200, "image": "/images/rooms/aru_city_04_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Pasighat",
-    "reviews": [
-      { "date": "2025-01-18", "rating": 3, "comment": "Peaceful environment and cozy rooms." },
-      { "date": "2025-02-05", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
-    ]
-  }],
   "Assam": [
   {
     "id": "ass_city_01",
@@ -212,7 +30,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Tezpur",
+    "city": "Guwahati",
     "reviews": [
       { "date": "2025-04-07", "rating": 4.5, "comment": "Absolutely stunning hotel with exceptional service!" },
       { "date": "2024-12-30", "rating": 4, "comment": "Location was perfect for sightseeing." }
@@ -248,228 +66,82 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Silchar",
+    "city": "Kaziranga",
     "reviews": [
       { "date": "2024-12-12", "rating": 4.5, "comment": "Nice place but rooms were a bit small." },
       { "date": "2025-04-02", "rating": 3, "comment": "The ambiance is absolutely delightful." }
     ]
-  }],
-  "Bihar": [
-  {
-    "id": "bih_city_01",
-    "name": "Elysian Grandeur",
-    "rating": 5.0,
-    "image": "/images/hotels/bih_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3500, "image": "/images/rooms/bih_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/bih_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/bih_city_01_suite.jpg" }
-    ],
-    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
-    "star": 7,
-    "city": "Patna",
-    "reviews": [
-      { "date": "2025-03-26", "rating": 3, "comment": "Room service was prompt and friendly." },
-      { "date": "2025-02-08", "rating": 4.5, "comment": "My go-to hotel whenever I'm in town." }
-    ]
   },
   {
-    "id": "bih_city_02",
-    "name": "Solace Suites",
+    "id": "ass_city_05",
+    "name": "Prestige Heights",
     "rating": 4.5,
-    "image": "/images/hotels/bih_img2.jpg",
+    "image": "/images/hotels/ass_img5.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/bih_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/bih_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7000, "image": "/images/rooms/bih_city_02_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/ass_city_05_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/ass_city_05_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7000, "image": "/images/rooms/ass_city_05_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Gaya",
+    "city": "Kaziranga",
     "reviews": [
-      { "date": "2025-01-05", "rating": 4.5, "comment": "Luxurious experience but food could've been better." },
-      { "date": "2024-11-17", "rating": 5, "comment": "Peaceful environment and cozy rooms." }
+      { "date": "2024-12-02", "rating": 4, "comment": "Very clean and well-maintained hotel." },
+      { "date": "2025-03-09", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
     ]
   },
   {
-    "id": "bih_city_03",
-    "name": "The Radiant Crest",
+    "id": "ass_city_06",
+    "name": "Sterling Vista",
     "rating": 4.5,
-    "image": "/images/hotels/bih_img3.jpg",
+    "image": "/images/hotels/ass_img6.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3100, "image": "/images/rooms/bih_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4700, "image": "/images/rooms/bih_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7200, "image": "/images/rooms/bih_city_03_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/ass_city_06_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/ass_city_06_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7500, "image": "/images/rooms/ass_city_06_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Patna",
+    "city": "Kaziranga",
     "reviews": [
-      { "date": "2025-02-11", "rating": 3, "comment": "The ambiance is absolutely delightful." },
-      { "date": "2024-11-16", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
+      { "date": "2025-02-12", "rating": 3, "comment": "Excellent amenities and courteous staff." },
+      { "date": "2024-11-21", "rating": 5, "comment": "Luxurious experience but food could've been better." }
     ]
   },
   {
-    "id": "bih_city_04",
-    "name": "Zenith Valley Resort",
-    "rating": 4.5,
-    "image": "/images/hotels/bih_img4.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/bih_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/bih_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7400, "image": "/images/rooms/bih_city_04_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Bihar Sharif",
-    "reviews": [
-      { "date": "2024-11-11", "rating": 4.5, "comment": "My go-to hotel whenever I'm in town." },
-      { "date": "2025-02-13", "rating": 4.5, "comment": "Excellent amenities and courteous staff." }
-    ]
-  },
-  {
-    "id": "bih_city_05",
-    "name": "Willow Creek Hotel",
+    "id": "ass_city_07",
+    "name": "Pine Hill Lodge",
     "rating": 4.0,
-    "image": "/images/hotels/bih_img5.jpg",
+    "image": "/images/hotels/ass_img7.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2400, "image": "/images/rooms/bih_city_05_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3600, "image": "/images/rooms/bih_city_05_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5400, "image": "/images/rooms/bih_city_05_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 2400, "image": "/images/rooms/ass_city_07_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3600, "image": "/images/rooms/ass_city_07_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5500, "image": "/images/rooms/ass_city_07_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Patna",
+    "city": "Majuli",
     "reviews": [
-      { "date": "2025-01-31", "rating": 4, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2025-03-02", "rating": 3, "comment": "Everything was perfect. Worth every penny." }
+      { "date": "2025-03-18", "rating": 3, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2025-04-03", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
     ]
   },
   {
-    "id": "bih_city_06",
-    "name": "Sunnybrook Inn",
+    "id": "ass_city_08",
+    "name": "The Green Terrace",
     "rating": 4.0,
-    "image": "/images/hotels/bih_img6.jpg",
+    "image": "/images/hotels/ass_img8.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2300, "image": "/images/rooms/bih_city_06_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3500, "image": "/images/rooms/bih_city_06_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5200, "image": "/images/rooms/bih_city_06_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 2300, "image": "/images/rooms/ass_city_08_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3500, "image": "/images/rooms/ass_city_08_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5200, "image": "/images/rooms/ass_city_08_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Gaya",
+    "city": "Majuli",
     "reviews": [
-      { "date": "2024-12-11", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2024-11-20", "rating": 4, "comment": "Nice place but rooms were a bit small." }
-    ]
-  }],
-  "Chhattisgarh": [
-  {
-    "id": "chh_city_01",
-    "name": "Aurora Heights",
-    "rating": 5.0,
-    "image": "/images/hotels/chh_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3600, "image": "/images/rooms/chh_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5400, "image": "/images/rooms/chh_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8200, "image": "/images/rooms/chh_city_01_suite.jpg" }
-    ],
-    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
-    "star": 7,
-    "city": "Raipur",
-    "reviews": [
-      { "date": "2024-12-11", "rating": 5, "comment": "Service was slow but the room was nice." },
-      { "date": "2024-11-10", "rating": 5, "comment": "Room service was prompt and friendly." }
-    ]
-  },
-  {
-    "id": "chh_city_02",
-    "name": "The Velvet Leaf",
-    "rating": 4.5,
-    "image": "/images/hotels/chh_img2.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3100, "image": "/images/rooms/chh_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4700, "image": "/images/rooms/chh_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7200, "image": "/images/rooms/chh_city_02_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Bilaspur",
-    "reviews": [
-      { "date": "2025-02-16", "rating": 4, "comment": "Room service was prompt and friendly." },
-      { "date": "2025-03-21", "rating": 4.5, "comment": "Great location. Would visit again." }
-    ]
-  },
-  {
-    "id": "chh_city_03",
-    "name": "Crystal Mirage",
-    "rating": 4.5,
-    "image": "/images/hotels/chh_img3.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/chh_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/chh_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7400, "image": "/images/rooms/chh_city_03_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Korba",
-    "reviews": [
-      { "date": "2025-01-23", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2025-03-31", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
-    ]
-  },
-  {
-    "id": "chh_city_04",
-    "name": "Opal Garden Hotel",
-    "rating": 4.5,
-    "image": "/images/hotels/chh_img4.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3150, "image": "/images/rooms/chh_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4750, "image": "/images/rooms/chh_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7300, "image": "/images/rooms/chh_city_04_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Raipur",
-    "reviews": [
-      { "date": "2025-02-08", "rating": 4, "comment": "Loved the pool and the food!" },
-      { "date": "2024-11-03", "rating": 5, "comment": "The ambiance is absolutely delightful." }
-    ]
-  },
-  {
-    "id": "chh_city_05",
-    "name": "Valley Vista Resort",
-    "rating": 4.0,
-    "image": "/images/hotels/chh_img5.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 2500, "image": "/images/rooms/chh_city_05_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3700, "image": "/images/rooms/chh_city_05_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5600, "image": "/images/rooms/chh_city_05_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Raigarh",
-    "reviews": [
-      { "date": "2025-02-26", "rating": 4.5, "comment": "Peaceful environment and cozy rooms." },
-      { "date": "2025-04-08", "rating": 4, "comment": "The spa services were top-notch!" }
-    ]
-  },
-  {
-    "id": "chh_city_06",
-    "name": "The Orchard House",
-    "rating": 4.0,
-    "image": "/images/hotels/chh_img6.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 2400, "image": "/images/rooms/chh_city_06_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3600, "image": "/images/rooms/chh_city_06_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5400, "image": "/images/rooms/chh_city_06_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Durg-Bhilai Nagar",
-    "reviews": [
-      { "date": "2025-03-16", "rating": 3, "comment": "Everything was perfect. Worth every penny." },
-      { "date": "2025-02-28", "rating": 3, "comment": "The spa services were top-notch!" }
+      { "date": "2025-01-18", "rating": 3, "comment": "Peaceful environment and cozy rooms." },
+      { "date": "2025-02-05", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
     ]
   }],
   "Goa": [
@@ -503,7 +175,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Vasco da Gama",
+    "city": "Panaji",
     "reviews": [
       { "date": "2025-02-20", "rating": 4.5, "comment": "Great location. Would visit again." },
       { "date": "2024-12-24", "rating": 5, "comment": "The ambiance is absolutely delightful." }
@@ -539,192 +211,172 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Margao",
+    "city": "Panaji",
     "reviews": [
       { "date": "2024-11-26", "rating": 4, "comment": "Peaceful environment and cozy rooms." },
       { "date": "2025-01-08", "rating": 4.5, "comment": "Excellent amenities and courteous staff." }
     ]
-  }],
-  "Gujarat": [
+  },
   {
-    "id": "guj_city_01",
+    "id": "goa_city_05",
     "name": "The Zenith Royale",
     "rating": 5.0,
-    "image": "/images/hotels/guj_img1.jpg",
+    "image": "/images/hotels/goa_img5.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/guj_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6200, "image": "/images/rooms/guj_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/guj_city_01_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/goa_city_05_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6200, "image": "/images/rooms/goa_city_05_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/goa_city_05_suite.jpg" }
     ],
     "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
     "star": 7,
-    "city": "Ahmedabad",
+    "city": "Baga",
     "reviews": [
       { "date": "2025-02-23", "rating": 5, "comment": "Excellent amenities and courteous staff." },
       { "date": "2025-04-06", "rating": 5, "comment": "Room service was prompt and friendly." }
     ]
   },
   {
-    "id": "guj_city_02",
+    "id": "goa_city_06",
     "name": "The Sapphire Enclave",
     "rating": 5.0,
-    "image": "/images/hotels/guj_img2.jpg",
+    "image": "/images/hotels/goa_img6.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 4100, "image": "/images/rooms/guj_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6100, "image": "/images/rooms/guj_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9100, "image": "/images/rooms/guj_city_02_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 4100, "image": "/images/rooms/goa_city_06_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6100, "image": "/images/rooms/goa_city_06_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9100, "image": "/images/rooms/goa_city_06_suite.jpg" }
     ],
     "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
     "star": 7,
-    "city": "Surat",
+    "city": "Baga",
     "reviews": [
       { "date": "2024-11-17", "rating": 4, "comment": "Very clean and well-maintained hotel." },
       { "date": "2025-04-18", "rating": 5, "comment": "Impeccable service and a gorgeous view." }
     ]
   },
   {
-    "id": "guj_city_03",
+    "id": "goa_city_07",
     "name": "The Blossom Crown",
     "rating": 4.5,
-    "image": "/images/hotels/guj_img3.jpg",
+    "image": "/images/hotels/goa_img7.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/guj_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/guj_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7600, "image": "/images/rooms/guj_city_03_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/goa_city_07_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/goa_city_07_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7600, "image": "/images/rooms/goa_city_07_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Rajkot",
+    "city": "Baga",
     "reviews": [
       { "date": "2024-11-09", "rating": 3, "comment": "Nice place but rooms were a bit small." },
       { "date": "2024-11-08", "rating": 4, "comment": "Loved the pool and the food!" }
     ]
   },
   {
-    "id": "guj_city_04",
+    "id": "goa_city_08",
     "name": "Harmony Luxe",
     "rating": 4.5,
-    "image": "/images/hotels/guj_img4.jpg",
+    "image": "/images/hotels/goa_img8.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/guj_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/guj_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7900, "image": "/images/rooms/guj_city_04_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/goa_city_08_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/goa_city_08_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7900, "image": "/images/rooms/goa_city_08_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Ahmedabad", 
+    "city": "Anjuna", 
     "reviews": [
       { "date": "2025-01-23", "rating": 5, "comment": "Highly recommended for families." },
       { "date": "2024-10-21", "rating": 3, "comment": "The ambiance is absolutely delightful." }
     ]
-  }],
-  "Haryana": [
-  {
-    "id": "har_city_01",
-    "name": "Celestia Majestic",
-    "rating": 5.0,
-    "image": "/images/hotels/har_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/har_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6200, "image": "/images/rooms/har_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/har_city_01_suite.jpg" }
-    ],
-    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
-    "star": 7,
-    "city": "Faridabad",
-    "reviews": [
-      { "date": "2025-02-07", "rating": 4.5, "comment": "Highly recommended for families." },
-      { "date": "2025-03-09", "rating": 4, "comment": "My go-to hotel whenever I'm in town." }
-    ]
   },
   {
-    "id": "har_city_02",
-    "name": "Nova Haven",
+    "id": "goa_city_09",
+    "name": "Tranquil Palace",
     "rating": 4.5,
-    "image": "/images/hotels/har_img2.jpg",
+    "image": "/images/hotels/goa_img9.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/har_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/har_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/har_city_02_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3100, "image": "/images/rooms/goa_city_09_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4900, "image": "/images/rooms/goa_city_09_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7300, "image": "/images/rooms/goa_city_09_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Gurgaon",
+    "city": "Anjuna",
     "reviews": [
-      { "date": "2025-02-23", "rating": 3, "comment": "Best hotel experience I've had in a while!" },
-      { "date": "2024-11-04", "rating": 4, "comment": "Very clean and well-maintained hotel." }
+      { "date": "2025-01-23", "rating": 5, "comment": "My go-to hotel whenever I'm in town." },
+      { "date": "2024-10-21", "rating": 3, "comment": "The ambiance is absolutely delightful." }
     ]
   },
   {
-    "id": "har_city_03",
-    "name": "Emerald Ridge",
+    "id": "goa_city_10",
+    "name": "The Crown Orchid",
     "rating": 4.5,
-    "image": "/images/hotels/har_img3.jpg",
+    "image": "/images/hotels/goa_img10.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3500, "image": "/images/rooms/har_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5400, "image": "/images/rooms/har_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8200, "image": "/images/rooms/har_city_03_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/goa_city_10_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5100, "image": "/images/rooms/goa_city_10_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7600, "image": "/images/rooms/goa_city_10_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Sonipat",
+    "city": "Anjuna",
     "reviews": [
-      { "date": "2024-11-09", "rating": 4.5, "comment": "Loved the pool and the food!" },
-      { "date": "2025-04-20", "rating": 3, "comment": "My go-to hotel whenever I'm in town." }
+      { "date": "2025-01-11", "rating": 5, "comment": "My go-to hotel whenever I'm in town." },
+      { "date": "2025-02-26", "rating": 5, "comment": "Highly recommended for families." }
     ]
   },
   {
-    "id": "har_city_04",
-    "name": "Hotel Aurora Bliss",
-    "rating": 4.5,
-    "image": "/images/hotels/har_img4.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/har_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5100, "image": "/images/rooms/har_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7800, "image": "/images/rooms/har_city_04_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Panipat",
-    "reviews": [
-      { "date": "2024-12-15", "rating": 4.5, "comment": "Could improve the check-in process." },
-      { "date": "2025-02-16", "rating": 3, "comment": "Nice place but rooms were a bit small." }
-    ]
-  },
-  {
-    "id": "har_city_05",
-    "name": "Maplewood Retreat",
+    "id": "goa_city_11",
+    "name": "Birchwood Suites",
     "rating": 4.0,
-    "image": "/images/hotels/har_img5.jpg",
+    "image": "/images/hotels/goa_img11.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2600, "image": "/images/rooms/har_city_05_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3900, "image": "/images/rooms/har_city_05_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5900, "image": "/images/rooms/har_city_05_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 2500, "image": "/images/rooms/goa_city_11_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3800, "image": "/images/rooms/goa_city_11_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5800, "image": "/images/rooms/goa_city_11_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Faridabad",
+    "city": "Calangute",
     "reviews": [
-      { "date": "2024-12-15", "rating": 4.5, "comment": "Could improve the check-in process." },
-      { "date": "2025-02-16", "rating": 3, "comment": "Nice place but rooms were a bit small." }
+      { "date": "2024-11-01", "rating": 4.5, "comment": "Peaceful environment and cozy rooms." },
+      { "date": "2024-11-01", "rating": 3, "comment": "Nice place but rooms were a bit small." }
     ]
   },
   {
-    "id": "har_city_06",
-    "name": "Creekside Inn",
+    "id": "goa_city_12",
+    "name": "Redwood Inn",
     "rating": 4.0,
-    "image": "/images/hotels/har_img6.jpg",
+    "image": "/images/hotels/goa_img12.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2700, "image": "/images/rooms/har_city_06_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4000, "image": "/images/rooms/har_city_06_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6100, "image": "/images/rooms/har_city_06_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 2600, "image": "/images/rooms/goa_city_12_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4000, "image": "/images/rooms/goa_city_12_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6000, "image": "/images/rooms/goa_city_12_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Ambala",
+    "city": "Calangute",
     "reviews": [
-      { "date": "2025-02-05", "rating": 4.5, "comment": "Best hotel experience I've had in a while!" },
-      { "date": "2024-11-16", "rating": 4, "comment": "Luxurious experience but food could've been better." }
+      { "date": "2025-02-01", "rating": 4.5, "comment": "The spa services were top-notch!" },
+      { "date": "2024-11-26", "rating": 3, "comment": "Best hotel experience I've had in a while!" }
+    ]
+  },
+  {
+    "id": "goa_city_13",
+    "name": "Cedar Lane Hotel",
+    "rating": 4.0,
+    "image": "/images/hotels/goa_img13.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2700, "image": "/images/rooms/goa_city_13_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4200, "image": "/images/rooms/goa_city_13_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6200, "image": "/images/rooms/goa_city_13_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Calangute",
+    "reviews": [
+      { "date": "2025-01-07", "rating": 5, "comment": "Loved the pool and the food!" },
+      { "date": "2025-02-13", "rating": 5, "comment": "Absolutely stunning hotel with exceptional service!" }
     ]
   }],
   "Himachal Pradesh": [
@@ -758,7 +410,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Manali",
+    "city": "Shimla",
     "reviews": [
       { "date": "2024-12-08", "rating": 5, "comment": "Impeccable service and a gorgeous view." },
       { "date": "2025-01-11", "rating": 4, "comment": "Very clean and well-maintained hotel." }
@@ -799,114 +451,295 @@ const statesData = {
       { "date": "2025-04-10", "rating": 5, "comment": "Great location. Would visit again." },
       { "date": "2024-12-31", "rating": 4, "comment": "Best hotel experience I've had in a while!" }
     ]
-  }],
-  "Jharkhand": [
+  },
   {
-    "id": "jha_city_01",
-    "name": "Regalia Haven",
-    "rating": 5.0,
-    "image": "/images/hotels/jha_img1.jpg",
+    "id": "him_city_05",
+    "name": "The Luxe Lantern",
+    "rating": 4.5,
+    "image": "/images/hotels/him_img5.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 4300, "image": "/images/rooms/jha_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6300, "image": "/images/rooms/jha_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9300, "image": "/images/rooms/jha_city_01_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 4300, "image": "/images/rooms/him_city_05_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6100, "image": "/images/rooms/him_city_05_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8400, "image": "/images/rooms/him_city_05_suite.jpg" }
     ],
-    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
-    "star": 7,
-    "city": "Ranchi",
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Dharamshala",
+    "reviews": [
+      { "date": "2024-12-08", "rating": 5, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2025-01-11", "rating": 4, "comment": "Very clean and well-maintained hotel." }
+    ]
+  },
+  {
+    "id": "him_city_06",
+    "name": "Grand Sapphire Inn",
+    "rating": 4.5,
+    "image": "/images/hotels/him_img6.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/him_city_06_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6000, "image": "/images/rooms/him_city_06_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8300, "image": "/images/rooms/him_city_06_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Manali",
+    "reviews": [
+      { "date": "2024-11-15", "rating": 5, "comment": "Peaceful environment and cozy rooms." },
+      { "date": "2025-02-05", "rating": 4, "comment": "Service was slow but the room was nice." }
+    ]
+  },
+  {
+    "id": "him_city_07",
+    "name": "The Birchwood Court",
+    "rating": 4.0,
+    "image": "/images/hotels/him_img7.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/him_city_07_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4900, "image": "/images/rooms/him_city_07_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6700, "image": "/images/rooms/him_city_07_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Manali",
+    "reviews": [
+      { "date": "2025-04-10", "rating": 5, "comment": "Great location. Would visit again." },
+      { "date": "2024-12-31", "rating": 4, "comment": "Best hotel experience I've had in a while!" }
+    ]
+  },
+  {
+    "id": "him_city_08",
+    "name": "Hillside Manor",
+    "rating": 4.0,
+    "image": "/images/hotels/him_img8.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/him_city_08_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/him_city_08_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6900, "image": "/images/rooms/him_city_08_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Manali",
     "reviews": [
       { "date": "2024-12-19", "rating": 5, "comment": "Room service was prompt and friendly." },
       { "date": "2024-10-28", "rating": 5, "comment": "Highly recommended for families." }
     ]
-  },
+  }], 
+  "Jammu & Kashmir": [
   {
-    "id": "jha_city_02",
-    "name": "The Skylight Grand",
-    "rating": 4.5,
-    "image": "/images/hotels/jha_img2.jpg",
+    "id": "jam_city_01",
+    "name": "The Imperial Crown",
+    "rating": 5.0,
+    "image": "/images/hotels/jam_img1.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/jha_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/jha_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7900, "image": "/images/rooms/jha_city_02_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3500, "image": "/images/rooms/jam_city_01_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/jam_city_01_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/jam_city_01_suite.jpg" }
     ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Jamshedpur",
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Srinagar",
     "reviews": [
-      { "date": "2024-11-09", "rating": 5, "comment": "Nice place but rooms were a bit small." },
-      { "date": "2025-02-18", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
+      { "date": "2025-04-10", "rating": 5, "comment": "Absolutely stunning hotel with exceptional service!" },
+      { "date": "2025-03-15", "rating": 4, "comment": "Luxurious experience but food could've been better." }
     ]
   },
   {
-    "id": "jha_city_03",
-    "name": "Royal Summit",
+    "id": "jam_city_02",
+    "name": "Grand Eden",
     "rating": 4.5,
-    "image": "/images/hotels/jha_img3.jpg",
+    "image": "/images/hotels/jam_img2.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/jha_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/jha_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7600, "image": "/images/rooms/jha_city_03_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/jam_city_02_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/jam_city_02_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7000, "image": "/images/rooms/jam_city_02_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Bokaro Steel City",
+    "city": "Sonmarg",
     "reviews": [
-      { "date": "2024-11-21", "rating": 3, "comment": "The spa services were top-notch!" },
-      { "date": "2024-10-25", "rating": 3, "comment": "Excellent amenities and courteous staff." }
+      { "date": "2025-01-20", "rating": 5, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2025-02-02", "rating": 3, "comment": "Nice place but rooms were a bit small." }
     ]
   },
   {
-    "id": "jha_city_04",
-    "name": "Velvet Shore Resort",
+    "id": "jam_city_03",
+    "name": "Azure Bay Hotel",
     "rating": 4.5,
-    "image": "/images/hotels/jha_img4.jpg",
+    "image": "/images/hotels/jam_img3.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/jha_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/jha_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7900, "image": "/images/rooms/jha_city_04_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 2800, "image": "/images/rooms/jam_city_03_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4200, "image": "/images/rooms/jam_city_03_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/jam_city_03_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Deoghar",
+    "city": "Pahalgam",
     "reviews": [
-      { "date": "2025-01-08", "rating": 4, "comment": "Excellent amenities and courteous staff." },
-      { "date": "2024-12-11", "rating": 4, "comment": "Absolutely stunning hotel with exceptional service!" }
+      { "date": "2025-04-01", "rating": 4, "comment": "Very clean and well-maintained hotel." },
+      { "date": "2025-03-05", "rating": 5, "comment": "Loved the pool and the food!" }
     ]
   },
   {
-    "id": "jha_city_05",
-    "name": "The Elmwood Inn",
+    "id": "jam_city_04",
+    "name": "The Golden Lotus",
+    "rating": 4.5,
+    "image": "/images/hotels/jam_img4.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/jam_city_04_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/jam_city_04_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7500, "image": "/images/rooms/jam_city_04_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Srinagar",
+    "reviews": [
+      { "date": "2025-02-25", "rating": 4, "comment": "Great location. Would visit again." },
+      { "date": "2025-01-18", "rating": 5, "comment": "Everything was perfect. Worth every penny." }
+    ]
+  },
+  {
+    "id": "jam_city_05",
+    "name": "The Oakwood Inn",
     "rating": 4.0,
-    "image": "/images/hotels/jha_img5.jpg",
+    "image": "/images/hotels/jam_img5.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2600, "image": "/images/rooms/jha_city_05_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3900, "image": "/images/rooms/jha_city_05_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5900, "image": "/images/rooms/jha_city_05_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 2200, "image": "/images/rooms/jam_city_05_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3400, "image": "/images/rooms/jam_city_05_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5200, "image": "/images/rooms/jam_city_05_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Ranchi",
+    "city": "Sonmarg",
     "reviews": [
-      { "date": "2024-10-28", "rating": 3, "comment": "Luxurious experience but food could've been better." },
-      { "date": "2025-01-18", "rating": 4, "comment": "Impeccable service and a gorgeous view." }
+      { "date": "2025-03-22", "rating": 3, "comment": "Service was slow but the room was nice." },
+      { "date": "2025-04-17", "rating": 5, "comment": "Best hotel experience I've had in a while!" }
     ]
   },
   {
-    "id": "jha_city_06",
-    "name": "Pinecrest Hotel",
+    "id": "jam_city_06",
+    "name": "Riverstone Hotel",
     "rating": 4.0,
-    "image": "/images/hotels/jha_img6.jpg",
+    "image": "/images/hotels/jam_img6.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2500, "image": "/images/rooms/jha_city_06_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3800, "image": "/images/rooms/jha_city_06_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5700, "image": "/images/rooms/jha_city_06_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 2100, "image": "/images/rooms/jam_city_06_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3300, "image": "/images/rooms/jam_city_06_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5000, "image": "/images/rooms/jam_city_06_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Dhanbad",
+    "city": "Gulmarg",
     "reviews": [
-      { "date": "2024-12-03", "rating": 3, "comment": "The spa services were top-notch!" },
-      { "date": "2025-04-06", "rating": 3, "comment": "Highly recommended for families." }
+      { "date": "2024-12-03", "rating": 3, "comment": "Absolutely stunning hotel with exceptional service!" },
+      { "date": "2025-02-03", "rating": 4.5, "comment": "Everything was perfect. Worth every penny." }
+    ]
+  },
+
+  {
+    "id": "jam_city_07",
+    "name": "Snowpeak Retreat",
+    "rating": 4.8,
+    "image": "/images/hotels/jam_img7.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3600, "image": "/images/rooms/jam_city_07_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5400, "image": "/images/rooms/jam_city_07_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8200, "image": "/images/rooms/jam_city_07_suite.jpg" }
+    ],
+    "amenities": ["Heated Rooms", "Mountain View", "Spa", "Fireplace"],
+    "star": 5,
+    "city": "Gulmarg",
+    "reviews": [
+      { "date": "2025-03-01", "rating": 5, "comment": "Breathtaking views and cozy rooms." },
+      { "date": "2025-02-10", "rating": 4, "comment": "Perfect winter getaway." }
+    ]
+  },
+  {
+    "id": "jam_city_08",
+    "name": "Dal Lake Residency",
+    "rating": 4.7,
+    "image": "/images/hotels/jam_img8.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/jam_city_08_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/jam_city_08_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7800, "image": "/images/rooms/jam_city_08_suite.jpg" }
+    ],
+    "amenities": ["Lake View", "Houseboat Dining", "WiFi", "Transport"],
+    "star": 5,
+    "city": "Srinagar",
+    "reviews": [
+      { "date": "2025-04-02", "rating": 5, "comment": "Magical stay near Dal Lake." },
+      { "date": "2025-03-12", "rating": 4, "comment": "Great ambiance and peaceful vibe." }
+    ]
+  },
+  {
+    "id": "jam_city_09",
+    "name": "Pinewood Escape",
+    "rating": 4.3,
+    "image": "/images/hotels/jam_img9.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2600, "image": "/images/rooms/jam_city_09_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4100, "image": "/images/rooms/jam_city_09_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6200, "image": "/images/rooms/jam_city_09_suite.jpg" }
+    ],
+    "amenities": ["Forest View", "WiFi", "Bonfire", "Parking"],
+    "star": 4,
+    "city": "Pahalgam",
+    "reviews": [
+      { "date": "2025-02-20", "rating": 4, "comment": "Quiet and relaxing stay." },
+      { "date": "2025-01-15", "rating": 5, "comment": "Perfect for nature lovers." }
+    ]
+  },
+  {
+    "id": "jam_city_10",
+    "name": "Himalayan Heights",
+    "rating": 4.6,
+    "image": "/images/hotels/jam_img10.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/jam_city_10_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4700, "image": "/images/rooms/jam_city_10_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7400, "image": "/images/rooms/jam_city_10_suite.jpg" }
+    ],
+    "amenities": ["Mountain View", "Gym", "Restaurant", "Spa"],
+    "star": 5,
+    "city": "Pahalgam",
+    "reviews": [
+      { "date": "2025-03-18", "rating": 5, "comment": "Amazing hospitality and views." },
+      { "date": "2025-02-28", "rating": 4, "comment": "Very comfortable stay." }
+    ]
+  },
+  {
+    "id": "jam_city_11",
+    "name": "Valley Vista Inn",
+    "rating": 4.2,
+    "image": "/images/hotels/jam_img11.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2400, "image": "/images/rooms/jam_city_11_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3900, "image": "/images/rooms/jam_city_11_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6100, "image": "/images/rooms/jam_city_11_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Parking", "Restaurant"],
+    "star": 4,
+    "city": "Gulmarg",
+    "reviews": [
+      { "date": "2025-01-30", "rating": 4, "comment": "Good value for money." },
+      { "date": "2025-02-14", "rating": 4.5, "comment": "Clean and well maintained." }
+    ]
+  },
+  {
+    "id": "jam_city_12",
+    "name": "Shikara Palace",
+    "rating": 4.9,
+    "image": "/images/hotels/jam_img12.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3700, "image": "/images/rooms/jam_city_12_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5600, "image": "/images/rooms/jam_city_12_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8500, "image": "/images/rooms/jam_city_12_suite.jpg" }
+    ],
+    "amenities": ["Lake View", "Luxury Dining", "Boat Ride", "Spa"],
+    "star": 5,
+    "city": "Srinagar",
+    "reviews": [
+      { "date": "2025-04-05", "rating": 5, "comment": "One of the best stays ever!" },
+      { "date": "2025-03-22", "rating": 5, "comment": "Truly luxurious experience." }
     ]
   }],
   "Karnataka": [
@@ -974,7 +807,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Mangalore",
+    "city": "Mysore",
     "reviews": [
       { "date": "2024-12-03", "rating": 3, "comment": "Absolutely stunning hotel with exceptional service!" },
       { "date": "2025-02-03", "rating": 4.5, "comment": "Everything was perfect. Worth every penny." }
@@ -992,7 +825,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Davangere",
+    "city": "Hampi",
     "reviews": [
       { "date": "2024-12-02", "rating": 4, "comment": "Very clean and well-maintained hotel." },
       { "date": "2025-03-09", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
@@ -1010,7 +843,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Hubli-Dharwad",
+    "city": "Bengaluru",
     "reviews": [
       { "date": "2025-02-12", "rating": 3, "comment": "Excellent amenities and courteous staff." },
       { "date": "2024-11-21", "rating": 5, "comment": "Luxurious experience but food could've been better." }
@@ -1028,7 +861,7 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Bengaluru",
+    "city": "Coorg",
     "reviews": [
       { "date": "2025-03-18", "rating": 3, "comment": "Impeccable service and a gorgeous view." },
       { "date": "2025-04-03", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
@@ -1064,10 +897,226 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Mangalore",
+    "city": "Hampi",
     "reviews": [
       { "date": "2024-12-30", "rating": 5, "comment": "Everything was perfect. Worth every penny." },
       { "date": "2024-12-04", "rating": 5, "comment": "Excellent amenities and courteous staff." }
+    ]
+  },
+  {
+    "id": "kar_city_10",
+    "name": "Elysian Grandeur",
+    "rating": 5.0,
+    "image": "/images/hotels/kar_img10.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3500, "image": "/images/rooms/kar_city_10_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/kar_city_10_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/kar_city_10_suite.jpg" }
+    ],
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Bengaluru",
+    "reviews": [
+      { "date": "2025-03-26", "rating": 3, "comment": "Room service was prompt and friendly." },
+      { "date": "2025-02-08", "rating": 4.5, "comment": "My go-to hotel whenever I'm in town." }
+    ]
+  },
+  {
+    "id": "kar_city_11",
+    "name": "Solace Suites",
+    "rating": 4.5,
+    "image": "/images/hotels/kar_img11.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/kar_city_11_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/kar_city_11_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7000, "image": "/images/rooms/kar_city_11_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Mysore",
+    "reviews": [
+      { "date": "2025-01-05", "rating": 4.5, "comment": "Luxurious experience but food could've been better." },
+      { "date": "2024-11-17", "rating": 5, "comment": "Peaceful environment and cozy rooms." }
+    ]
+  },
+  {
+    "id": "kar_city_12",
+    "name": "The Radiant Crest",
+    "rating": 4.5,
+    "image": "/images/hotels/kar_img12.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3100, "image": "/images/rooms/kar_city_12_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4700, "image": "/images/rooms/kar_city_12_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7200, "image": "/images/rooms/kar_city_12_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Bengaluru",
+    "reviews": [
+      { "date": "2025-02-11", "rating": 3, "comment": "The ambiance is absolutely delightful." },
+      { "date": "2024-11-16", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
+    ]
+  },
+  {
+    "id": "kar_city_13",
+    "name": "Zenith Valley Resort",
+    "rating": 4.5,
+    "image": "/images/hotels/kar_img13.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/kar_city_13_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/kar_city_13_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7400, "image": "/images/rooms/kar_city_13_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Coorg",
+    "reviews": [
+      { "date": "2024-11-11", "rating": 4.5, "comment": "My go-to hotel whenever I'm in town." },
+      { "date": "2025-02-13", "rating": 4.5, "comment": "Excellent amenities and courteous staff." }
+    ]
+  },
+  {
+    "id": "kar_city_14",
+    "name": "Willow Creek Hotel",
+    "rating": 4.0,
+    "image": "/images/hotels/kar_img14.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2400, "image": "/images/rooms/kar_city_14_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3600, "image": "/images/rooms/kar_city_14_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5400, "image": "/images/rooms/kar_city_14_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Hampi",
+    "reviews": [
+      { "date": "2025-01-31", "rating": 4, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2025-03-02", "rating": 3, "comment": "Everything was perfect. Worth every penny." }
+    ]
+  },
+  {
+    "id": "kar_city_15",
+    "name": "Sunnybrook Inn",
+    "rating": 4.0,
+    "image": "/images/hotels/kar_img15.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2300, "image": "/images/rooms/kar_city_15_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3500, "image": "/images/rooms/kar_city_15_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5200, "image": "/images/rooms/kar_city_15_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Hampi",
+    "reviews": [
+      { "date": "2024-12-11", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2024-11-20", "rating": 4, "comment": "Nice place but rooms were a bit small." }
+    ]
+  },
+  {
+    "id": "kar_city_16",
+    "name": "Celestia Majestic",
+    "rating": 5.0,
+    "image": "/images/hotels/kar_img16.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/kar_city_16_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6200, "image": "/images/rooms/kar_city_16_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/kar_city_16_suite.jpg" }
+    ],
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Bengaluru",
+    "reviews": [
+      { "date": "2025-02-07", "rating": 4.5, "comment": "Highly recommended for families." },
+      { "date": "2025-03-09", "rating": 4, "comment": "My go-to hotel whenever I'm in town." }
+    ]
+  },
+  {
+    "id": "kar_city_17",
+    "name": "Nova Haven",
+    "rating": 4.5,
+    "image": "/images/hotels/kar_img17.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/kar_city_17_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/kar_city_17_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/kar_city_17_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Mysore",
+    "reviews": [
+      { "date": "2025-02-23", "rating": 3, "comment": "Best hotel experience I've had in a while!" },
+      { "date": "2024-11-04", "rating": 4, "comment": "Very clean and well-maintained hotel." }
+    ]
+  },
+  {
+    "id": "kar_city_18",
+    "name": "Emerald Ridge",
+    "rating": 4.5,
+    "image": "/images/hotels/kar_img18.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3500, "image": "/images/rooms/kar_city_18_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5400, "image": "/images/rooms/kar_city_18_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8200, "image": "/images/rooms/kar_city_18_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Coorg",
+    "reviews": [
+      { "date": "2024-11-09", "rating": 4.5, "comment": "Loved the pool and the food!" },
+      { "date": "2025-04-20", "rating": 3, "comment": "My go-to hotel whenever I'm in town." }
+    ]
+  },
+  {
+    "id": "kar_city_19",
+    "name": "Hotel Aurora Bliss",
+    "rating": 4.5,
+    "image": "/images/hotels/kar_img19.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/kar_city_19_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5100, "image": "/images/rooms/kar_city_19_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7800, "image": "/images/rooms/kar_city_19_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Coorg",
+    "reviews": [
+      { "date": "2024-12-15", "rating": 4.5, "comment": "Could improve the check-in process." },
+      { "date": "2025-02-16", "rating": 3, "comment": "Nice place but rooms were a bit small." }
+    ]
+  },
+  {
+    "id": "kar_city_20",
+    "name": "Maplewood Retreat",
+    "rating": 4.0,
+    "image": "/images/hotels/kar_img20.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2600, "image": "/images/rooms/kar_city_20_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3900, "image": "/images/rooms/kar_city_20_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5900, "image": "/images/rooms/kar_city_20_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Bengaluru",
+    "reviews": [
+      { "date": "2024-12-15", "rating": 4.5, "comment": "Could improve the check-in process." },
+      { "date": "2025-02-16", "rating": 3, "comment": "Nice place but rooms were a bit small." }
+    ]
+  },
+  {
+    "id": "kar_city_21",
+    "name": "Creekside Inn",
+    "rating": 4.0,
+    "image": "/images/hotels/kar_img21.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2700, "image": "/images/rooms/kar_city_21_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4000, "image": "/images/rooms/kar_city_21_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6100, "image": "/images/rooms/kar_city_21_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Coorg",
+    "reviews": [
+      { "date": "2025-02-05", "rating": 4.5, "comment": "Best hotel experience I've had in a while!" },
+      { "date": "2024-11-16", "rating": 4, "comment": "Luxurious experience but food could've been better." }
     ]
   }],
   "Kerala": [
@@ -1101,7 +1150,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Thrissur",
+    "city": "Munnar",
     "reviews": [
       { "date": "2025-03-06", "rating": 4.5, "comment": "Service was slow but the room was nice." },
       { "date": "2024-11-23", "rating": 4, "comment": "Great location. Would visit again." }
@@ -1119,7 +1168,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Kozhikode",
+    "city": "Kochi",
     "reviews": [
       { "date": "2024-12-12", "rating": 4.5, "comment": "Nice place but rooms were a bit small." },
       { "date": "2025-04-02", "rating": 3, "comment": "The ambiance is absolutely delightful." }
@@ -1173,121 +1222,156 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Wayanad",
+    "city": "Alappuzha",
     "reviews": [
       { "date": "2025-02-11", "rating": 3, "comment": "The ambiance is absolutely delightful." },
       { "date": "2024-11-16", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
     ]
-  }],
-  "Madhya Pradesh": [
-  {
-    "id": "mad_city_01",
-    "name": "Luma Grand",
-    "rating": 5.0,
-    "image": "/images/hotels/mad_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4500, "image": "/images/rooms/mad_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6800, "image": "/images/rooms/mad_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9900, "image": "/images/rooms/mad_city_01_suite.jpg" }
-    ],
-    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
-    "star": 7,
-    "city": "Gwalior",
-    "reviews": [
-      { "date": "2024-11-11", "rating": 4.5, "comment": "My go-to hotel whenever I'm in town." },
-      { "date": "2025-02-13", "rating": 4.5, "comment": "Excellent amenities and courteous staff." }
-    ]
   },
   {
-    "id": "mad_city_02",
-    "name": "Moonlight Grand",
-    "rating": 4.5,
-    "image": "/images/hotels/mad_img2.jpg",
+    "id": "ker_city_07",
+    "name": "Lagoon Paradise",
+    "rating": 4.8,
+    "image": "/images/hotels/ker_img7.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/mad_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/mad_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7800, "image": "/images/rooms/mad_city_02_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3600, "image": "/images/rooms/ker_city_07_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5400, "image": "/images/rooms/ker_city_07_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8200, "image": "/images/rooms/ker_city_07_suite.jpg" }
     ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "amenities": ["Backwater View", "Boat Ride", "Spa", "Restaurant"],
     "star": 5,
-    "city": "Indore",
+    "city": "Alappuzha",
     "reviews": [
-      { "date": "2025-01-31", "rating": 4, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2025-03-02", "rating": 3, "comment": "Everything was perfect. Worth every penny." }
+      { "date": "2025-03-14", "rating": 5, "comment": "Amazing backwater experience and peaceful stay." },
+      { "date": "2025-02-20", "rating": 4.5, "comment": "Beautiful location with great hospitality." }
     ]
   },
   {
-    "id": "mad_city_03",
-    "name": "Vantage Elan",
-    "rating": 4.5,
-    "image": "/images/hotels/mad_img3.jpg",
+    "id": "ker_city_08",
+    "name": "Coconut Grove Resort",
+    "rating": 4.6,
+    "image": "/images/hotels/ker_img8.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/mad_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/mad_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7600, "image": "/images/rooms/mad_city_03_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/ker_city_08_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/ker_city_08_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7800, "image": "/images/rooms/ker_city_08_suite.jpg" }
     ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "amenities": ["Beach Access", "Pool", "WiFi", "Ayurvedic Spa"],
     "star": 5,
-    "city": "Sanchi",
+    "city": "Munnar",
     "reviews": [
-      { "date": "2024-12-11", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2024-11-20", "rating": 4, "comment": "Nice place but rooms were a bit small." }
+      { "date": "2025-04-03", "rating": 4.5, "comment": "Perfect beachside getaway." },
+      { "date": "2025-03-11", "rating": 4, "comment": "Relaxing stay with great views." }
     ]
   },
   {
-    "id": "mad_city_04",
-    "name": "The Opaline Grove",
-    "rating": 4.5,
-    "image": "/images/hotels/mad_img4.jpg",
+    "id": "ker_city_09",
+    "name": "Hilltop Serenity",
+    "rating": 4.4,
+    "image": "/images/hotels/ker_img9.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3500, "image": "/images/rooms/mad_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5300, "image": "/images/rooms/mad_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/mad_city_04_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3100, "image": "/images/rooms/ker_city_09_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/ker_city_09_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7200, "image": "/images/rooms/ker_city_09_suite.jpg" }
     ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Bhopal",
-    "reviews": [
-      { "date": "2024-12-11", "rating": 5, "comment": "Service was slow but the room was nice." },
-      { "date": "2024-11-10", "rating": 5, "comment": "Room service was prompt and friendly." }
-    ]
-  },
-  {
-    "id": "mad_city_05",
-    "name": "Springdale Suites",
-    "rating": 4.0,
-    "image": "/images/hotels/mad_img5.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 2600, "image": "/images/rooms/mad_city_05_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3900, "image": "/images/rooms/mad_city_05_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5900, "image": "/images/rooms/mad_city_05_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "amenities": ["Mountain View", "Bonfire", "Restaurant", "Parking"],
     "star": 4,
-    "city": "Gwalior",
+    "city": "Munnar",
     "reviews": [
-      { "date": "2025-02-16", "rating": 4, "comment": "Room service was prompt and friendly." },
-      { "date": "2025-03-21", "rating": 4.5, "comment": "Great location. Would visit again." }
+      { "date": "2025-02-28", "rating": 4.5, "comment": "Amazing views and cozy rooms." },
+      { "date": "2025-01-19", "rating": 4, "comment": "Great for a peaceful retreat." }
     ]
   },
   {
-    "id": "mad_city_06",
-    "name": "Birch Grove Hotel",
-    "rating": 4.0,
-    "image": "/images/hotels/mad_img6.jpg",
+    "id": "ker_city_10",
+    "name": "Palm Shore Hotel",
+    "rating": 4.3,
+    "image": "/images/hotels/ker_img10.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2700, "image": "/images/rooms/mad_city_06_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4000, "image": "/images/rooms/mad_city_06_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6100, "image": "/images/rooms/mad_city_06_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/ker_city_10_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4600, "image": "/images/rooms/ker_city_10_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7000, "image": "/images/rooms/ker_city_10_suite.jpg" }
     ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "amenities": ["Beach View", "WiFi", "Restaurant", "Transport"],
     "star": 4,
-    "city": "Ujjain",
+    "city": "Varkala",
     "reviews": [
-      { "date": "2025-01-23", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2025-03-31", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
+      { "date": "2025-03-07", "rating": 4, "comment": "Nice beachfront property." },
+      { "date": "2025-02-25", "rating": 4.5, "comment": "Comfortable stay and good service." }
     ]
-  }],
+  },
+  {
+    "id": "ker_city_11",
+    "name": "Spice Garden Retreat",
+    "rating": 4.7,
+    "image": "/images/hotels/ker_img11.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3500, "image": "/images/rooms/ker_city_11_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5300, "image": "/images/rooms/ker_city_11_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/ker_city_11_suite.jpg" }
+    ],
+    "amenities": ["Spice Plantation Tour", "Spa", "Restaurant", "WiFi"],
+    "star": 5,
+    "city": "Varkala",
+    "reviews": [
+      { "date": "2025-04-01", "rating": 5, "comment": "Unique experience surrounded by nature." },
+      { "date": "2025-03-18", "rating": 4.5, "comment": "Loved the peaceful environment." }
+    ]
+  },
+  {
+    "id": "ker_city_12",
+    "name": "Harbor View Inn",
+    "rating": 4.2,
+    "image": "/images/hotels/ker_img12.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2800, "image": "/images/rooms/ker_city_12_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4300, "image": "/images/rooms/ker_city_12_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/ker_city_12_suite.jpg" }
+    ],
+    "amenities": ["Harbor View", "WiFi", "Restaurant", "Parking"],
+    "star": 4,
+    "city": "Kochi",
+    "reviews": [
+      { "date": "2025-03-22", "rating": 4, "comment": "Good location near port area." },
+      { "date": "2025-02-14", "rating": 4.5, "comment": "Nice rooms and friendly staff." }
+    ]
+  },
+  {
+    "id": "ker_city_13",
+    "name": "Monsoon Breeze Resort",
+    "rating": 4.6,
+    "image": "/images/hotels/ker_img13.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/ker_city_13_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5100, "image": "/images/rooms/ker_city_13_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7700, "image": "/images/rooms/ker_city_13_suite.jpg" }
+    ],
+    "amenities": ["Rainforest View", "Spa", "Restaurant", "WiFi"],
+    "star": 5,
+    "city": "Varkala",
+    "reviews": [
+      { "date": "2025-04-05", "rating": 4.5, "comment": "Refreshing stay surrounded by greenery." },
+      { "date": "2025-03-21", "rating": 5, "comment": "Perfect monsoon getaway with amazing views." }
+    ]
+  },
+  {
+    "id": "ker_city_14",
+    "name": "Backwater Bliss Inn",
+    "rating": 4.4,
+    "image": "/images/hotels/ker_img14.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3100, "image": "/images/rooms/ker_city_14_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/ker_city_14_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7300, "image": "/images/rooms/ker_city_14_suite.jpg" }
+    ],
+    "amenities": ["Backwater View", "Boat Ride", "WiFi", "Restaurant"],
+    "star": 4,
+    "city": "Alappuzha",
+    "reviews": [
+      { "date": "2025-03-29", "rating": 4, "comment": "Lovely backwater experience and calm surroundings." },
+      { "date": "2025-02-18", "rating": 4.5, "comment": "Great hospitality and scenic views." }
+    ]
+  }], 
   "Maharashtra": [
   {
     "id": "mah_city_01",
@@ -1337,7 +1421,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Nagpur",
+    "city": "Pune",
     "reviews": [
       { "date": "2025-03-16", "rating": 3, "comment": "Everything was perfect. Worth every penny." },
       { "date": "2025-02-28", "rating": 3, "comment": "The spa services were top-notch!" }
@@ -1391,7 +1475,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Aurangabad",
+    "city": "Mahabaleshwar",
     "reviews": [
       { "date": "2024-12-01", "rating": 5, "comment": "Very clean and well-maintained hotel." },
       { "date": "2025-02-09", "rating": 4.5, "comment": "Very clean and well-maintained hotel." }
@@ -1409,7 +1493,7 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Nashik",
+    "city": "Mumbai",
     "reviews": [
       { "date": "2024-11-26", "rating": 4, "comment": "Peaceful environment and cozy rooms." },
       { "date": "2025-01-08", "rating": 4.5, "comment": "Excellent amenities and courteous staff." }
@@ -1427,7 +1511,7 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Matheran",
+    "city": "Lonavala",
     "reviews": [
       { "date": "2025-02-23", "rating": 5, "comment": "Excellent amenities and courteous staff." },
       { "date": "2025-04-06", "rating": 5, "comment": "Room service was prompt and friendly." }
@@ -1445,85 +1529,282 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Malvan",
+    "city": "Lonavala",
     "reviews": [
       { "date": "2024-11-17", "rating": 4, "comment": "Very clean and well-maintained hotel." },
       { "date": "2025-04-18", "rating": 5, "comment": "Impeccable service and a gorgeous view." }
     ]
-  }],
-  "Manipur": [
+  },
   {
-    "id": "man_city_01",
-    "name": "Edenstone Heights",
-    "rating": 4.5,
-    "image": "/images/hotels/man_img1.jpg",
+    "id": "mah_city_10",
+    "name": "Royale Opulence",
+    "rating": 5.0,
+    "image": "/images/hotels/mah_img10.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/man_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6400, "image": "/images/rooms/man_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9600, "image": "/images/rooms/man_city_01_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 8500, "image": "/images/rooms/mah_city_10_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 11500, "image": "/images/rooms/mah_city_10_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 16000, "image": "/images/rooms/mah_city_10_suite.jpg" }
+    ],
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Mumbai",
+    "reviews": [
+      { "date": "2024-11-26", "rating": 4, "comment": "Peaceful environment and cozy rooms." },
+      { "date": "2025-01-08", "rating": 4.5, "comment": "Excellent amenities and courteous staff." }
+    ]
+  },
+  {
+    "id": "mah_city_11",
+    "name": "Crown Jewel Hotel",
+    "rating": 5.0,
+    "image": "/images/hotels/mah_img11.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 8200, "image": "/images/rooms/mah_city_11_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 11000, "image": "/images/rooms/mah_city_11_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 15500, "image": "/images/rooms/mah_city_11_suite.jpg" }
+    ],
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Pune",
+    "reviews": [
+      { "date": "2025-02-23", "rating": 5, "comment": "Excellent amenities and courteous staff." },
+      { "date": "2025-04-06", "rating": 5, "comment": "Room service was prompt and friendly." }
+    ]
+  },
+  {
+    "id": "mah_city_12",
+    "name": "The Olive Courtyard",
+    "rating": 4.5,
+    "image": "/images/hotels/mah_img12.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 5200, "image": "/images/rooms/mah_city_12_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6900, "image": "/images/rooms/mah_city_12_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/mah_city_12_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Imphal",
+    "city": "Pune",
+    "reviews": [
+      { "date": "2024-11-17", "rating": 4, "comment": "Very clean and well-maintained hotel." },
+      { "date": "2025-04-18", "rating": 5, "comment": "Impeccable service and a gorgeous view." }
+    ]
+  },
+  {
+    "id": "mah_city_13",
+    "name": "Hotel Euphoria",
+    "rating": 4.5,
+    "image": "/images/hotels/mah_img13.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 5000, "image": "/images/rooms/mah_city_13_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6700, "image": "/images/rooms/mah_city_13_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9000, "image": "/images/rooms/mah_city_13_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Mahabaleshwar",
     "reviews": [
       { "date": "2024-11-09", "rating": 3, "comment": "Nice place but rooms were a bit small." },
       { "date": "2024-11-08", "rating": 4, "comment": "Loved the pool and the food!" }
     ]
   },
   {
-    "id": "man_city_02",
-    "name": "Lotus Hilltop Resort",
+    "id": "mah_city_14",
+    "name": "Flamingo Falls",
     "rating": 4.5,
-    "image": "/images/hotels/man_img2.jpg",
+    "image": "/images/hotels/mah_img14.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 4300, "image": "/images/rooms/man_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6600, "image": "/images/rooms/man_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9900, "image": "/images/rooms/man_city_02_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 5100, "image": "/images/rooms/mah_city_14_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6800, "image": "/images/rooms/mah_city_14_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9100, "image": "/images/rooms/mah_city_14_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Churachandpur",
+    "city": "Lonavala",
     "reviews": [
       { "date": "2025-01-23", "rating": 5, "comment": "My go-to hotel whenever I'm in town." },
       { "date": "2024-10-21", "rating": 3, "comment": "The ambiance is absolutely delightful." }
     ]
   },
   {
-    "id": "man_city_03",
-    "name": "The Country Garden",
-    "rating": 4.0,
-    "image": "/images/hotels/man_img3.jpg",
+    "id": "mah_city_15",
+    "name": "Cascade Royale",
+    "rating": 4.5,
+    "image": "/images/hotels/mah_img15.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/man_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/man_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6800, "image": "/images/rooms/man_city_03_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 5300, "image": "/images/rooms/mah_city_15_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 7000, "image": "/images/rooms/mah_city_15_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9400, "image": "/images/rooms/mah_city_15_suite.jpg" }
     ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Imphal",
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Mumbai",
     "reviews": [
       { "date": "2025-01-11", "rating": 5, "comment": "My go-to hotel whenever I'm in town." },
       { "date": "2025-02-26", "rating": 5, "comment": "Highly recommended for families." }
     ]
   },
   {
-    "id": "man_city_04",
-    "name": "Oak Ridge Hotel",
+    "id": "mah_city_16",
+    "name": "Mountain Ridge Inn",
     "rating": 4.0,
-    "image": "/images/hotels/man_img4.jpg",
+    "image": "/images/hotels/mah_img16.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2900, "image": "/images/rooms/man_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4300, "image": "/images/rooms/man_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/man_city_04_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/mah_city_16_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4300, "image": "/images/rooms/mah_city_16_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5800, "image": "/images/rooms/mah_city_16_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Ukhrul",
+    "city": "Lonavala",
     "reviews": [
       { "date": "2024-11-01", "rating": 4.5, "comment": "Peaceful environment and cozy rooms." },
       { "date": "2024-11-01", "rating": 3, "comment": "Nice place but rooms were a bit small." }
     ]
-  }],
+  },
+  {
+    "id": "mah_city_17",
+    "name": "Country Pines Hotel",
+    "rating": 4.0,
+    "image": "/images/hotels/mah_img17.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/mah_city_17_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4400, "image": "/images/rooms/mah_city_17_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6000, "image": "/images/rooms/mah_city_17_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Mahabaleshwar",
+    "reviews": [
+      { "date": "2025-02-01", "rating": 4.5, "comment": "The spa services were top-notch!" },
+      { "date": "2024-11-26", "rating": 3, "comment": "Best hotel experience I've had in a while!" }
+    ]
+  },
+  {
+    "id": "mah_city_18",
+    "name": "The Redleaf Lodge",
+    "rating": 4.0,
+    "image": "/images/hotels/mah_img18.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/mah_city_18_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/mah_city_18_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6100, "image": "/images/rooms/mah_city_18_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Mumbai",
+    "reviews": [
+      { "date": "2025-01-07", "rating": 5, "comment": "Loved the pool and the food!" },
+      { "date": "2025-02-13", "rating": 5, "comment": "Absolutely stunning hotel with exceptional service!" }
+    ]
+  },
+  {
+    "id": "mah_city_19",
+    "name": "Aurora Heights",
+    "rating": 5.0,
+    "image": "/images/hotels/mah_img19.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3600, "image": "/images/rooms/mah_city_19_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5400, "image": "/images/rooms/mah_city_19_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8200, "image": "/images/rooms/mah_city_19_suite.jpg" }
+    ],
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Mumbai",
+    "reviews": [
+      { "date": "2024-12-11", "rating": 5, "comment": "Service was slow but the room was nice." },
+      { "date": "2024-11-10", "rating": 5, "comment": "Room service was prompt and friendly." }
+    ]
+  },
+  {
+    "id": "mah_city_20",
+    "name": "The Velvet Leaf",
+    "rating": 4.5,
+    "image": "/images/hotels/mah_img20.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3100, "image": "/images/rooms/mah_city_20_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4700, "image": "/images/rooms/mah_city_20_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7200, "image": "/images/rooms/mah_city_20_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Pune",
+    "reviews": [
+      { "date": "2025-02-16", "rating": 4, "comment": "Room service was prompt and friendly." },
+      { "date": "2025-03-21", "rating": 4.5, "comment": "Great location. Would visit again." }
+    ]
+  },
+  {
+    "id": "mah_city_21",
+    "name": "Crystal Mirage",
+    "rating": 4.5,
+    "image": "/images/hotels/mah_img21.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/mah_city_21_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/mah_city_21_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7400, "image": "/images/rooms/mah_city_21_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Pune",
+    "reviews": [
+      { "date": "2025-01-23", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2025-03-31", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
+    ]
+  },
+  {
+    "id": "mah_city_22",
+    "name": "Opal Garden Hotel",
+    "rating": 4.5,
+    "image": "/images/hotels/mah_img22.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3150, "image": "/images/rooms/mah_city_22_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4750, "image": "/images/rooms/mah_city_22_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7300, "image": "/images/rooms/mah_city_22_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Mahabaleshwar",
+    "reviews": [
+      { "date": "2025-02-08", "rating": 4, "comment": "Loved the pool and the food!" },
+      { "date": "2024-11-03", "rating": 5, "comment": "The ambiance is absolutely delightful." }
+    ]
+  },
+  {
+    "id": "mah_city_23",
+    "name": "Valley Vista Resort",
+    "rating": 4.0,
+    "image": "/images/hotels/mah_img23.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2500, "image": "/images/rooms/mah_city_23_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3700, "image": "/images/rooms/mah_city_23_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5600, "image": "/images/rooms/mah_city_23_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Lonavala",
+    "reviews": [
+      { "date": "2025-02-26", "rating": 4.5, "comment": "Peaceful environment and cozy rooms." },
+      { "date": "2025-04-08", "rating": 4, "comment": "The spa services were top-notch!" }
+    ]
+  },
+  {
+    "id": "mah_city_24",
+    "name": "The Orchard House",
+    "rating": 4.0,
+    "image": "/images/hotels/mah_img24.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2400, "image": "/images/rooms/mah_city_24_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3600, "image": "/images/rooms/mah_city_24_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5400, "image": "/images/rooms/mah_city_24_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Mahabaleshwar",
+    "reviews": [
+      { "date": "2025-03-16", "rating": 3, "comment": "Everything was perfect. Worth every penny." },
+      { "date": "2025-02-28", "rating": 3, "comment": "The spa services were top-notch!" }
+    ]
+  }], 
   "Meghalaya": [
   {
     "id": "meg_city_01",
@@ -1591,338 +1872,82 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Mawlynnong",
+    "city": "Dawki",
     "reviews": [
       { "date": "2025-02-23", "rating": 3, "comment": "Best hotel experience I've had in a while!" },
       { "date": "2024-11-04", "rating": 4, "comment": "Very clean and well-maintained hotel." }
     ]
-  }],
-  "Mizoram": [
+  },
   {
-    "id": "miz_city_01",
-    "name": "Verdant Vibe Hotel",
+    "id": "meg_city_05",
+    "name": "Edenstone Heights",
     "rating": 4.5,
-    "image": "/images/hotels/miz_img1.jpg",
+    "image": "/images/hotels/meg_img5.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3800, "image": "/images/rooms/miz_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5800, "image": "/images/rooms/miz_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8600, "image": "/images/rooms/miz_city_01_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/meg_city_05_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6400, "image": "/images/rooms/meg_city_05_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9600, "image": "/images/rooms/meg_city_05_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Aizawl",
+    "city": "Dawki",
     "reviews": [
-      { "date": "2024-11-09", "rating": 4.5, "comment": "Loved the pool and the food!" },
-      { "date": "2025-04-20", "rating": 3, "comment": "My go-to hotel whenever I'm in town." }
+      { "date": "2024-11-09", "rating": 3, "comment": "Nice place but rooms were a bit small." },
+      { "date": "2024-11-08", "rating": 4, "comment": "Loved the pool and the food!" }
     ]
   },
   {
-    "id": "miz_city_02",
-    "name": "Twilight Dunes",
+    "id": "meg_city_06",
+    "name": "Lotus Hilltop Resort",
     "rating": 4.5,
-    "image": "/images/hotels/miz_img2.jpg",
+    "image": "/images/hotels/meg_img6.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3600, "image": "/images/rooms/miz_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5600, "image": "/images/rooms/miz_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8400, "image": "/images/rooms/miz_city_02_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 4300, "image": "/images/rooms/meg_city_06_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6600, "image": "/images/rooms/meg_city_06_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9900, "image": "/images/rooms/meg_city_06_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Champhai",
+    "city": "Cherrapunji",
     "reviews": [
-      { "date": "2024-12-15", "rating": 4.5, "comment": "Could improve the check-in process." },
-      { "date": "2025-02-16", "rating": 3, "comment": "Nice place but rooms were a bit small." }
+      { "date": "2025-01-23", "rating": 5, "comment": "My go-to hotel whenever I'm in town." },
+      { "date": "2024-10-21", "rating": 3, "comment": "The ambiance is absolutely delightful." }
     ]
   },
   {
-    "id": "miz_city_03",
-    "name": "Meadowbrook Lodge",
+    "id": "meg_city_07",
+    "name": "The Country Garden",
     "rating": 4.0,
-    "image": "/images/hotels/miz_img3.jpg",
+    "image": "/images/hotels/meg_img7.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2600, "image": "/images/rooms/miz_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4000, "image": "/images/rooms/miz_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6200, "image": "/images/rooms/miz_city_03_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/meg_city_07_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/meg_city_07_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6800, "image": "/images/rooms/meg_city_07_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Aizawl",
+    "city": "Shillong",
     "reviews": [
-      { "date": "2025-02-05", "rating": 4.5, "comment": "Best hotel experience I've had in a while!" },
-      { "date": "2024-11-16", "rating": 4, "comment": "Luxurious experience but food could've been better." }
+      { "date": "2025-01-11", "rating": 5, "comment": "My go-to hotel whenever I'm in town." },
+      { "date": "2025-02-26", "rating": 5, "comment": "Highly recommended for families." }
     ]
   },
   {
-    "id": "miz_city_04",
-    "name": "Woodland Heights",
+    "id": "meg_city_08",
+    "name": "Oak Ridge Hotel",
     "rating": 4.0,
-    "image": "/images/hotels/miz_img4.jpg",
+    "image": "/images/hotels/meg_img8.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 2500, "image": "/images/rooms/miz_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 3900, "image": "/images/rooms/miz_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6000, "image": "/images/rooms/miz_city_04_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 2900, "image": "/images/rooms/meg_city_08_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4300, "image": "/images/rooms/meg_city_08_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/meg_city_08_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Lunglei",
+    "city": "Cherrapunji",
     "reviews": [
-      { "date": "2024-11-20", "rating": 4, "comment": "Excellent amenities and courteous staff." },
-      { "date": "2024-11-29", "rating": 3, "comment": "Impeccable service and a gorgeous view." }
-    ]
-  }],
-  "Mizoram": [
-  {
-    "id": "miz_city_01",
-    "name": "Verdant Vibe Hotel",
-    "rating": 4.5,
-    "image": "/images/hotels/miz_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/miz_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6000, "image": "/images/rooms/miz_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8200, "image": "/images/rooms/miz_city_01_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Aizawl",
-    "reviews": [
-      { "date": "2024-11-09", "rating": 4.5, "comment": "Loved the pool and the food!" },
-      { "date": "2025-04-20", "rating": 3, "comment": "My go-to hotel whenever I'm in town." }
-    ]
-  },
-  {
-    "id": "miz_city_02",
-    "name": "Twilight Dunes",
-    "rating": 4.5,
-    "image": "/images/hotels/miz_img2.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4100, "image": "/images/rooms/miz_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5900, "image": "/images/rooms/miz_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/miz_city_02_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Champhai",
-    "reviews": [
-      { "date": "2024-12-15", "rating": 4.5, "comment": "Could improve the check-in process." },
-      { "date": "2025-02-16", "rating": 3, "comment": "Nice place but rooms were a bit small." }
-    ]
-  },
-  {
-    "id": "miz_city_03",
-    "name": "Meadowbrook Lodge",
-    "rating": 4.0,
-    "image": "/images/hotels/miz_img3.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/miz_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/miz_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/miz_city_03_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Aizawl",
-    "reviews": [
-      { "date": "2025-02-05", "rating": 4.5, "comment": "Best hotel experience I've had in a while!" },
-      { "date": "2024-11-16", "rating": 4, "comment": "Luxurious experience but food could've been better." }
-    ]
-  },
-  {
-    "id": "miz_city_04",
-    "name": "Woodland Heights",
-    "rating": 4.0,
-    "image": "/images/hotels/miz_img4.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3100, "image": "/images/rooms/miz_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4600, "image": "/images/rooms/miz_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6200, "image": "/images/rooms/miz_city_04_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Lunglei",
-    "reviews": [
-      { "date": "2024-11-20", "rating": 4, "comment": "Excellent amenities and courteous staff." },
-      { "date": "2024-11-29", "rating": 3, "comment": "Impeccable service and a gorgeous view." }
-    ]
-  }],
-  "Nagaland": [
-  {
-    "id": "nag_city_01",
-    "name": "The Luxe Lantern",
-    "rating": 4.5,
-    "image": "/images/hotels/nag_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4300, "image": "/images/rooms/nag_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6100, "image": "/images/rooms/nag_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8400, "image": "/images/rooms/nag_city_01_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Kohima",
-    "reviews": [
-      { "date": "2024-12-08", "rating": 5, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2025-01-11", "rating": 4, "comment": "Very clean and well-maintained hotel." }
-    ]
-  },
-  {
-    "id": "nag_city_02",
-    "name": "Grand Sapphire Inn",
-    "rating": 4.5,
-    "image": "/images/hotels/nag_img2.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/nag_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6000, "image": "/images/rooms/nag_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8300, "image": "/images/rooms/nag_city_02_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Mokokchung",
-    "reviews": [
-      { "date": "2024-11-15", "rating": 5, "comment": "Peaceful environment and cozy rooms." },
-      { "date": "2025-02-05", "rating": 4, "comment": "Service was slow but the room was nice." }
-    ]
-  },
-  {
-    "id": "nag_city_03",
-    "name": "The Birchwood Court",
-    "rating": 4.0,
-    "image": "/images/hotels/nag_img3.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/nag_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4900, "image": "/images/rooms/nag_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6700, "image": "/images/rooms/nag_city_03_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Kohima",
-    "reviews": [
-      { "date": "2025-04-10", "rating": 5, "comment": "Great location. Would visit again." },
-      { "date": "2024-12-31", "rating": 4, "comment": "Best hotel experience I've had in a while!" }
-    ]
-  },
-  {
-    "id": "nag_city_04",
-    "name": "Hillside Manor",
-    "rating": 4.0,
-    "image": "/images/hotels/nag_img4.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/nag_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/nag_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6900, "image": "/images/rooms/nag_city_04_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Dimapur",
-    "reviews": [
-      { "date": "2024-12-19", "rating": 5, "comment": "Room service was prompt and friendly." },
-      { "date": "2024-10-28", "rating": 5, "comment": "Highly recommended for families." }
-    ]
-  }],
-  "Punjab": [
-  {
-    "id": "pun_city_01",
-    "name": "The Regal Pavilion",
-    "rating": 5.0,
-    "image": "/images/hotels/pun_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 9200, "image": "/images/rooms/pun_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 12800, "image": "/images/rooms/pun_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 18500, "image": "/images/rooms/pun_city_01_suite.jpg" }
-    ],
-    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
-    "star": 7,
-    "city": "Amritsar",
-    "reviews": [
-      { "date": "2025-02-10", "rating": 4, "comment": "Excellent amenities and courteous staff." },
-      { "date": "2025-01-13", "rating": 5, "comment": "Everything was perfect. Worth every penny." }
-    ]
-  },
-  {
-    "id": "pun_city_02",
-    "name": "Monarch Bay",
-    "rating": 4.5,
-    "image": "/images/hotels/pun_img2.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4500, "image": "/images/rooms/pun_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6500, "image": "/images/rooms/pun_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9000, "image": "/images/rooms/pun_city_02_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Chandigarh",
-    "reviews": [
-      { "date": "2024-12-03", "rating": 3, "comment": "Absolutely stunning hotel with exceptional service!" },
-      { "date": "2025-02-03", "rating": 4.5, "comment": "Everything was perfect. Worth every penny." }
-    ]
-  },
-  {
-    "id": "pun_city_03",
-    "name": "Ivory Palace",
-    "rating": 4.5,
-    "image": "/images/hotels/pun_img3.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4600, "image": "/images/rooms/pun_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6700, "image": "/images/rooms/pun_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/pun_city_03_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Patiala",
-    "reviews": [
-      { "date": "2024-12-02", "rating": 4, "comment": "Very clean and well-maintained hotel." },
-      { "date": "2025-03-09", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
-    ]
-  },
-  {
-    "id": "pun_city_04",
-    "name": "Sunset Imperial",
-    "rating": 4.5,
-    "image": "/images/hotels/pun_img4.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4700, "image": "/images/rooms/pun_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6900, "image": "/images/rooms/pun_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9500, "image": "/images/rooms/pun_city_04_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Jalandhar",
-    "reviews": [
-      { "date": "2025-02-12", "rating": 3, "comment": "Excellent amenities and courteous staff." },
-      { "date": "2024-11-21", "rating": 5, "comment": "Luxurious experience but food could've been better." }
-    ]
-  },
-  {
-    "id": "pun_city_05",
-    "name": "Willow Springs Inn",
-    "rating": 4.0,
-    "image": "/images/hotels/pun_img5.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/pun_city_05_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/pun_city_05_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6600, "image": "/images/rooms/pun_city_05_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Ludhiana",
-    "reviews": [
-      { "date": "2025-03-18", "rating": 3, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2025-04-03", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
-    ]
-  },
-  {
-    "id": "pun_city_06",
-    "name": "The Tranquil Grove",
-    "rating": 4.0,
-    "image": "/images/hotels/pun_img6.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/pun_city_06_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4900, "image": "/images/rooms/pun_city_06_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6800, "image": "/images/rooms/pun_city_06_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Amritsar",
-    "reviews": [
-      { "date": "2025-01-18", "rating": 3, "comment": "Peaceful environment and cozy rooms." },
-      { "date": "2025-02-05", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
+      { "date": "2024-11-01", "rating": 4.5, "comment": "Peaceful environment and cozy rooms." },
+      { "date": "2024-11-01", "rating": 3, "comment": "Nice place but rooms were a bit small." }
     ]
   }],
   "Rajasthan": [
@@ -2010,7 +2035,7 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Bikaner",
+    "city": "Jodhpur",
     "reviews": [
       { "date": "2025-03-26", "rating": 3, "comment": "Room service was prompt and friendly." },
       { "date": "2025-02-08", "rating": 4.5, "comment": "My go-to hotel whenever I'm in town." }
@@ -2028,10 +2053,118 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Chittorgarh",
+    "city": "Jaipur",
     "reviews": [
       { "date": "2025-01-05", "rating": 4.5, "comment": "Luxurious experience but food could've been better." },
       { "date": "2024-11-17", "rating": 5, "comment": "Peaceful environment and cozy rooms." }
+    ]
+  },
+  {
+    "id": "raj_city_07",
+    "name": "Luma Grand",
+    "rating": 5.0,
+    "image": "/images/hotels/raj_img7.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4500, "image": "/images/rooms/raj_city_07_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6800, "image": "/images/rooms/raj_city_07_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9900, "image": "/images/rooms/raj_city_07_suite.jpg" }
+    ],
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Jaipur",
+    "reviews": [
+      { "date": "2024-11-11", "rating": 4.5, "comment": "My go-to hotel whenever I'm in town." },
+      { "date": "2025-02-13", "rating": 4.5, "comment": "Excellent amenities and courteous staff." }
+    ]
+  },
+  {
+    "id": "raj_city_08",
+    "name": "Moonlight Grand",
+    "rating": 4.5,
+    "image": "/images/hotels/raj_img8.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/raj_city_08_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/raj_city_08_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7800, "image": "/images/rooms/raj_city_08_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Udaipur",
+    "reviews": [
+      { "date": "2025-01-31", "rating": 4, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2025-03-02", "rating": 3, "comment": "Everything was perfect. Worth every penny." }
+    ]
+  },
+  {
+    "id": "raj_city_09",
+    "name": "Vantage Elan",
+    "rating": 4.5,
+    "image": "/images/hotels/raj_img9.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/raj_city_09_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/raj_city_09_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7600, "image": "/images/rooms/raj_city_09_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Jodhpur",
+    "reviews": [
+      { "date": "2024-12-11", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2024-11-20", "rating": 4, "comment": "Nice place but rooms were a bit small." }
+    ]
+  },
+  {
+    "id": "raj_city_10",
+    "name": "The Opaline Grove",
+    "rating": 4.5,
+    "image": "/images/hotels/raj_img10.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3500, "image": "/images/rooms/raj_city_10_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5300, "image": "/images/rooms/raj_city_10_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/raj_city_10_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Jaisalmer",
+    "reviews": [
+      { "date": "2024-12-11", "rating": 5, "comment": "Service was slow but the room was nice." },
+      { "date": "2024-11-10", "rating": 5, "comment": "Room service was prompt and friendly." }
+    ]
+  },
+  {
+    "id": "raj_city_11",
+    "name": "Springdale Suites",
+    "rating": 4.0,
+    "image": "/images/hotels/raj_img11.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2600, "image": "/images/rooms/raj_city_11_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3900, "image": "/images/rooms/raj_city_11_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5900, "image": "/images/rooms/raj_city_11_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Jaisalmer",
+    "reviews": [
+      { "date": "2025-02-16", "rating": 4, "comment": "Room service was prompt and friendly." },
+      { "date": "2025-03-21", "rating": 4.5, "comment": "Great location. Would visit again." }
+    ]
+  },
+  {
+    "id": "raj_city_12",
+    "name": "Birch Grove Hotel",
+    "rating": 4.0,
+    "image": "/images/hotels/raj_img12.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2700, "image": "/images/rooms/raj_city_12_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4000, "image": "/images/rooms/raj_city_12_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6100, "image": "/images/rooms/raj_city_12_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Bikaner",
+    "reviews": [
+      { "date": "2025-01-23", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2025-03-31", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
     ]
   }],
   "Sikkim": [
@@ -2106,6 +2239,78 @@ const statesData = {
       { "date": "2024-12-11", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
       { "date": "2024-11-20", "rating": 4, "comment": "Nice place but rooms were a bit small." }
     ]
+  },
+  {
+    "id": "sik_city_05",
+    "name": "Verdant Vibe Hotel",
+    "rating": 4.5,
+    "image": "/images/hotels/sik_img5.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/sik_city_05_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6000, "image": "/images/rooms/sik_city_05_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8200, "image": "/images/rooms/sik_city_05_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Gangtok",
+    "reviews": [
+      { "date": "2024-11-09", "rating": 4.5, "comment": "Loved the pool and the food!" },
+      { "date": "2025-04-20", "rating": 3, "comment": "My go-to hotel whenever I'm in town." }
+    ]
+  },
+  {
+    "id": "sik_city_06",
+    "name": "Twilight Dunes",
+    "rating": 4.5,
+    "image": "/images/hotels/sik_img6.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4100, "image": "/images/rooms/sik_city_06_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5900, "image": "/images/rooms/sik_city_06_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/sik_city_06_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Pelling",
+    "reviews": [
+      { "date": "2024-12-15", "rating": 4.5, "comment": "Could improve the check-in process." },
+      { "date": "2025-02-16", "rating": 3, "comment": "Nice place but rooms were a bit small." }
+    ]
+  },
+  {
+    "id": "sik_city_07",
+    "name": "Meadowbrook Lodge",
+    "rating": 4.0,
+    "image": "/images/hotels/sik_img7.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/sik_city_07_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/sik_city_07_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/sik_city_07_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Lachung",
+    "reviews": [
+      { "date": "2025-02-05", "rating": 4.5, "comment": "Best hotel experience I've had in a while!" },
+      { "date": "2024-11-16", "rating": 4, "comment": "Luxurious experience but food could've been better." }
+    ]
+  },
+  {
+    "id": "sik_city_08",
+    "name": "Woodland Heights",
+    "rating": 4.0,
+    "image": "/images/hotels/sik_img8.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3100, "image": "/images/rooms/sik_city_08_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4600, "image": "/images/rooms/sik_city_08_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6200, "image": "/images/rooms/sik_city_08_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Pelling",
+    "reviews": [
+      { "date": "2024-11-20", "rating": 4, "comment": "Excellent amenities and courteous staff." },
+      { "date": "2024-11-29", "rating": 3, "comment": "Impeccable service and a gorgeous view." }
+    ]
   }],
   "Tamil Nadu": [
   {
@@ -2138,7 +2343,7 @@ const statesData = {
     ],
     "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
     "star": 7,
-    "city": "Coimbatore",
+    "city": "Rameswaram",
     "reviews": [
       { "date": "2025-02-16", "rating": 4, "comment": "Room service was prompt and friendly." },
       { "date": "2025-03-21", "rating": 4.5, "comment": "Great location. Would visit again." }
@@ -2156,7 +2361,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Thanjavur",
+    "city": "Rameswaram",
     "reviews": [
       { "date": "2025-01-23", "rating": 4.5, "comment": "Impeccable service and a gorgeous view." },
       { "date": "2025-03-31", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
@@ -2174,7 +2379,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Tiruchirappalli",
+    "city": "Madurai",
     "reviews": [
       { "date": "2025-02-08", "rating": 4, "comment": "Loved the pool and the food!" },
       { "date": "2024-11-03", "rating": 5, "comment": "The ambiance is absolutely delightful." }
@@ -2228,7 +2433,7 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Tirunelveli",
+    "city": "Ooty",
     "reviews": [
       { "date": "2024-11-13", "rating": 5, "comment": "Service was slow but the room was nice." },
       { "date": "2025-02-05", "rating": 3, "comment": "Great location. Would visit again." }
@@ -2246,7 +2451,7 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Kanchipuram",
+    "city": "Ooty",
     "reviews": [
       { "date": "2025-02-20", "rating": 4.5, "comment": "Great location. Would visit again." },
       { "date": "2024-12-24", "rating": 5, "comment": "The ambiance is absolutely delightful." }
@@ -2269,243 +2474,277 @@ const statesData = {
       { "date": "2024-12-01", "rating": 5, "comment": "Very clean and well-maintained hotel." },
       { "date": "2025-02-09", "rating": 4.5, "comment": "Very clean and well-maintained hotel." }
     ]
-  }],
-  "Telangana": [
+  },
   {
-    "id": "tel_city_01",
-    "name": "Royale Opulence",
+    "id": "tam_city_10",
+    "name": "Regalia Haven",
     "rating": 5.0,
-    "image": "/images/hotels/tel_img1.jpg",
+    "image": "/images/hotels/tam_img10.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 8500, "image": "/images/rooms/tel_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 11500, "image": "/images/rooms/tel_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 16000, "image": "/images/rooms/tel_city_01_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 4300, "image": "/images/rooms/tam_city_10_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6300, "image": "/images/rooms/tam_city_10_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9300, "image": "/images/rooms/tam_city_10_suite.jpg" }
     ],
     "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
     "star": 7,
-    "city": "Hyderabad",
+    "city": "Chennai",
     "reviews": [
-      { "date": "2024-11-26", "rating": 4, "comment": "Peaceful environment and cozy rooms." },
-      { "date": "2025-01-08", "rating": 4.5, "comment": "Excellent amenities and courteous staff." }
+      { "date": "2024-12-19", "rating": 5, "comment": "Room service was prompt and friendly." },
+      { "date": "2024-10-28", "rating": 5, "comment": "Highly recommended for families." }
     ]
   },
   {
-    "id": "tel_city_02",
-    "name": "Crown Jewel Hotel",
-    "rating": 5.0,
-    "image": "/images/hotels/tel_img2.jpg",
+    "id": "tam_city_11",
+    "name": "The Skylight Grand",
+    "rating": 4.5,
+    "image": "/images/hotels/tam_img11.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 8200, "image": "/images/rooms/tel_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 11000, "image": "/images/rooms/tel_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 15500, "image": "/images/rooms/tel_city_02_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/tam_city_11_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/tam_city_11_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7900, "image": "/images/rooms/tam_city_11_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Rameswaram",
+    "reviews": [
+      { "date": "2024-11-09", "rating": 5, "comment": "Nice place but rooms were a bit small." },
+      { "date": "2025-02-18", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
+    ]
+  },
+  {
+    "id": "tam_city_12",
+    "name": "Royal Summit",
+    "rating": 4.5,
+    "image": "/images/hotels/tam_img12.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/tam_city_12_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5000, "image": "/images/rooms/tam_city_12_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7600, "image": "/images/rooms/tam_city_12_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Madurai",
+    "reviews": [
+      { "date": "2024-11-21", "rating": 3, "comment": "The spa services were top-notch!" },
+      { "date": "2024-10-25", "rating": 3, "comment": "Excellent amenities and courteous staff." }
+    ]
+  },
+  {
+    "id": "tam_city_13",
+    "name": "Velvet Shore Resort",
+    "rating": 4.5,
+    "image": "/images/hotels/tam_img13.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/tam_city_13_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5200, "image": "/images/rooms/tam_city_13_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7900, "image": "/images/rooms/tam_city_13_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Rameswaram",
+    "reviews": [
+      { "date": "2025-01-08", "rating": 4, "comment": "Excellent amenities and courteous staff." },
+      { "date": "2024-12-11", "rating": 4, "comment": "Absolutely stunning hotel with exceptional service!" }
+    ]
+  },
+  {
+    "id": "tam_city_14",
+    "name": "The Elmwood Inn",
+    "rating": 4.0,
+    "image": "/images/hotels/tam_img14.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2600, "image": "/images/rooms/tam_city_14_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3900, "image": "/images/rooms/tam_city_14_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5900, "image": "/images/rooms/tam_city_14_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Chennai",
+    "reviews": [
+      { "date": "2024-10-28", "rating": 3, "comment": "Luxurious experience but food could've been better." },
+      { "date": "2025-01-18", "rating": 4, "comment": "Impeccable service and a gorgeous view." }
+    ]
+  },
+  {
+    "id": "tam_city_15",
+    "name": "Pinecrest Hotel",
+    "rating": 4.0,
+    "image": "/images/hotels/tam_img15.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 2500, "image": "/images/rooms/tam_city_15_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 3800, "image": "/images/rooms/tam_city_15_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5700, "image": "/images/rooms/tam_city_15_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Madurai",
+    "reviews": [
+      { "date": "2024-12-03", "rating": 3, "comment": "The spa services were top-notch!" },
+      { "date": "2025-04-06", "rating": 3, "comment": "Highly recommended for families." }
+    ]
+  },
+  {
+    "id": "tam_city_16",
+    "name": "Sovereign Suites",
+    "rating": 5.0,
+    "image": "/images/hotels/tam_img16.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 5200, "image": "/images/rooms/tam_city_16_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 7100, "image": "/images/rooms/tam_city_16_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9400, "image": "/images/rooms/tam_city_16_suite.jpg" }
     ],
     "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
     "star": 7,
-    "city": "Warangal",
+    "city": "Chennai",
     "reviews": [
-      { "date": "2025-02-23", "rating": 5, "comment": "Excellent amenities and courteous staff." },
-      { "date": "2025-04-06", "rating": 5, "comment": "Room service was prompt and friendly." }
+      { "date": "2024-12-03", "rating": 3, "comment": "Absolutely stunning hotel with exceptional service!" },
+      { "date": "2025-02-03", "rating": 4.5, "comment": "Everything was perfect. Worth every penny." }
     ]
   },
   {
-    "id": "tel_city_03",
-    "name": "The Olive Courtyard",
-    "rating": 4.5,
-    "image": "/images/hotels/tel_img3.jpg",
+    "id": "tam_city_17",
+    "name": "The Royal Orchid Court",
+    "rating": 5.0,
+    "image": "/images/hotels/tam_img17.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 5200, "image": "/images/rooms/tel_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6900, "image": "/images/rooms/tel_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/tel_city_03_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 5100, "image": "/images/rooms/tam_city_17_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 7000, "image": "/images/rooms/tam_city_17_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/tam_city_17_suite.jpg" }
+    ],
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Rameswaram",
+    "reviews": [
+      { "date": "2024-12-02", "rating": 4, "comment": "Very clean and well-maintained hotel." },
+      { "date": "2025-03-09", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
+    ]
+  },
+  {
+    "id": "tam_city_18",
+    "name": "Lushstone Retreat",
+    "rating": 4.5,
+    "image": "/images/hotels/tam_img18.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4300, "image": "/images/rooms/tam_city_18_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5900, "image": "/images/rooms/tam_city_18_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7700, "image": "/images/rooms/tam_city_18_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Nizamabad",
+    "city": "Madurai",
     "reviews": [
-      { "date": "2024-11-17", "rating": 4, "comment": "Very clean and well-maintained hotel." },
-      { "date": "2025-04-18", "rating": 5, "comment": "Impeccable service and a gorgeous view." }
+      { "date": "2025-02-12", "rating": 3, "comment": "Excellent amenities and courteous staff." },
+      { "date": "2024-11-21", "rating": 5, "comment": "Luxurious experience but food could've been better." }
     ]
   },
   {
-    "id": "tel_city_04",
-    "name": "Hotel Euphoria",
+    "id": "tam_city_19",
+    "name": "The Velvet Grove",
     "rating": 4.5,
-    "image": "/images/hotels/tel_img4.jpg",
+    "image": "/images/hotels/tam_img19.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 5000, "image": "/images/rooms/tel_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6700, "image": "/images/rooms/tel_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9000, "image": "/images/rooms/tel_city_04_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 4400, "image": "/images/rooms/tam_city_19_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6000, "image": "/images/rooms/tam_city_19_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7800, "image": "/images/rooms/tam_city_19_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Nalgonda",
+    "city": "Ooty",
     "reviews": [
-      { "date": "2024-11-09", "rating": 3, "comment": "Nice place but rooms were a bit small." },
-      { "date": "2024-11-08", "rating": 4, "comment": "Loved the pool and the food!" }
+      { "date": "2025-03-18", "rating": 3, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2025-04-03", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
     ]
   },
   {
-    "id": "tel_city_05",
-    "name": "Flamingo Falls",
+    "id": "tam_city_20",
+    "name": "Coral Springs",
     "rating": 4.5,
-    "image": "/images/hotels/tel_img5.jpg",
+    "image": "/images/hotels/tam_img20.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 5100, "image": "/images/rooms/tel_city_05_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6800, "image": "/images/rooms/tel_city_05_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9100, "image": "/images/rooms/tel_city_05_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/tam_city_20_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 5800, "image": "/images/rooms/tam_city_20_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 7600, "image": "/images/rooms/tam_city_20_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Khammam",
+    "city": "Ooty",
     "reviews": [
-      { "date": "2025-01-23", "rating": 5, "comment": "My go-to hotel whenever I'm in town." },
-      { "date": "2024-10-21", "rating": 3, "comment": "The ambiance is absolutely delightful." }
+      { "date": "2025-01-18", "rating": 3, "comment": "Peaceful environment and cozy rooms." },
+      { "date": "2025-02-05", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
     ]
   },
   {
-    "id": "tel_city_06",
-    "name": "Cascade Royale",
+    "id": "tam_city_21",
+    "name": "Amethyst Grace",
     "rating": 4.5,
-    "image": "/images/hotels/tel_img6.jpg",
+    "image": "/images/hotels/tam_img21.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 5300, "image": "/images/rooms/tel_city_06_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 7000, "image": "/images/rooms/tel_city_06_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9400, "image": "/images/rooms/tel_city_06_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 4500, "image": "/images/rooms/tam_city_21_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6200, "image": "/images/rooms/tam_city_21_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/tam_city_21_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Karimnagar",
+    "city": "Madurai",
     "reviews": [
-      { "date": "2025-01-11", "rating": 5, "comment": "My go-to hotel whenever I'm in town." },
-      { "date": "2025-02-26", "rating": 5, "comment": "Highly recommended for families." }
+      { "date": "2024-12-30", "rating": 5, "comment": "Everything was perfect. Worth every penny." },
+      { "date": "2024-12-04", "rating": 5, "comment": "Excellent amenities and courteous staff." }
     ]
   },
   {
-    "id": "tel_city_07",
-    "name": "Mountain Ridge Inn",
+    "id": "tam_city_22",
+    "name": "Brookside Suites",
     "rating": 4.0,
-    "image": "/images/hotels/tel_img7.jpg",
+    "image": "/images/hotels/tam_img22.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/tel_city_07_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4300, "image": "/images/rooms/tel_city_07_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5800, "image": "/images/rooms/tel_city_07_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/tam_city_22_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4600, "image": "/images/rooms/tam_city_22_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6300, "image": "/images/rooms/tam_city_22_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Secunderabad",
+    "city": "Rameswaram",
     "reviews": [
-      { "date": "2024-11-01", "rating": 4.5, "comment": "Peaceful environment and cozy rooms." },
-      { "date": "2024-11-01", "rating": 3, "comment": "Nice place but rooms were a bit small." }
+      { "date": "2025-04-07", "rating": 4.5, "comment": "Absolutely stunning hotel with exceptional service!" },
+      { "date": "2024-12-30", "rating": 4, "comment": "Location was perfect for sightseeing." }
     ]
   },
   {
-    "id": "tel_city_08",
-    "name": "Country Pines Hotel",
+    "id": "tam_city_23",
+    "name": "Lakeside Court",
     "rating": 4.0,
-    "image": "/images/hotels/tel_img8.jpg",
+    "image": "/images/hotels/tam_img23.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/tel_city_08_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4400, "image": "/images/rooms/tel_city_08_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6000, "image": "/images/rooms/tel_city_08_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/tam_city_23_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4700, "image": "/images/rooms/tam_city_23_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/tam_city_23_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Warangal",
+    "city": "Ooty",
     "reviews": [
-      { "date": "2025-02-01", "rating": 4.5, "comment": "The spa services were top-notch!" },
-      { "date": "2024-11-26", "rating": 3, "comment": "Best hotel experience I've had in a while!" }
+      { "date": "2025-03-06", "rating": 4.5, "comment": "Service was slow but the room was nice." },
+      { "date": "2024-11-23", "rating": 4, "comment": "Great location. Would visit again." }
     ]
   },
   {
-    "id": "tel_city_09",
-    "name": "The Redleaf Lodge",
+    "id": "tam_city_24",
+    "name": "The Meadow Lodge",
     "rating": 4.0,
-    "image": "/images/hotels/tel_img9.jpg",
+    "image": "/images/hotels/tam_img24.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/tel_city_09_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/tel_city_09_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6100, "image": "/images/rooms/tel_city_09_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/tam_city_24_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/tam_city_24_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6600, "image": "/images/rooms/tam_city_24_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Hyderabad",
+    "city": "Chennai",
     "reviews": [
-      { "date": "2025-01-07", "rating": 5, "comment": "Loved the pool and the food!" },
-      { "date": "2025-02-13", "rating": 5, "comment": "Absolutely stunning hotel with exceptional service!" }
+      { "date": "2024-12-12", "rating": 4.5, "comment": "Nice place but rooms were a bit small." },
+      { "date": "2025-04-02", "rating": 3, "comment": "The ambiance is absolutely delightful." }
     ]
-  }],
-  "Tripura": [
-  {
-    "id": "tri_city_01",
-    "name": "Horizon Flame",
-    "rating": 4.5,
-    "image": "/images/hotels/tri_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 5200, "image": "/images/rooms/tri_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6900, "image": "/images/rooms/tri_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/tri_city_01_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Agartala",
-    "reviews": [
-      { "date": "2025-02-07", "rating": 4.5, "comment": "Highly recommended for families." },
-      { "date": "2025-03-09", "rating": 4, "comment": "Highly recommended for families." }
-    ]
-  },
-  {
-    "id": "tri_city_02",
-    "name": "The Regal Isle",
-    "rating": 4.5,
-    "image": "/images/hotels/tri_img2.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 5100, "image": "/images/rooms/tri_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6800, "image": "/images/rooms/tri_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9100, "image": "/images/rooms/tri_city_02_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Udaipur",
-    "reviews": [
-      { "date": "2025-02-23", "rating": 3, "comment": "Best hotel experience I've had in a while!" },
-      { "date": "2024-11-04", "rating": 4, "comment": "Very clean and well-maintained hotel." }
-    ]
-  },
-  {
-    "id": "tri_city_03",
-    "name": "The Shady Grove",
-    "rating": 4.0,
-    "image": "/images/hotels/tri_img3.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/tri_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4300, "image": "/images/rooms/tri_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 5800, "image": "/images/rooms/tri_city_03_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Kailashahar",
-    "reviews": [
-      { "date": "2024-11-09", "rating": 4.5, "comment": "Loved the pool and the food!" },
-      { "date": "2025-04-20", "rating": 3, "comment": "My go-to hotel whenever I'm in town." }
-    ]
-  },
-  {
-    "id": "tri_city_04",
-    "name": "Willow Glen Suites",
-    "rating": 4.0,
-    "image": "/images/hotels/tri_img4.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/tri_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4400, "image": "/images/rooms/tri_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6000, "image": "/images/rooms/tri_city_04_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Agartala",
-    "reviews": [
-      { "date": "2024-12-15", "rating": 4.5, "comment": "Could improve the check-in process." },
-      { "date": "2025-02-16", "rating": 3, "comment": "Nice place but rooms were a bit small." }
-    ]
-  }],
+  }], 
   "Uttar Pradesh": [
   {
     "id": "up_city_01",
@@ -2668,6 +2907,222 @@ const statesData = {
       { "date": "2025-01-08", "rating": 4, "comment": "Excellent amenities and courteous staff." },
       { "date": "2024-12-11", "rating": 4, "comment": "Absolutely stunning hotel with exceptional service!" }
     ]
+  },
+  {
+    "id": "up_city_10",
+    "name": "Velvet Horizon",
+    "rating": 5.0,
+    "image": "/images/hotels/up_img10.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 5000, "image": "/images/rooms/up_city_10_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 7200, "image": "/images/rooms/up_city_10_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9800, "image": "/images/rooms/up_city_10_suite.jpg" }
+    ],
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Lucknow",
+    "reviews": [
+      { "date": "2024-11-09", "rating": 5, "comment": "Nice place but rooms were a bit small." },
+      { "date": "2025-02-18", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
+    ]
+  },
+  {
+    "id": "up_city_11",
+    "name": "The Amara Court",
+    "rating": 4.5,
+    "image": "/images/hotels/up_img11.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/up_city_11_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6100, "image": "/images/rooms/up_city_11_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8300, "image": "/images/rooms/up_city_11_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Varanasi",
+    "reviews": [
+      { "date": "2024-11-21", "rating": 3, "comment": "The spa services were top-notch!" },
+      { "date": "2024-10-25", "rating": 3, "comment": "Excellent amenities and courteous staff." }
+    ]
+  },
+  {
+    "id": "up_city_12",
+    "name": "Zenith Serene",
+    "rating": 4.5,
+    "image": "/images/hotels/up_img12.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4300, "image": "/images/rooms/up_city_12_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6200, "image": "/images/rooms/up_city_12_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8500, "image": "/images/rooms/up_city_12_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Noida",
+    "reviews": [
+      { "date": "2025-01-08", "rating": 4, "comment": "Excellent amenities and courteous staff." },
+      { "date": "2024-12-11", "rating": 4, "comment": "Absolutely stunning hotel with exceptional service!" }
+    ]
+  },
+  {
+    "id": "up_city_13",
+    "name": "Cascade Bliss Hotel",
+    "rating": 4.5,
+    "image": "/images/hotels/up_img13.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4100, "image": "/images/rooms/up_city_13_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6000, "image": "/images/rooms/up_city_13_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 8200, "image": "/images/rooms/up_city_13_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Agra",
+    "reviews": [
+      { "date": "2024-10-28", "rating": 3, "comment": "Luxurious experience but food could've been better." },
+      { "date": "2025-01-18", "rating": 4, "comment": "Impeccable service and a gorgeous view." }
+    ]
+  },
+  {
+    "id": "up_city_14",
+    "name": "The Rustic Lodge",
+    "rating": 4.0,
+    "image": "/images/hotels/up_img14.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3000, "image": "/images/rooms/up_city_14_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4500, "image": "/images/rooms/up_city_14_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6200, "image": "/images/rooms/up_city_14_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Kanpur",
+    "reviews": [
+      { "date": "2024-12-03", "rating": 3, "comment": "The spa services were top-notch!" },
+      { "date": "2025-04-06", "rating": 3, "comment": "Highly recommended for families." }
+    ]
+  },
+  {
+    "id": "up_city_15",
+    "name": "The Green Pines",
+    "rating": 4.0,
+    "image": "/images/hotels/up_img15.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/up_city_15_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4700, "image": "/images/rooms/up_city_15_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/up_city_15_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Prayagraj",
+    "reviews": [
+      { "date": "2025-01-27", "rating": 4, "comment": "Service was slow but the room was nice." },
+      { "date": "2025-04-21", "rating": 5, "comment": "Great location. Would visit again." }
+    ]
+  },
+  {
+    "id": "up_city_16",
+    "name": "The Regal Pavilion",
+    "rating": 5.0,
+    "image": "/images/hotels/up_img16.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 9200, "image": "/images/rooms/up_city_16_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 12800, "image": "/images/rooms/up_city_16_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 18500, "image": "/images/rooms/up_city_16_suite.jpg" }
+    ],
+    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
+    "star": 7,
+    "city": "Lucknow",
+    "reviews": [
+      { "date": "2025-02-10", "rating": 4, "comment": "Excellent amenities and courteous staff." },
+      { "date": "2025-01-13", "rating": 5, "comment": "Everything was perfect. Worth every penny." }
+    ]
+  },
+  {
+    "id": "up_city_17",
+    "name": "Monarch Bay",
+    "rating": 4.5,
+    "image": "/images/hotels/up_img17.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4500, "image": "/images/rooms/up_city_17_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6500, "image": "/images/rooms/up_city_17_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9000, "image": "/images/rooms/up_city_17_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Noida",
+    "reviews": [
+      { "date": "2024-12-03", "rating": 3, "comment": "Absolutely stunning hotel with exceptional service!" },
+      { "date": "2025-02-03", "rating": 4.5, "comment": "Everything was perfect. Worth every penny." }
+    ]
+  },
+  {
+    "id": "up_city_18",
+    "name": "Ivory Palace",
+    "rating": 4.5,
+    "image": "/images/hotels/up_img18.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4600, "image": "/images/rooms/up_city_18_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6700, "image": "/images/rooms/up_city_18_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/up_city_18_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Kanpur",
+    "reviews": [
+      { "date": "2024-12-02", "rating": 4, "comment": "Very clean and well-maintained hotel." },
+      { "date": "2025-03-09", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
+    ]
+  },
+  {
+    "id": "up_city_19",
+    "name": "Sunset Imperial",
+    "rating": 4.5,
+    "image": "/images/hotels/up_img19.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 4700, "image": "/images/rooms/up_city_19_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6900, "image": "/images/rooms/up_city_19_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9500, "image": "/images/rooms/up_city_19_suite.jpg" }
+    ],
+    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
+    "star": 5,
+    "city": "Agra",
+    "reviews": [
+      { "date": "2025-02-12", "rating": 3, "comment": "Excellent amenities and courteous staff." },
+      { "date": "2024-11-21", "rating": 5, "comment": "Luxurious experience but food could've been better." }
+    ]
+  },
+  {
+    "id": "up_city_20",
+    "name": "Willow Springs Inn",
+    "rating": 4.0,
+    "image": "/images/hotels/up_img20.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/up_city_20_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/up_city_20_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6600, "image": "/images/rooms/up_city_20_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Varanasi",
+    "reviews": [
+      { "date": "2025-03-18", "rating": 3, "comment": "Impeccable service and a gorgeous view." },
+      { "date": "2025-04-03", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
+    ]
+  },
+  {
+    "id": "up_city_21",
+    "name": "The Tranquil Grove",
+    "rating": 4.0,
+    "image": "/images/hotels/up_img21.jpg",
+    "rooms": [
+      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/up_city_21_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4900, "image": "/images/rooms/up_city_21_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6800, "image": "/images/rooms/up_city_21_suite.jpg" }
+    ],
+    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
+    "star": 4,
+    "city": "Prayagraj",
+    "reviews": [
+      { "date": "2025-01-18", "rating": 3, "comment": "Peaceful environment and cozy rooms." },
+      { "date": "2025-02-05", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
+    ]
   }],
   "Uttarakhand": [
   {
@@ -2682,7 +3137,7 @@ const statesData = {
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Dehradun",
+    "city": "Mussoorie",
     "reviews": [
       { "date": "2024-10-28", "rating": 3, "comment": "Luxurious experience but food could've been better." },
       { "date": "2025-01-18", "rating": 4, "comment": "Impeccable service and a gorgeous view." }
@@ -2718,7 +3173,7 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Haridwar",
+    "city": "Rishikesh",
     "reviews": [
       { "date": "2025-01-27", "rating": 4, "comment": "Service was slow but the room was nice." },
       { "date": "2025-04-21", "rating": 5, "comment": "Great location. Would visit again." }
@@ -2736,175 +3191,84 @@ const statesData = {
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Dehradun",
+    "city": "Nainital",
     "reviews": [
       { "date": "2025-02-10", "rating": 4, "comment": "Excellent amenities and courteous staff." },
       { "date": "2025-01-13", "rating": 5, "comment": "Everything was perfect. Worth every penny." }
     ]
-  }],
-  "West Bengal": [
-  {
-    "id": "wes_city_01",
-    "name": "Sovereign Suites",
-    "rating": 5.0,
-    "image": "/images/hotels/wes_img1.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 5200, "image": "/images/rooms/wes_city_01_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 7100, "image": "/images/rooms/wes_city_01_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9400, "image": "/images/rooms/wes_city_01_suite.jpg" }
-    ],
-    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
-    "star": 7,
-    "city": "Kolkata",
-    "reviews": [
-      { "date": "2024-12-03", "rating": 3, "comment": "Absolutely stunning hotel with exceptional service!" },
-      { "date": "2025-02-03", "rating": 4.5, "comment": "Everything was perfect. Worth every penny." }
-    ]
   },
   {
-    "id": "wes_city_02",
-    "name": "The Royal Orchid Court",
-    "rating": 5.0,
-    "image": "/images/hotels/wes_img2.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 5100, "image": "/images/rooms/wes_city_02_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 7000, "image": "/images/rooms/wes_city_02_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/wes_city_02_suite.jpg" }
-    ],
-    "amenities": ["Personalised Butler Services", "Spa & Therapy", "Transport", "Private Cinema"],
-    "star": 7,
-    "city": "Howrah",
-    "reviews": [
-      { "date": "2024-12-02", "rating": 4, "comment": "Very clean and well-maintained hotel." },
-      { "date": "2025-03-09", "rating": 3, "comment": "Peaceful environment and cozy rooms." }
-    ]
-  },
-  {
-    "id": "wes_city_03",
-    "name": "Lushstone Retreat",
+    "id": "uk_city_05",
+    "name": "Horizon Flame",
     "rating": 4.5,
-    "image": "/images/hotels/wes_img3.jpg",
+    "image": "/images/hotels/uk_img5.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 4300, "image": "/images/rooms/wes_city_03_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5900, "image": "/images/rooms/wes_city_03_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7700, "image": "/images/rooms/wes_city_03_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 5200, "image": "/images/rooms/uk_city_05_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6900, "image": "/images/rooms/uk_city_05_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9200, "image": "/images/rooms/uk_city_05_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Darjeeling",
+    "city": "Rishikesh",
     "reviews": [
-      { "date": "2025-02-12", "rating": 3, "comment": "Excellent amenities and courteous staff." },
-      { "date": "2024-11-21", "rating": 5, "comment": "Luxurious experience but food could've been better." }
+      { "date": "2025-02-07", "rating": 4.5, "comment": "Highly recommended for families." },
+      { "date": "2025-03-09", "rating": 4, "comment": "Highly recommended for families." }
     ]
   },
   {
-    "id": "wes_city_04",
-    "name": "The Velvet Grove",
+    "id": "uk_city_06",
+    "name": "The Regal Isle",
     "rating": 4.5,
-    "image": "/images/hotels/wes_img4.jpg",
+    "image": "/images/hotels/uk_img6.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 4400, "image": "/images/rooms/wes_city_04_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6000, "image": "/images/rooms/wes_city_04_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7800, "image": "/images/rooms/wes_city_04_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 5100, "image": "/images/rooms/uk_city_06_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 6800, "image": "/images/rooms/uk_city_06_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 9100, "image": "/images/rooms/uk_city_06_suite.jpg" }
     ],
     "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
     "star": 5,
-    "city": "Siliguri",
+    "city": "Nainital",
     "reviews": [
-      { "date": "2025-03-18", "rating": 3, "comment": "Impeccable service and a gorgeous view." },
-      { "date": "2025-04-03", "rating": 4, "comment": "Everything was perfect. Worth every penny." }
+      { "date": "2025-02-23", "rating": 3, "comment": "Best hotel experience I've had in a while!" },
+      { "date": "2024-11-04", "rating": 4, "comment": "Very clean and well-maintained hotel." }
     ]
   },
   {
-    "id": "wes_city_05",
-    "name": "Coral Springs",
-    "rating": 4.5,
-    "image": "/images/hotels/wes_img5.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4200, "image": "/images/rooms/wes_city_05_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 5800, "image": "/images/rooms/wes_city_05_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 7600, "image": "/images/rooms/wes_city_05_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Kalimpong",
-    "reviews": [
-      { "date": "2025-01-18", "rating": 3, "comment": "Peaceful environment and cozy rooms." },
-      { "date": "2025-02-05", "rating": 4, "comment": "Peaceful environment and cozy rooms." }
-    ]
-  },
-  {
-    "id": "wes_city_06",
-    "name": "Amethyst Grace",
-    "rating": 4.5,
-    "image": "/images/hotels/wes_img6.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 4500, "image": "/images/rooms/wes_city_06_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 6200, "image": "/images/rooms/wes_city_06_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 8000, "image": "/images/rooms/wes_city_06_suite.jpg" }
-    ],
-    "amenities": ["In-Room Mini-Bar", "Gourmet Dining", "Pool", "Advanced In-Room Technologies"],
-    "star": 5,
-    "city": "Kurseong",
-    "reviews": [
-      { "date": "2024-12-30", "rating": 5, "comment": "Everything was perfect. Worth every penny." },
-      { "date": "2024-12-04", "rating": 5, "comment": "Excellent amenities and courteous staff." }
-    ]
-  },
-  {
-    "id": "wes_city_07",
-    "name": "Brookside Suites",
+    "id": "uk_city_07",
+    "name": "The Shady Grove",
     "rating": 4.0,
-    "image": "/images/hotels/wes_img7.jpg",
+    "image": "/images/hotels/uk_img7.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/wes_city_07_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4600, "image": "/images/rooms/wes_city_07_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6300, "image": "/images/rooms/wes_city_07_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3200, "image": "/images/rooms/uk_city_07_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4300, "image": "/images/rooms/uk_city_07_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 5800, "image": "/images/rooms/uk_city_07_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Mandarmoni",
+    "city": "Mussoorie",
     "reviews": [
-      { "date": "2025-04-07", "rating": 4.5, "comment": "Absolutely stunning hotel with exceptional service!" },
-      { "date": "2024-12-30", "rating": 4, "comment": "Location was perfect for sightseeing." }
+      { "date": "2024-11-09", "rating": 4.5, "comment": "Loved the pool and the food!" },
+      { "date": "2025-04-20", "rating": 3, "comment": "My go-to hotel whenever I'm in town." }
     ]
   },
   {
-    "id": "wes_city_08",
-    "name": "Lakeside Court",
+    "id": "uk_city_08",
+    "name": "Willow Glen Suites",
     "rating": 4.0,
-    "image": "/images/hotels/wes_img8.jpg",
+    "image": "/images/hotels/uk_img8.jpg",
     "rooms": [
-      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/wes_city_08_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4700, "image": "/images/rooms/wes_city_08_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6500, "image": "/images/rooms/wes_city_08_suite.jpg" }
+      { "type": "STANDARD", "priceNight": 3300, "image": "/images/rooms/uk_city_08_standard.jpg" },
+      { "type": "DELUXE", "priceNight": 4400, "image": "/images/rooms/uk_city_08_deluxe.jpg" },
+      { "type": "SUITE", "priceNight": 6000, "image": "/images/rooms/uk_city_08_suite.jpg" }
     ],
     "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
     "star": 4,
-    "city": "Durgapur",
+    "city": "Nainital",
     "reviews": [
-      { "date": "2025-03-06", "rating": 4.5, "comment": "Service was slow but the room was nice." },
-      { "date": "2024-11-23", "rating": 4, "comment": "Great location. Would visit again." }
-    ]
-  },
-  {
-    "id": "wes_city_09",
-    "name": "The Meadow Lodge",
-    "rating": 4.0,
-    "image": "/images/hotels/wes_img9.jpg",
-    "rooms": [
-      { "type": "STANDARD", "priceNight": 3400, "image": "/images/rooms/wes_city_09_standard.jpg" },
-      { "type": "DELUXE", "priceNight": 4800, "image": "/images/rooms/wes_city_09_deluxe.jpg" },
-      { "type": "SUITE", "priceNight": 6600, "image": "/images/rooms/wes_city_09_suite.jpg" }
-    ],
-    "amenities": ["WiFi", "AC", "Gym", "Premium Toiletries"],
-    "star": 4,
-    "city": "Kolkata",
-    "reviews": [
-      { "date": "2024-12-12", "rating": 4.5, "comment": "Nice place but rooms were a bit small." },
-      { "date": "2025-04-02", "rating": 3, "comment": "The ambiance is absolutely delightful." }
+      { "date": "2024-12-15", "rating": 4.5, "comment": "Could improve the check-in process." },
+      { "date": "2025-02-16", "rating": 3, "comment": "Nice place but rooms were a bit small." }
     ]
   }]
-};
+}
 
 export default statesData
