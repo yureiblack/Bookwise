@@ -62,9 +62,6 @@ model Hotel {
   star        Int
   description String @db.Text
 
-  paymentProvider String?
-  paymentAccount  String?
-
   city      City        @relation(fields: [cityId], references: [id])
   rooms     RoomType[]
   bookings  Booking[]
