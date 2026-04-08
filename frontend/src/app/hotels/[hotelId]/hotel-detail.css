@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+/* ===============================
+   HOTEL DETAIL PAGE OVERRIDES
+=================================*/
+.hotel-detail-wrapper {
+  padding-top: 30px;
+}
+
+.back-btn {
+  font-family: "Marcellus", serif;
+  background: transparent;
+  border: 1px solid rgba(110, 123, 66, 0.4);
+  color: #9fb35e;
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background: rgba(110, 123, 66, 0.15);
+  border-color: var(--accent);
+  transform: translateX(-3px);
+}
+
+.hotel-location-subtitle {
+  font-family: "Marcellus", serif;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.1rem;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* ===============================
+   REVIEW SECTION
+=================================*/
+.review-section {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-review-btn {
+  font-family: "Marcellus", serif;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 16px 40px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.add-review-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* ===============================
+   REVIEW FORM CARD
+=================================*/
+.review-form-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(38, 51, 21, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(110, 123, 66, 0.3);
+  border-radius: 20px;
+  padding: 35px;
+  font-family: "Marcellus", serif;
+  color: white;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.review-form-card h3 {
+  color: #9fb35e;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* ===============================
+   REVIEW FORM FIELDS
+=================================*/
+.review-field {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-field label {
+  margin-bottom: 8px;
+  color: #9fb35e;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.review-field select {
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+}
+
+.review-field select:focus {
+  outline: none;
+  border-color: rgba(110, 123, 66, 0.6);
+}
+
+.review-field textarea {
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+  transition: border-color 0.3s;
+}
+
+.review-field textarea:focus {
+  outline: none;
+  border-color: rgba(110, 123, 66, 0.6);
+}
+
+.review-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===============================
+   STAR RATING INPUT
+=================================*/
+.star-rating-input {
+  display: flex;
+  gap: 6px;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.15);
+  transition: all 0.2s ease;
+  padding: 2px 4px;
+  line-height: 1;
+}
+
+.star-btn.active {
+  color: #f5c518;
+  text-shadow: 0 0 8px rgba(245, 197, 24, 0.4);
+}
+
+.star-btn:hover {
+  transform: scale(1.2);
+  color: #f5c518;
+}
+
+/* ===============================
+   REVIEW FORM ACTIONS
+=================================*/
+.review-form-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.submit-review-btn {
+  flex: 2;
+  background: linear-gradient(135deg, #6e7b42, #51490B);
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-family: "Marcellus", serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-review-btn:hover:not(:disabled) {
+  box-shadow: 0 4px 20px rgba(110, 123, 66, 0.3);
+  transform: translateY(-1px);
+}
+
+.submit-review-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancel-review-btn {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255, 77, 77, 0.5);
+  color: #ff6b6b;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Marcellus", serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.cancel-review-btn:hover {
+  background: rgba(255, 77, 77, 0.1);
+  border-color: #ff4d4d;
+}
+
+/* ===============================
+   REVIEW MESSAGES
+=================================*/
+.review-msg {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.review-msg.success {
+  color: #81c784;
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.review-msg.error {
+  color: #ff6b6b;
+  background: rgba(255, 77, 77, 0.1);
+  border: 1px solid rgba(255, 77, 77, 0.3);
+}
+
+.no-review-msg {
+  font-family: "Marcellus", serif;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 15px;
+}

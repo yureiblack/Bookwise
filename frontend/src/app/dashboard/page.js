@@ -169,7 +169,11 @@ export default function Dashboard() {
                 {bookings.map(b => (
                   <div key={b.id} className="booking-card">
                     <div className="booking-card-header">
-                      <h3>{b.hotel.name}</h3>
+                      <h3>
+                        <Link href={`/hotels/${b.hotelId}`} className="hotel-name-link">
+                          {b.hotel.name}
+                        </Link>
+                      </h3>
                       <span className={`status-badge status-${b.status.toLowerCase().replace("_", "-")}`}>
                         {b.status === "CHECKED_IN" ? "Checked In" : "Confirmed"}
                       </span>

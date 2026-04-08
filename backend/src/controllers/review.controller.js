@@ -2,7 +2,7 @@
 import { addReviewByBooking } from '../services/review.service.js';
 
 export const postReview = async (req, res) => {
-    const { bookingId } = req.body; 
+    const { bookingId } = req.body;
     const { rating, comment } = req.body;
 
     if (!bookingId || !rating || !comment) {
@@ -24,7 +24,7 @@ export const postReview = async (req, res) => {
         return res.status(201).json(review);
     } catch (err) {
         if (err.message === "NOT_ALLOWED") {
-            return res.status(403).json({ message: "Booking not checked-in or review already submitted" });
+            return res.status(403).json({ message: "Booking not eligible or review already submitted" });
         }
         return res.status(500).json({ message: "Failed to post review" });
     }

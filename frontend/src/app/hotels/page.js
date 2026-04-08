@@ -49,7 +49,7 @@ function HotelListContent() {
           if (foundCity) {
             setCityName(foundCity.name);
             setStateName(state.name);
-            break; 
+            break;
           }
         }
       } catch (error) {
@@ -109,7 +109,7 @@ function HotelListContent() {
       if (paymentData.paymentStatus === "SUCCESS") {
         setShowModal(false);
         const roomType = selectedHotel.rooms.find(r => r.id === selectedRoomId)?.type;
-        
+
         const qrWindow = window.open("", "_blank");
         qrWindow.document.write(`
           <html>
@@ -181,8 +181,8 @@ function HotelListContent() {
                     ))}
                   </div>
                 </div>
-                <button 
-                  className="main-booking-btn" 
+                <button
+                  className="main-booking-btn"
                   onClick={(e) => { e.stopPropagation(); handleBookNow(hotel); }}
                 >
                   Book Your Stay
@@ -215,25 +215,25 @@ function HotelListContent() {
             <h2>Book {selectedHotel.name}</h2>
             <div className="modal-field">
               <label>Check-In</label>
-              <input 
-                type="date" 
-                min={today} 
-                value={checkIn} 
+              <input
+                type="date"
+                min={today}
+                value={checkIn}
                 onChange={(e) => {
                   setCheckIn(e.target.value);
                   if (checkOut && e.target.value >= checkOut) {
                     setCheckOut("");
                   }
-                }} 
+                }}
               />
             </div>
             <div className="modal-field">
               <label>Check-Out</label>
-              <input 
-                type="date" 
-                min={checkIn || today} 
-                value={checkOut} 
-                onChange={(e) => setCheckOut(e.target.value)} 
+              <input
+                type="date"
+                min={checkIn || today}
+                value={checkOut}
+                onChange={(e) => setCheckOut(e.target.value)}
               />
             </div>
             <div className="modal-field">
@@ -243,7 +243,7 @@ function HotelListContent() {
                 {selectedHotel.rooms.map(r => <option key={r.id} value={r.id}>{r.type} - ₹{r.priceNight}</option>)}
               </select>
             </div>
-            {totalPrice > 0 && <p style={{fontSize: '1.2rem'}}><strong>Total: ₹{totalPrice}</strong></p>}
+            {totalPrice > 0 && <p style={{ fontSize: '1.2rem' }}><strong>Total: ₹{totalPrice}</strong></p>}
             <div className="modal-actions">
               <button className="confirm-btn" onClick={handlePayNow} disabled={processingPayment}>
                 {processingPayment ? "Processing..." : "Confirm Booking"}

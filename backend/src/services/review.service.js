@@ -14,9 +14,12 @@ export const addReviewByBooking = async ({ bookingId, userId, rating, comment })
         throw new Error("NOT_ALLOWED");
     }
 
-    if (booking.reviewed || booking.status !== "CHECKED_IN") {
+    // Allow review for CHECKED_IN or CONFIRMED bookings
+    if (booking.status !== "CHECKED_IN" && booking.status !== "CONFIRMED") {
         throw new Error("NOT_ALLOWED");
     }
+
+    // No duplicate check — users can post multiple reviews per booking
 
     const review = await prisma.review.create({
         data: {
@@ -25,11 +28,6 @@ export const addReviewByBooking = async ({ bookingId, userId, rating, comment })
             rating,
             comment
         }
-    });
-
-    await prisma.booking.update({
-        where: { id: booking.id },
-        data: { reviewed: true }
     });
 
     return review;

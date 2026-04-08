@@ -263,6 +263,33 @@
   font-weight: 600;
 }
 
+/* Hotel Name Link */
+.hotel-name-link {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hotel-name-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #9fb35e;
+  transition: width 0.3s ease;
+}
+
+.hotel-name-link:hover {
+  color: #9fb35e;
+}
+
+.hotel-name-link:hover::after {
+  width: 100%;
+}
+
 /* Status Badge */
 .status-badge {
   font-size: 0.75rem;
