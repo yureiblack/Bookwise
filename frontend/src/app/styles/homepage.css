@@ -55,18 +55,19 @@
 .get-started {
   font-family: "Tangerine", cursive;
   font-size: 2rem;
-  color: #bfc99e; 
+  color: #b1bb8d;
   cursor: pointer;
   text-decoration: none;
-  border: 2px solid var(--accent);       
-  padding: 0.5rem 2.5rem 0.5rem 2rem;         
-  border-radius: 10px;           
-  transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+  border: 2px solid var(--primary-3);
+  padding: 0.7rem 2.5rem;
+  border-radius: 20px;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
 .get-started:hover {
-  opacity: 0.95;                        
-  background-color: rgba(255, 255, 255, 0.15); 
+  opacity: 0.95;
+  background-color: rgba(197, 182, 137, 0.15);
 }
 
 @media (max-width: 768px) {

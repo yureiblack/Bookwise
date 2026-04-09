@@ -6,20 +6,15 @@ import { useRouter } from 'next/navigation'
 
 export default function Page() {
   const [isLeaving, setIsLeaving] = useState(false)
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const router = useRouter()
 
-  useEffect(() => {
-    const token = localStorage.getItem('token')
-    if (token) setIsLoggedIn(true)
-  }, [])
-
   const handleGetStarted = () => {
-    setIsLeaving(true) 
+    setIsLeaving(true)
 
     setTimeout(() => {
-      router.push(isLoggedIn ? '/dashboard' : '/login')
-    }, 1000) 
+      const token = localStorage.getItem('token')
+      router.push(token ? '/dashboard' : '/login')
+    }, 1000)
   }
 
   return (

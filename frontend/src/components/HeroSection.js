@@ -13,9 +13,9 @@ export default function HeroSection({ animateOut, onGetStarted }) {
       <div className={`hero-text ${animateOut ? 'slide-out' : ''}`}>
         <h1>Bookwise</h1>
         <p>Your stay, simplified — book hotels with just your email</p>
-        <span className="get-started" onClick={onGetStarted}>
+        <button className="get-started" onClick={onGetStarted}>
           Get Started
-        </span>
+        </button>
       </div>
     </div>
   )

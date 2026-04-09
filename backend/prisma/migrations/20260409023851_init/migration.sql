@@ -37,9 +37,7 @@ CREATE TABLE `Hotel` (
     `image` VARCHAR(191) NOT NULL,
     `amenities` JSON NOT NULL,
     `star` INTEGER NOT NULL,
-    `description` VARCHAR(191) NOT NULL,
-    `paymentProvider` VARCHAR(191) NULL,
-    `paymentAccount` VARCHAR(191) NULL,
+    `description` TEXT NOT NULL,
 
     UNIQUE INDEX `Hotel_name_cityId_key`(`name`, `cityId`),
     PRIMARY KEY (`id`)
