@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider  = "mysql"
-  url       = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 enum RoomCategory {
@@ -60,7 +61,7 @@ model Hotel {
   image       String   // thumbnail 
   amenities   Json
   star        Int
-  description String @db.Text
+  description String
 
   city      City        @relation(fields: [cityId], references: [id])
   rooms     RoomType[]
