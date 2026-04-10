@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import "../../hotels/hotels.css";
 import "./hotel-detail.css";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
 
 export default function HotelDetailPage() {
   const { hotelId } = useParams();
@@ -66,7 +67,7 @@ export default function HotelDetailPage() {
   useEffect(() => {
     if (!hotelId) return;
     setLoading(true);
-    fetch(`http://localhost:3001/api/hotels/${hotelId}`)
+    fetch(`${API_URL}/api/hotels/${hotelId}`)
       .then(res => res.json())
       .then(data => setHotel(data))
       .catch(err => console.error("Hotel fetch error:", err))
@@ -126,14 +127,14 @@ export default function HotelDetailPage() {
 
       setProcessingPayment(true);
 
-      const bookingRes = await fetch("http://localhost:3001/api/bookings", {
+      const bookingRes = await fetch(`${API_URL}/api/bookings`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ hotelId: hotel.id, roomTypeId: selectedRoomId, checkIn, checkOut }),
       });
       const bookingData = await bookingRes.json();
 
-      const paymentRes = await fetch("http://localhost:3001/api/payments/mock", {
+      const paymentRes = await fetch(`${API_URL}/api/payments/mock`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ bookingId: bookingData.bookingId || bookingData.id }),
@@ -193,7 +194,7 @@ export default function HotelDetailPage() {
     setReviewMessage("");
 
     try {
-      const res = await fetch(`http://localhost:3001/api/hotels/${hotelId}/reviews`, {
+      const res = await fetch(`${API_URL}/api/hotels/${hotelId}/reviews`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -213,7 +214,7 @@ export default function HotelDetailPage() {
         setShowReviewForm(false);
 
         // Refresh hotel data for updated reviews
-        const updatedHotel = await fetch(`http://localhost:3001/api/hotels/${hotelId}`).then(r => r.json());
+        const updatedHotel = await fetch(`${API_URL}/api/hotels/${hotelId}`).then(r => r.json());
         setHotel(updatedHotel);
       } else {
         const errData = await res.json();

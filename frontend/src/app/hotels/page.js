@@ -65,7 +65,7 @@ function HotelListContent() {
     if (!cityId) return;
     async function fetchLocationStrings() {
       try {
-        const statesRes = await fetch(`${API_URL}/locations/states`);
+        const statesRes = await fetch(`${API_URL}/api/locations/states`);
         const states = await statesRes.json();
         for (const state of states) {
           const citiesRes = await fetch(`${API_URL}/api/locations/cities?stateId=${state.id}`);

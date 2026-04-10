@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import "./dashboard.css";
 import Image from "next/image";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
 
 export default function Dashboard() {
   const [greeting, setGreeting] = useState("");
@@ -59,7 +60,10 @@ export default function Dashboard() {
   useEffect(() => {
     fetch(`${API_URL}/api/locations/states`)
       .then(res => res.json())
-      .then(data => setStates(data))
+      .then(data => {
+    console.log("States response:", data)  // ← add this to see what's coming back
+    setStates(Array.isArray(data) ? data : [])
+  })
       .catch(err => console.error("States error:", err));
   }, []);
 

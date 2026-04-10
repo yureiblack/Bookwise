@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import '../login/login-register.css'   
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
+
 export default function RegisterPage() {
   const router = useRouter()
   const [email, setEmail] = useState('')
