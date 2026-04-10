@@ -22,30 +22,18 @@ export const bookHotel = async (req, res) => {
         console.log("===== CREATED BOOKING =====");
         console.log("Created Booking:", JSON.stringify(booking, null, 2));
 
-        // Fetch complete booking with relationships
-        console.log("===== FETCHING COMPLETE BOOKING =====");
-        const completeBooking = await prisma.booking.findUnique({
-            where: { id: booking.id },
-            include: {
-                hotel: true,
-                roomType: true
-            }
-        });
-
-        console.log("Complete Booking with Relations:", JSON.stringify(completeBooking, null, 2));
-
         const qrUrl = `${process.env.BASE_URL}/api/bookings/verify/${booking.qrPayload.token}`
         const qrImage = await generateQR(qrUrl)
 
         const responseData = {
-            bookingCode: completeBooking.bookingCode,
-            bookingId: completeBooking.id,
-            status: completeBooking.status,
+            bookingCode: booking.bookingCode,
+            bookingId: booking.id,
+            status: booking.status,
             qrImage,
-            hotelName: completeBooking.hotel?.name || "",
-            roomType: completeBooking.roomType?.type || "",
-            checkIn: completeBooking.checkIn ? new Date(completeBooking.checkIn).toISOString().split('T')[0] : "",
-            checkOut: completeBooking.checkOut ? new Date(completeBooking.checkOut).toISOString().split('T')[0] : ""
+            hotelName: booking.hotel?.name || "",
+            roomType: booking.roomType?.type || "",
+            checkIn: booking.checkIn ? new Date(booking.checkIn).toISOString().split('T')[0] : "",
+            checkOut: booking.checkOut ? new Date(booking.checkOut).toISOString().split('T')[0] : ""
         };
 
         console.log("===== RESPONSE DATA =====");

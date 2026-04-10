@@ -308,7 +308,7 @@ function HotelListContent() {
               margin: '20px 0',
               fontFamily: 'Marcellus, serif'
             }}>
-              Thank you for booking with BookWise
+              Thank you for booking with BookWise. Please save this QR and use it to scan at check-in.
             </p>
 
             <button

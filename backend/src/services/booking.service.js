@@ -25,21 +25,20 @@ export const createBooking = async ({
                 issuedAt: new Date()
             }
         },
-        select: {
-            id: true,
-            bookingCode: true,
-            qrPayload: true,
-            status: true,
-            checkIn: true,
-            checkOut: true,
-            hotelId: true,      
-            roomTypeId: true
+        include: {
+            hotel: true,
+            roomType: true
         }
     })
 }
 
 export const findBookingByQRToken = async (token) => {
+    const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
     const bookings = await prisma.booking.findMany({
+        where: {
+            createdAt: { gte: thirtyDaysAgo },
+            status: { not: "CHECKED_IN" }
+        },
         orderBy: { createdAt: 'desc' },
         include: {
             hotel: true,
