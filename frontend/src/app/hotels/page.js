@@ -3,6 +3,7 @@
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import "./hotels.css";
+const API_URL = import.meta.env.VITE_API_URL
 
 function HotelListContent() {
   const searchParams = useSearchParams();
@@ -53,7 +54,7 @@ function HotelListContent() {
   useEffect(() => {
     if (!cityId) return;
     setLoading(true);
-    fetch(`http://localhost:3001/api/hotels?cityId=${cityId}`)
+    fetch(`${API_URL}/hotels?cityId=${cityId}`)
       .then(res => res.json())
       .then(data => setHotels(Array.isArray(data) ? data : []))
       .catch(err => console.error("Hotels fetch error:", err))
