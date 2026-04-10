@@ -10,6 +10,7 @@ export default function Dashboard() {
   const [bookings, setBookings] = useState([]);
   const [bookingsLoading, setBookingsLoading] = useState(true);
   const [showSearch, setShowSearch] = useState(false);
+  const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
   const [search, setSearch] = useState({ stateId: "", cityId: "" });
@@ -110,9 +111,14 @@ export default function Dashboard() {
           </div>
 
           <div className="account-buttons">
-            <Link href="/profile">
-              <button>Profile</button>
-            </Link>
+            <div className="profile-container">
+              <button onClick={() => setShowProfileDropdown(!showProfileDropdown)}>Profile</button>
+              {showProfileDropdown && (
+                <div className="profile-dropdown">
+                  <p>{user?.email || "No email available"}</p>
+                </div>
+              )}
+            </div>
             <button className="logout" onClick={handleLogout}>
               Logout
             </button>
