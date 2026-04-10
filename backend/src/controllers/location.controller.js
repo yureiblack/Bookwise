@@ -4,8 +4,9 @@ export const getStates = async (req, res) => {
     try{
         const states = await fetchStates()
         return res.json(states)
-    } catch{
-        return res.status(500).json({message: "Failed to fetch states"})
+    } catch(err) {
+        console.error("STATES ERROR:", err) 
+        return res.status(500).json({ message: "Failed to fetch states" })
     }
 }
 
