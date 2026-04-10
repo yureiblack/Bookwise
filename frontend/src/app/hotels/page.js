@@ -65,10 +65,10 @@ function HotelListContent() {
     if (!cityId) return;
     async function fetchLocationStrings() {
       try {
-        const statesRes = await fetch("http://localhost:3001/api/locations/states");
+        const statesRes = await fetch(`${API_URL}/locations/states`);
         const states = await statesRes.json();
         for (const state of states) {
-          const citiesRes = await fetch(`http://localhost:3001/api/locations/cities?stateId=${state.id}`);
+          const citiesRes = await fetch(`${API_URL}/api/locations/cities?stateId=${state.id}`);
           const cities = await citiesRes.json();
           const foundCity = cities.find(c => c.id === cityId);
           if (foundCity) {
@@ -117,14 +117,14 @@ function HotelListContent() {
 
       setProcessingPayment(true);
 
-      const bookingRes = await fetch("http://localhost:3001/api/bookings", {
+      const bookingRes = await fetch(`${API_URL}/api/bookings`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ hotelId: selectedHotel.id, roomTypeId: selectedRoomId, checkIn, checkOut }),
       });
       const bookingData = await bookingRes.json();
 
-      const paymentRes = await fetch("http://localhost:3001/api/payments/mock", {
+      const paymentRes = await fetch(`${API_URL}/api/payments/mock`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ bookingId: bookingData.bookingId || bookingData.id }),

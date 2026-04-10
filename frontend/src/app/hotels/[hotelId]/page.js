@@ -78,7 +78,7 @@ export default function HotelDetailPage() {
     const token = localStorage.getItem("token");
     if (!token || !hotelId) return;
 
-    fetch("http://localhost:3001/api/bookings/my", {
+    fetch(`${API_URL}/api/bookings/my`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())

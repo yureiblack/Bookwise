@@ -28,7 +28,7 @@ export default function Dashboard() {
     const token = localStorage.getItem("token");
     if (!token) return;
 
-    fetch("http://localhost:3001/api/users/me", {
+    fetch(`${API_URL}/api/users/me`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())
@@ -44,7 +44,7 @@ export default function Dashboard() {
       return;
     }
 
-    fetch("http://localhost:3001/api/bookings/my", {
+    fetch(`${API_URL}/api/bookings/my`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())
@@ -57,7 +57,7 @@ export default function Dashboard() {
 
   //fetch states
   useEffect(() => {
-    fetch("http://localhost:3001/api/locations/states")
+    fetch(`${API_URL}/api/locations/states`)
       .then(res => res.json())
       .then(data => setStates(data))
       .catch(err => console.error("States error:", err));
@@ -71,7 +71,7 @@ export default function Dashboard() {
       return;
     }
 
-    fetch(`http://localhost:3001/api/locations/cities?stateId=${search.stateId}`)
+    fetch(`${API_URL}/api/locations/cities?stateId=${search.stateId}`)
       .then(res => res.json())
       .then(data => setCities(data))
       .catch(err => console.error("Cities error:", err));
