@@ -20,6 +20,8 @@ export default function HotelDetailPage() {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [processingPayment, setProcessingPayment] = useState(false);
+  const [showQRModal, setShowQRModal] = useState(false);
+  const [qrBookingInfo, setQrBookingInfo] = useState(null);
 
   // Review states
   const [showReviewForm, setShowReviewForm] = useState(false);
@@ -32,6 +34,28 @@ export default function HotelDetailPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const today = new Date().toISOString().split("T")[0];
+
+  // Generate QR code when modal is shown
+  useEffect(() => {
+    if (showQRModal && qrBookingInfo) {
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+      script.onload = function() {
+        const container = document.getElementById('qr-container');
+        if (container && container.children.length === 0) {
+          new window.QRCode(container, {
+            text: JSON.stringify(qrBookingInfo),
+            width: 250,
+            height: 250,
+            colorDark: '#000000',
+            colorLight: '#ffffff',
+            correctLevel: 1
+          });
+        }
+      };
+      document.head.appendChild(script);
+    }
+  }, [showQRModal, qrBookingInfo]);
 
   // Check login status
   useEffect(() => {
@@ -118,27 +142,26 @@ export default function HotelDetailPage() {
 
       if (paymentData.paymentStatus === "SUCCESS") {
         setShowModal(false);
-        const roomType = hotel.rooms.find(r => r.id === selectedRoomId)?.type;
 
-        const qrWindow = window.open("", "_blank");
-        qrWindow.document.write(`
-          <html>
-            <body style="text-align:center; font-family: sans-serif; padding: 40px; background: #020A01; color: white;">
-              <div style="background:#263315; padding: 30px; display:inline-block; border-radius: 20px; border: 1px solid #6e7b42;">
-                <h2 style="color: #6e7b42; font-family: Marcellus, serif;">Booking Confirmed!</h2>
-                <img src="${bookingData.qrImage}" style="width:200px; border-radius: 10px; margin: 20px 0;" />
-                <div style="text-align:left; border-top: 1px solid rgba(255,255,255,0.1); padding-top:15px;">
-                  <p><strong>Hotel:</strong> ${hotel.name}</p>
-                  <p><strong>Booking ID:</strong> ${bookingData.bookingId || bookingData.id}</p>
-                  <p><strong>Room Type:</strong> ${roomType}</p>
-                  <p><strong>Check-In:</strong> ${checkIn}</p>
-                  <p><strong>Check-Out:</strong> ${checkOut}</p>
-                  <p><strong>Booked At:</strong> ${new Date().toLocaleString()}</p>
-                </div>
-              </div>
-            </body>
-          </html>
-        `);
+        // Format dates properly
+        const formatDate = (date) => {
+          if (!date) return '';
+          const d = new Date(date);
+          return d.toISOString().split('T')[0];
+        };
+
+        // Create booking info JSON with all details for QR
+        const bookingInfo = {
+          Hotel: bookingData.hotelName,
+          "Booking Code": bookingData.bookingCode,
+          "Room Type": bookingData.roomType,
+          "Check-In": formatDate(bookingData.checkIn),
+          "Check-Out": formatDate(bookingData.checkOut),
+          "Booked At": new Date().toLocaleString()
+        };
+
+        setQrBookingInfo(bookingInfo);
+        setShowQRModal(true);
       } else {
         alert("Payment failed. Please try again.");
       }
@@ -434,6 +457,53 @@ export default function HotelDetailPage() {
       {lightboxImg && (
         <div className="lightbox-overlay" onClick={() => setLightboxImg(null)}>
           <img src={lightboxImg} alt="Enlarged" />
+        </div>
+      )}
+
+      {/* QR Code Confirmation Modal */}
+      {showQRModal && qrBookingInfo && (
+        <div className="modal-overlay" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{
+            background: '#263315',
+            padding: '40px',
+            borderRadius: '20px',
+            border: '1px solid #6e7b42',
+            textAlign: 'center',
+            maxWidth: '500px',
+            color: 'white'
+          }}>
+            <h2 style={{ color: '#6e7b42', fontFamily: 'Marcellus, serif', marginBottom: '20px' }}>
+              Booking Confirmed!
+            </h2>
+
+            {/* QR Code Canvas */}
+            <div id="qr-container" style={{ margin: '20px 0', display: 'flex', justifyContent: 'center' }}></div>
+
+            <p style={{
+              color: '#6e7b42',
+              fontSize: '1.1rem',
+              margin: '20px 0',
+              fontFamily: 'Marcellus, serif'
+            }}>
+              Thank you for booking with BookWise
+            </p>
+
+            <button
+              onClick={() => setShowQRModal(false)}
+              style={{
+                marginTop: '20px',
+                padding: '10px 20px',
+                background: '#6e7b42',
+                color: '#020A01',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontWeight: 'bold'
+              }}
+            >
+              Close
+            </button>
+          </div>
         </div>
       )}
     </div>

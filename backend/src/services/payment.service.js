@@ -74,7 +74,11 @@ export const confirmPayment = async({bookingId, reference}) => {
 export const simulatePayment = async ({ bookingId }) => {
     const booking = await prisma.booking.findUnique({
         where: { id: bookingId },
-        include: { payment: true }
+        include: {
+            payment: true,
+            hotel: true,
+            roomType: true
+        }
     });
 
     if (!booking) throw new Error("BOOKING_NOT_FOUND");
@@ -114,7 +118,15 @@ export const simulatePayment = async ({ bookingId }) => {
 
     return {
         bookingId,
+        bookingCode: booking.bookingCode,
         paymentStatus: payment.status,
-        bookingStatus: isSuccess ? "CONFIRMED" : "PENDING"
+        bookingStatus: isSuccess ? "CONFIRMED" : "PENDING",
+        bookingInfo: {
+            hotel: booking.hotel.name,
+            roomType: booking.roomType.type,
+            checkIn: booking.checkIn,
+            checkOut: booking.checkOut,
+            bookingCode: booking.bookingCode
+        }
     };
 };

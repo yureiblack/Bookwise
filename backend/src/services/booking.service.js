@@ -5,14 +5,14 @@ export const createBooking = async ({
     userId,
     hotelId,
     roomTypeId,
-    checkIn, 
+    checkIn,
     checkOut
 }) => {
 
     const bookingCode = `BW-${crypto.randomBytes(3).toString('hex').toUpperCase()}`
     const token = crypto.randomUUID()
-    return prisma.booking.create({ 
-        data: { 
+    return prisma.booking.create({
+        data: {
             bookingCode,
             userId,
             hotelId,
@@ -28,8 +28,12 @@ export const createBooking = async ({
         select: {
             id: true,
             bookingCode: true,
-            qrPayload: true, 
-            status: true
+            qrPayload: true,
+            status: true,
+            checkIn: true,
+            checkOut: true,
+            hotelId: true,      
+            roomTypeId: true
         }
     })
 }

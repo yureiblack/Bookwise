@@ -6,32 +6,59 @@ import {
 } from '../services/booking.service.js'
 
 import {generateQR} from '../utils/qr.js'
+import prisma from '../prisma/client.js'
 
 export const bookHotel = async (req, res) => {
     try{
+        console.log("===== BOOKING REQUEST =====");
         console.log("Decoded userId:", req.userId);
+        console.log("Request body:", req.body);
+
         const booking = await createBooking({
             userId: req.userId,
             ...req.body
-        }) 
+        })
+
+        console.log("===== CREATED BOOKING =====");
+        console.log("Created Booking:", JSON.stringify(booking, null, 2));
+
+        // Fetch complete booking with relationships
+        console.log("===== FETCHING COMPLETE BOOKING =====");
+        const completeBooking = await prisma.booking.findUnique({
+            where: { id: booking.id },
+            include: {
+                hotel: true,
+                roomType: true
+            }
+        });
+
+        console.log("Complete Booking with Relations:", JSON.stringify(completeBooking, null, 2));
 
         const qrUrl = `${process.env.BASE_URL}/api/bookings/verify/${booking.qrPayload.token}`
         const qrImage = await generateQR(qrUrl)
 
-        console.log("QR Token:", booking.qrPayload.token);
+        const responseData = {
+            bookingCode: completeBooking.bookingCode,
+            bookingId: completeBooking.id,
+            status: completeBooking.status,
+            qrImage,
+            hotelName: completeBooking.hotel?.name || "",
+            roomType: completeBooking.roomType?.type || "",
+            checkIn: completeBooking.checkIn ? new Date(completeBooking.checkIn).toISOString().split('T')[0] : "",
+            checkOut: completeBooking.checkOut ? new Date(completeBooking.checkOut).toISOString().split('T')[0] : ""
+        };
 
-        return res.status(201).json({
-            bookingCode: booking.bookingCode,
-            bookingId: booking.id,
-            status: booking.status,
-            qrImage
-        })
+        console.log("===== RESPONSE DATA =====");
+        console.log(JSON.stringify(responseData, null, 2));
+
+        return res.status(201).json(responseData);
     } catch (err) {
-    console.error("BOOKING ERROR:", err);
-    return res.status(500).json({ 
-        message: "Booking failed",
-        error: err.message
-    });
+        console.error("===== BOOKING ERROR =====");
+        console.error("Error:", err);
+        return res.status(500).json({
+            message: "Booking failed",
+            error: err.message
+        });
     }
 }
 
