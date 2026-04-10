@@ -3,7 +3,7 @@
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import "./hotels.css";
-const API_URL = process.env.VITE_API_URL || "http://localhost:3001"
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
 
 function HotelListContent() {
   const searchParams = useSearchParams();
