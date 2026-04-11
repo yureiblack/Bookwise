@@ -6,10 +6,6 @@ const router = express.Router()
 
 router.post('/initiate', authMiddleware, startPayment)
 router.post('/success', paymentSuccess)
-
-// Dev-only mock route
-if (process.env.NODE_ENV !== 'production') {
-    router.post('/mock', authMiddleware, mockPayment);
-}
+router.post('/mock', authMiddleware, mockPayment);
 
 export default router 
