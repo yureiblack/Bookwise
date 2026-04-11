@@ -54,7 +54,7 @@ function HotelListContent() {
   useEffect(() => {
     if (!cityId) return;
     setLoading(true);
-    fetch(`${API_URL}/hotels?cityId=${cityId}`)
+    fetch(`${API_URL}/api/hotels?cityId=${cityId}`)
       .then(res => res.json())
       .then(data => setHotels(Array.isArray(data) ? data : []))
       .catch(err => console.error("Hotels fetch error:", err))
