@@ -1,9 +1,18 @@
-'use client'
+"use client";
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import "./dashboard.css";
 import Image from "next/image";
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
+import {
+  MapPin,
+  BedDouble,
+  CalendarArrowDownIcon,
+  CalendarArrowUpIcon,
+  Ticket,
+} from "lucide-react";
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
 
 export default function Dashboard() {
   const [greeting, setGreeting] = useState("");
@@ -16,69 +25,73 @@ export default function Dashboard() {
   const [cities, setCities] = useState([]);
   const [search, setSearch] = useState({ stateId: "", cityId: "" });
 
-  //set greetings
   useEffect(() => {
     const hour = new Date().getHours();
-    if (hour < 12) setGreeting("Good morning");
-    else if (hour < 18) setGreeting("Good afternoon");
-    else setGreeting("Good evening");
+
+    if (hour < 12) {
+      setGreeting("Good morning");
+    } else if (hour < 18) {
+      setGreeting("Good afternoon");
+    } else {
+      setGreeting("Good evening");
+    }
   }, []);
 
-  // Fetch user profile
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (!token) return;
+
+    if (!token) {
+      return;
+    }
 
     fetch(`${API_URL}/api/users/me`, {
-      headers: { Authorization: `Bearer ${token}` }
+      headers: { Authorization: `Bearer ${token}` },
     })
-      .then(res => res.json())
-      .then(data => setUser(data))
-      .catch(err => console.error("User fetch error:", err));
+      .then((res) => res.json())
+      .then((data) => setUser(data))
+      .catch((err) => console.error("User fetch error:", err));
   }, []);
 
-  // Fetch user's confirmed & checked-in bookings
   useEffect(() => {
     const token = localStorage.getItem("token");
+
     if (!token) {
       setBookingsLoading(false);
       return;
     }
 
     fetch(`${API_URL}/api/bookings/my`, {
-      headers: { Authorization: `Bearer ${token}` }
+      headers: { Authorization: `Bearer ${token}` },
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         setBookings(Array.isArray(data) ? data : []);
       })
-      .catch(err => console.error("Bookings fetch error:", err))
+      .catch((err) => console.error("Bookings fetch error:", err))
       .finally(() => setBookingsLoading(false));
   }, []);
 
-  //fetch states
   useEffect(() => {
     fetch(`${API_URL}/api/locations/states`)
-      .then(res => res.json())
-      .then(data => {
-    console.log("States response:", data)  // ← add this to see what's coming back
-    setStates(Array.isArray(data) ? data : [])
-  })
-      .catch(err => console.error("States error:", err));
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("States response:", data);
+        setStates(Array.isArray(data) ? data : []);
+      })
+      .catch((err) => console.error("States error:", err));
   }, []);
 
-  // Fetch cities when state changes
   useEffect(() => {
     if (!search.stateId) {
       setCities([]);
-      setSearch(prev => ({ ...prev, cityId: "" }));
+      setSearch((prev) => ({ ...prev, cityId: "" }));
       return;
     }
 
     fetch(`${API_URL}/api/locations/cities?stateId=${search.stateId}`)
-      .then(res => res.json())
-      .then(data => setCities(data))
-      .catch(err => console.error("Cities error:", err));
+      .then((res) => res.json())
+      .then((data) => setCities(Array.isArray(data) ? data : []))
+      .catch((err) => console.error("Cities error:", err));
   }, [search.stateId]);
 
   const handleSearch = (e) => {
@@ -95,7 +108,7 @@ export default function Dashboard() {
     return new Date(dateStr).toLocaleDateString("en-IN", {
       day: "numeric",
       month: "short",
-      year: "numeric"
+      year: "numeric",
     });
   };
 
@@ -116,13 +129,21 @@ export default function Dashboard() {
 
           <div className="account-buttons">
             <div className="profile-container">
-              <button onClick={() => setShowProfileDropdown(!showProfileDropdown)}>Profile</button>
+              <button
+                onClick={() =>
+                  setShowProfileDropdown(!showProfileDropdown)
+                }
+              >
+                Profile
+              </button>
+
               {showProfileDropdown && (
                 <div className="profile-dropdown">
                   <p>{user?.email || "No email available"}</p>
                 </div>
               )}
             </div>
+
             <button className="logout" onClick={handleLogout}>
               Logout
             </button>
@@ -133,31 +154,51 @@ export default function Dashboard() {
         <div className="dashboard-main">
           {/* Greeting + Search */}
           <div className="welcome-section">
-            <h1>{greeting}, {user?.email?.split("@")[0] || "User"}!</h1>
+            <h1>
+              {greeting}, {user?.email?.split("@")[0] || "User"}!
+            </h1>
+
             <div className="search-hotels">
-              <button onClick={() => setShowSearch(!showSearch)}>Search Hotels</button>
+              <button onClick={() => setShowSearch(!showSearch)}>
+                Search Hotels
+              </button>
+
               {showSearch && (
                 <form className="search-dropdowns" onSubmit={handleSearch}>
                   <select
                     value={search.stateId}
-                    onChange={e => setSearch({ ...search, stateId: e.target.value })}
+                    onChange={(e) =>
+                      setSearch({
+                        ...search,
+                        stateId: e.target.value,
+                      })
+                    }
                     required
                   >
                     <option value="">Select State</option>
-                    {states.map(state => (
-                      <option key={state.id} value={state.id}>{state.name}</option>
+                    {states.map((state) => (
+                      <option key={state.id} value={state.id}>
+                        {state.name}
+                      </option>
                     ))}
                   </select>
 
                   <select
                     value={search.cityId}
-                    onChange={e => setSearch({ ...search, cityId: e.target.value })}
+                    onChange={(e) =>
+                      setSearch({
+                        ...search,
+                        cityId: e.target.value,
+                      })
+                    }
                     required
                     disabled={!cities.length}
                   >
                     <option value="">Select City</option>
-                    {cities.map(city => (
-                      <option key={city.id} value={city.id}>{city.name}</option>
+                    {cities.map((city) => (
+                      <option key={city.id} value={city.id}>
+                        {city.name}
+                      </option>
                     ))}
                   </select>
 
@@ -170,44 +211,87 @@ export default function Dashboard() {
           {/* Your Bookings */}
           <div className="bookings-section">
             <h2>Your Bookings</h2>
+
             {bookingsLoading ? (
               <p className="bookings-empty">Loading bookings...</p>
             ) : bookings.length === 0 ? (
-              <p className="bookings-empty">No confirmed or checked-in bookings yet.</p>
+              <p className="bookings-empty">
+                No confirmed or checked-in bookings yet.
+              </p>
             ) : (
               <div className="bookings-grid">
-                {bookings.map(b => (
+                {bookings.map((b) => (
                   <div key={b.id} className="booking-card">
                     <div className="booking-card-header">
                       <h3>
-                        <Link href={`/hotels/${b.hotelId}`} className="hotel-name-link">
+                        <Link
+                          href={`/hotels/${b.hotelId}`}
+                          className="hotel-name-link"
+                        >
                           {b.hotel.name}
                         </Link>
                       </h3>
-                      <span className={`status-badge status-${b.status.toLowerCase().replace("_", "-")}`}>
-                        {b.status === "CHECKED_IN" ? "Checked In" : "Confirmed"}
+
+                      <span
+                        className={`status-badge status-${b.status
+                          .toLowerCase()
+                          .replace("_", "-")}`}
+                      >
+                        {b.status === "CHECKED_IN"
+                          ? "Checked In"
+                          : "Confirmed"}
                       </span>
                     </div>
+
                     <div className="booking-card-body">
                       <div className="booking-detail">
-                        <span className="detail-label">📍 City</span>
-                        <span className="detail-value">{b.hotel.city.name}</span>
+                        <span className="detail-label">
+                          <MapPin size={17} strokeWidth={2.2} />
+                          City
+                        </span>
+                        <span className="detail-value">
+                          {b.hotel.city.name}
+                        </span>
                       </div>
+
                       <div className="booking-detail">
-                        <span className="detail-label">🛏️ Room</span>
-                        <span className="detail-value">{b.roomType.type}</span>
+                        <span className="detail-label">
+                          <BedDouble size={17} strokeWidth={2.2} />
+                          Room
+                        </span>
+                        <span className="detail-value">
+                          {b.roomType.type}
+                        </span>
                       </div>
+
                       <div className="booking-detail">
-                        <span className="detail-label">📅 Check-in</span>
-                        <span className="detail-value">{formatDate(b.checkIn)}</span>
+                        <span className="detail-label">
+                          <CalendarArrowDownIcon size={17} strokeWidth={2.2} />
+                          Check-in
+                        </span>
+                        <span className="detail-value">
+                          {formatDate(b.checkIn)}
+                        </span>
                       </div>
+
                       <div className="booking-detail">
-                        <span className="detail-label">📅 Check-out</span>
-                        <span className="detail-value">{formatDate(b.checkOut)}</span>
+                        <span className="detail-label">
+                          <CalendarArrowUpIcon size={17} strokeWidth={2.2} />
+                          Check-out
+                        </span>
+                        <span className="detail-value">
+                          {formatDate(b.checkOut)}
+                        </span>
                       </div>
+
                       <div className="booking-detail">
-                        <span className="detail-label">🔖 Code</span>
-                        <span className="detail-value booking-code">{b.bookingCode}</span>
+                        <span className="detail-label">
+                          <Ticket size={17} strokeWidth={2.2} />
+                          Code
+                        </span>
+                        <span className="detail-value booking-code">
+                          {b.bookingCode}
+                        </span>
                       </div>
                     </div>
                   </div>
